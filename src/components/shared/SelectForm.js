@@ -5,6 +5,7 @@ import heritageContext from '../context/Heritage/heritageContext';
 import Test from '../home/Test';
 
 function SelectForm(props) {
+    console.log('loading start....')
 
     const HeritageContext = useContext(heritageContext);
 
@@ -19,12 +20,12 @@ function SelectForm(props) {
 
 
     //ONCHANGE
-    const [selection, setSelection] = useState('select')
-    
+    const [selection, setSelection] = useState('select');
+
 
     //onSubmit
 
-    
+
     const [country, setCountry] = useState(false);
     const [select, setSelect] = useState(false);
     const [region, setRegion] = useState(false);
@@ -33,7 +34,7 @@ function SelectForm(props) {
     //SET STYLE
 
     const showCountry = () =>{
-        return country ? {display:'block'} : {display:'none'}
+        return country ? {} : {display:'none'}
     }
 
     const showSelect = () =>{
@@ -41,54 +42,54 @@ function SelectForm(props) {
     }
 
     const showRegion = () =>{
-        return region ? {display:'block'} : {display:'none'}
+        return region ? {} : {display:'none'}
     }
 
     const showCategory = () =>{
-        return category ? {display:'block'} : {display:'none'}
+        return category ? {} : {display:'none'}
     }
 
-
-    console.log(selection)
-    const handleChange = e =>{
+    const handleChange = (e) =>{
+        // const  {name, value} = e.target;
 
         const newselection = e.target.value;
 
-        
-        setSelection(newselection)
+
+        setSelection(newselection )
+        // ChangeStyles();
+
+        console.log(selection)
 
         //CHANGE STYLES
 
-        if(selection === 'Region'){
-            useEffect(() => {
-            setRegion(true);
-            setCategory(false);
-            setSelect(false);
-            setCountry(false);
-            },[])
-            
-        } else if (selection === 'Category'){
-            setRegion(false);
-            setCategory(true);
-            setSelect(false);
-            setCountry(false) 
-        } else if (selection === 'Country'){
-            setRegion(false);
-            setCategory(false);
-            setSelect(false);
-            setCountry(true) 
-        } else{
+        // if(selection.options === 'Region'){
+        //     setRegion(true);
+        //     setCategory(false);
+        //     setSelect(false);
+        //     setCountry(false);
 
-            setRegion(false);
-            setCategory(false);
-            setSelect(true);
-            setCountry(false) 
+        // } else if (selection.options === 'Category'){
+        //     setRegion(false);
+        //     setCategory(true);
+        //     setSelect(false);
+        //     setCountry(false)
+        // } else if (selection.options === 'Country'){
+        //     setRegion(false);
+        //     setCategory(false);
+        //     setSelect(false);
+        //     setCountry(true)
+        // } else{
 
-        }
-        
+        //     setRegion(false);
+        //     setCategory(false);
+        //     setSelect(true);
+        //     setCountry(false)
+
+        // }
+
     }
 
-    
+
 
 
 
@@ -96,18 +97,57 @@ function SelectForm(props) {
 
     //SET TO FALSE OR TRUE
 
-    const ChangeStyles = () => {
-       setCountry(false)
-    }
+    
+
+
+    useEffect(() => {
+        // ChangeStyles()
+        console.log(`this is the useEffect ${selection}`)
+        // const ChangeStyles = () => {
+        
+            if(selection === 'Region'){
+                 setRegion(true);
+                 setCategory(false);
+                 setSelect(false);
+                 setCountry(false);
+     
+             } else if (selection === 'Category'){
+                 setRegion(false);
+                 setCategory(true);
+                 setSelect(false);
+                 setCountry(false)
+             } else if (selection === 'Country'){
+                 setRegion(false);
+                 setCategory(false);
+                 setSelect(false);
+                 setCountry(true)
+             } else{
+     
+                 setRegion(false);
+                 setCategory(false);
+                 setSelect(true);
+                 setCountry(false)
+     
+             }
+
+             console.log(country,select,region,category)
+     
+             
+        //  }
+        
+
+    },[selection])
+
+    console.log('loading end....')
 
     return (
         <div>
             <form >
             <select onChange={handleChange}>
                     <option value='select'>select</option>
-                    <option>Country</option>
-                    <option>Region</option>
-                    <option>Category</option>
+                    <option value='Country'>Country</option>
+                    <option value='Region'>Region</option>
+                    <option value='Category'>Category</option>
             </select>
             <select style={showSelect()}>
                 <option>Choose</option>
@@ -120,19 +160,19 @@ function SelectForm(props) {
                     <option>Latin America and the Caribbean</option>
             </select>
             <div style={showCountry()}>
-                <Select  options={options} value={value} onChange={changeHandler} /> 
-            </div> 
-            
+                <Select  options={options} value={value} onChange={changeHandler} />
+            </div>
+
             <select style={showCategory()}>
                     <option>Mixed</option>
                     <option>Cultural</option>
                     <option>Natural</option>
-            </select> 
+            </select>
 
-            
-                
+
+
             <button>Search</button>
-                
+
             </form>
             <p onClick={HeritageContext.getNatural}>Natural</p>
             <p onClick={HeritageContext.getMixed}>Mixed</p>
