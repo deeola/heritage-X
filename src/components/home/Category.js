@@ -1,17 +1,14 @@
-import React, {useContext} from 'react';
+import React,{useContext} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 
-function Test() {
-
+function Category() {
     const HeritageContext = useContext(heritageContext);
 
-    const display = HeritageContext.display;
-
-
+    const Categories = HeritageContext.Categories;
     return (
         <div>
             {
-                display.map(item => {
+                Categories.map(item => {
                     return(
                         <div>
                         <img src={item.image_url} alt=''></img>
@@ -21,12 +18,10 @@ function Test() {
                     )
                 })
 
-            }
-            
-            
+            } 
             
         </div>
     )
 }
 
-export default Test
+export default Category;

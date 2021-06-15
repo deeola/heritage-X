@@ -8,22 +8,17 @@ const HeritageState = (props) => {
   //INITIAL STATE
   const initialState = {
     data: [],
-    country:[],
-    mixed:[],
-    natural:[],
-    cultural:[],
-    africa:[],
-    arabs:[],
-    asia:[],
-    europe:[],
-    latin:[],
+    countries:[],
+    categories:[],
+    regions:[],
     loading: false
   };
 
-  const [Naturals, SetNaturals] = useState([]);
-  const [Mixed, SetMixed] = useState([]);
-  const [Culture, SetCulture] = useState([]);
-  const [loading, setLoading] = useState(false)
+  const [Countries, SetCountries] = useState([]);
+  const [Categories, SetCategories] = useState([]);
+  const [Regions, SetRegions] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [display, setDisplay] = useState([])
 
   const [state, dispatch] = useReducer(heritageReducer, initialState);
 
@@ -34,8 +29,9 @@ const HeritageState = (props) => {
     const res =  await  fetch('./data.json');
     const items = await res.json();
     const regions =  items.filter(item => item.region.name === text);
+    SetRegions(regions)
+    setDisplay(regions)
     setLoading(false)
-    console.log(regions)
     
   }
 
@@ -46,7 +42,8 @@ const HeritageState = (props) => {
     const res =  await  fetch('./data.json');
     const items = await res.json();
     const categories =  items.filter(item => item.category.name === text );
-    console.log(categories)
+    SetCategories(categories)
+    setDisplay(categories)
     setLoading(false)
   }
 
@@ -59,7 +56,8 @@ const HeritageState = (props) => {
     const res =  await  fetch('./data.json');
     const items = await res.json();
     const Countries =  items.filter(item => item.states[0].name === text);
-    console.log(Countries)
+    SetCountries(Countries)
+    setDisplay(Countries)
     setLoading(false)
   }
 
@@ -104,12 +102,13 @@ const clickMe = () => {
         getDatas,
         clickMe,
         getRegion,
-        Naturals,
         loading,
         getCategory,
-        Mixed,
-        Culture,
-        getCountry
+        getCountry,
+        Countries,
+        Categories,
+        Regions,
+        display
       }}
     >
       {props.children}

@@ -1,17 +1,15 @@
-import React, {useContext} from 'react';
+import React,{useContext} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 
-function Test() {
+function Country() {
 
     const HeritageContext = useContext(heritageContext);
 
-    const display = HeritageContext.display;
-
-
+    const Countries = HeritageContext.Countries;
     return (
         <div>
-            {
-                display.map(item => {
+           {
+                Countries.map(item => {
                     return(
                         <div>
                         <img src={item.image_url} alt=''></img>
@@ -21,12 +19,9 @@ function Test() {
                     )
                 })
 
-            }
-            
-            
-            
+            } 
         </div>
     )
 }
 
-export default Test
+export default Country;

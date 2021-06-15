@@ -3,6 +3,8 @@ import countryList from 'react-select-country-list';
 import Select from 'react-select';
 import heritageContext from '../context/Heritage/heritageContext';
 import Test from '../home/Test';
+import {Link} from 'react-router-dom'
+import Country from '../home/Country';
 
 function SelectForm(props) {
 
@@ -14,9 +16,6 @@ function SelectForm(props) {
     const changeHandler = value => {
     setValue(value)
     }
-    const Naturals = HeritageContext.Naturals;
-    const Culture = HeritageContext.Culture;
-
 
     //ONCHANGE
     const [selection, setSelection] = useState('select');
@@ -115,7 +114,7 @@ function SelectForm(props) {
             <select style={showRegion()}>
                     <option>Africa</option>
                     <option>Arab States</option>
-                    <option>Asia and Pacific</option>
+                    <option>Asia and the Pacific</option>
                     <option>Europe and North America</option>
                     <option>Latin America and the Caribbean</option>
             </select>
@@ -132,13 +131,12 @@ function SelectForm(props) {
 
 
             <button>Search</button>
+            <Link to='/countries'>Country</Link>
+            <Link to='/regions'>Regions</Link>
+            <Link to='/categories'>Categories</Link>
 
             </form>
-            <p onClick={HeritageContext.getNatural}>Natural</p>
-            <p onClick={HeritageContext.getMixed}>Mixed</p>
-            <p onClick={HeritageContext.getCulture}>Culture</p>
-            <p onClick={HeritageContext.getDatas}>All</p>
-            <Test />
+
 
 
         </div>
