@@ -14,13 +14,40 @@ function Details({ match }) {
         const newdata = Regions.filter(item => item.id == Number(id) );
 
         setData(newdata)
-        console.log(newdata)
-        console.log(Regions)
+        
     },[])
 
+    if(data.length !== 0){
+        console.log(data[0])
+    }
+
+    
+
+    
+
+    
     return (
         <div>
-            <h1></h1>
+            {data.length !== 0 && data.map(item => {
+
+                return (
+                    <div>
+                        <h1>{item.name}</h1>
+                        <h1>{item.latitude}</h1>
+                        <h1>{item.longitude}</h1>
+                        <h1>{item.region.name}</h1>
+                        <img src={item.image_url} alt=''></img>
+                        <p>{item.short_description}</p>
+                        <h1>{item.states[0].name}</h1>
+                        <h1>{item.category.name}</h1>
+                        <h1>{item.date_inscribed}</h1>
+                    </div>
+                        
+                        
+                        
+                )
+                
+            })}
         </div>
     )
 }

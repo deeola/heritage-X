@@ -14,6 +14,7 @@ function Region() {
                 Regions.map(item => {
                     return(
                         <div>
+                        <h4>{item.states[0].name}</h4>
                         <img src={item.image_url} alt=''></img>
                         <h4>{item.name}</h4>
                         <p>{item.category.name}</p>

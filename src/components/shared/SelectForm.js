@@ -62,17 +62,20 @@ function SelectForm(props) {
                  setCategory(false);
                  setSelect(false);
                  setCountry(false);
+                 
      
              } else if (selection === 'Category'){
                  setRegion(false);
                  setCategory(true);
                  setSelect(false);
                  setCountry(false)
+                 
              } else if (selection === 'Country'){
                  setRegion(false);
                  setCategory(false);
                  setSelect(false);
                  setCountry(true)
+                 
              } else{
      
                  setRegion(false);
@@ -83,6 +86,24 @@ function SelectForm(props) {
              }
 
     },[selection])
+
+
+    // const linked = () => {
+    //     if(selection === 'Region'){
+
+
+    //     } else if (selection === 'Category'){
+
+    //     } else if (selection === 'Country'){
+
+    //     } else{
+
+    //         console.log('hello')
+
+    //     }
+
+        
+    // }
 
     //SUBMIT FORM
 
@@ -127,12 +148,9 @@ function SelectForm(props) {
                     <option>Cultural</option>
                     <option>Natural</option>
             </select>
-
-
-
-            <button>Search</button>
-            <Link to='/countries'>Country</Link>
+            <button>select</button>
             <Link to='/regions'>Regions</Link>
+            <Link to='/countries'>Country</Link>
             <Link to='/categories'>Categories</Link>
 
             </form>

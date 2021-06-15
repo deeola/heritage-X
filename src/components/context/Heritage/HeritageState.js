@@ -59,6 +59,8 @@ const HeritageState = (props) => {
     SetCountries(Countries)
     setDisplay(Countries)
     setLoading(false)
+
+    console.log(Countries)
   }
 
 
