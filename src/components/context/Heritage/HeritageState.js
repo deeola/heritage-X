@@ -29,38 +29,41 @@ const HeritageState = (props) => {
 
   //Natural
 
-  const getNatural = async() => {
+  const getRegion = async(text) => {
     setLoading(true);
     const res =  await  fetch('./data.json');
     const items = await res.json();
-    const Natural =  items.filter(item => item.category.name === 'Natural');
-    SetNaturals(Natural);
+    const regions =  items.filter(item => item.region.name === text);
     setLoading(false)
-    console.log(Naturals)
+    console.log(regions)
     
   }
 
-  //Mixed
+  //Categories
 
-  const getMixed = async() => {
+  const getCategory = async(text) => {
     setLoading(true);
     const res =  await  fetch('./data.json');
     const items = await res.json();
-    const Mixeds =  items.filter(item => item.category.name === 'Mixed');
-    SetMixed(Mixeds);
+    const categories =  items.filter(item => item.category.name === text );
+    console.log(categories)
     setLoading(false)
   }
 
-  //Culture
 
-  const getCulture = async() => {
+
+  //Country
+
+  const getCountry = async(text) => {
     setLoading(true);
     const res =  await  fetch('./data.json');
     const items = await res.json();
-    const Cultures =  items.filter(item => item.category.name === 'Cultural');
-    SetCulture(Cultures);
+    const Countries =  items.filter(item => item.states[0].name === text);
+    console.log(Countries)
     setLoading(false)
   }
+
+
 
   
   const  getDatas = async() => {
@@ -100,14 +103,13 @@ const clickMe = () => {
         // getdata,
         getDatas,
         clickMe,
-        getNatural,
+        getRegion,
         Naturals,
         loading,
-        getMixed,
+        getCategory,
         Mixed,
         Culture,
-        getCulture
-
+        getCountry
       }}
     >
       {props.children}

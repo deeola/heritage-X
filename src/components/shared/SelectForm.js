@@ -5,7 +5,6 @@ import heritageContext from '../context/Heritage/heritageContext';
 import Test from '../home/Test';
 
 function SelectForm(props) {
-    console.log('loading start....')
 
     const HeritageContext = useContext(heritageContext);
 
@@ -50,61 +49,15 @@ function SelectForm(props) {
     }
 
     const handleChange = (e) =>{
-        // const  {name, value} = e.target;
-
         const newselection = e.target.value;
-
-
         setSelection(newselection )
-        // ChangeStyles();
-
-        console.log(selection)
-
-        //CHANGE STYLES
-
-        // if(selection.options === 'Region'){
-        //     setRegion(true);
-        //     setCategory(false);
-        //     setSelect(false);
-        //     setCountry(false);
-
-        // } else if (selection.options === 'Category'){
-        //     setRegion(false);
-        //     setCategory(true);
-        //     setSelect(false);
-        //     setCountry(false)
-        // } else if (selection.options === 'Country'){
-        //     setRegion(false);
-        //     setCategory(false);
-        //     setSelect(false);
-        //     setCountry(true)
-        // } else{
-
-        //     setRegion(false);
-        //     setCategory(false);
-        //     setSelect(true);
-        //     setCountry(false)
-
-        // }
 
     }
-
-
-
-
-
-
-
-    //SET TO FALSE OR TRUE
-
     
 
 
-    useEffect(() => {
-        // ChangeStyles()
-        console.log(`this is the useEffect ${selection}`)
-        // const ChangeStyles = () => {
-        
+
+    useEffect(() => { 
             if(selection === 'Region'){
                  setRegion(true);
                  setCategory(false);
@@ -130,19 +83,26 @@ function SelectForm(props) {
      
              }
 
-             console.log(country,select,region,category)
-     
-             
-        //  }
-        
-
     },[selection])
 
-    console.log('loading end....')
+    //SUBMIT FORM
+
+    const handleSubmit = e => {
+
+        if(selection === 'Region'){
+            HeritageContext.getRegion(e.target[2].value);
+            
+        } else if(selection === 'Country'){
+            HeritageContext.getCountry(value.label);
+        } else if(selection === 'Category'){
+            HeritageContext.getCategory(e.target[4].value);
+        }
+        e.preventDefault();
+    }
 
     return (
         <div>
-            <form >
+            <form  onSubmit={handleSubmit}>
             <select onChange={handleChange}>
                     <option value='select'>select</option>
                     <option value='Country'>Country</option>
