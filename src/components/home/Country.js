@@ -1,5 +1,6 @@
 import React,{useContext} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
+import {Link} from 'react-router-dom';
 
 function Country() {
 
@@ -15,6 +16,7 @@ function Country() {
                         <img src={item.image_url} alt=''></img>
                         <h4>{item.name}</h4>
                         <p>{item.category.name}</p>
+                        <Link to={`/countries/${item.id}`}>Click me</Link>
                     </div>
                     )
                 })

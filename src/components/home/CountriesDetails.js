@@ -1,17 +1,17 @@
 import React,{useEffect, useContext, useState} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 
-function Details({ match }) {
+function CountriesDetails({ match }) {
 
     const HeritageContext = useContext(heritageContext);
 
-    const Regions = HeritageContext.Regions;
+    const Countries = HeritageContext.Countries;
 
     const [data, setData] = useState([])
 
     useEffect(() => {
         const id = match.params.id;
-        const newdata = Regions.filter(item => item.id == Number(id) );
+        const newdata = Countries.filter(item => item.id == Number(id) );
 
         setData(newdata)
         
@@ -32,9 +32,7 @@ function Details({ match }) {
                         <h1>{item.states[0].name}</h1>
                         <h1>{item.category.name}</h1>
                         <h1>{item.date_inscribed}</h1>
-                    </div>
-                        
-                        
+                    </div>    
                         
                 )
                 
@@ -43,4 +41,4 @@ function Details({ match }) {
     )
 }
 
-export default Details;
+export default CountriesDetails;

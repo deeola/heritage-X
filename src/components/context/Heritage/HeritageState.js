@@ -18,7 +18,12 @@ const HeritageState = (props) => {
   const [Categories, SetCategories] = useState([]);
   const [Regions, SetRegions] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [display, setDisplay] = useState([])
+  const [Africa, setAfrica] = useState([]);
+  const [Asia, setAsia] = useState([]);
+  const [Latin, setLatin] = useState([]);
+  const [Europe, setEurope] = useState([]);
+  const [Arab, setArab] = useState([]);
+
 
   const [state, dispatch] = useReducer(heritageReducer, initialState);
 
@@ -30,9 +35,7 @@ const HeritageState = (props) => {
     const items = await res.json();
     const regions =  items.filter(item => item.region.name === text);
     SetRegions(regions)
-    setDisplay(regions)
     setLoading(false)
-    
   }
 
   //Categories
@@ -43,11 +46,8 @@ const HeritageState = (props) => {
     const items = await res.json();
     const categories =  items.filter(item => item.category.name === text );
     SetCategories(categories)
-    setDisplay(categories)
     setLoading(false)
   }
-
-
 
   //Country
 
@@ -57,12 +57,89 @@ const HeritageState = (props) => {
     const items = await res.json();
     const Countries =  items.filter(item => item.states[0].name === text);
     SetCountries(Countries)
-    setDisplay(Countries)
     setLoading(false)
-
-    console.log(Countries)
   }
 
+  //GET AFRICA DATA
+  const getAfrica = async () => {
+    setLoading(true)
+    const res =  await  fetch('./data.json');
+    const items = await res.json();
+    const Africas =  items.filter(item => item.region.name === 'Africa');
+
+    //GET RANDOM NUMBERS
+    const Num1 = Math.floor(Math.random()*Africas.length) + 1 
+    const Num2 = Math.floor(Math.random()*Africas.length) + 1 
+    const Num3 = Math.floor(Math.random()*Africas.length) + 1 
+
+    setAfrica([Africas[Num1], Africas[Num2],Africas[Num3]])
+    setLoading(false)
+  }
+
+
+  //GET ASIA DATA
+  const getAsia = async () => {
+    setLoading(true)
+    const res =  await  fetch('./data.json');
+    const items = await res.json();
+    const Asia =  items.filter(item => item.region.name === 'Asia and the Pacific');
+
+    //GET RANDOM NUMBERS
+    const Num1 = Math.floor(Math.random()*Asia.length) + 1 
+    const Num2 = Math.floor(Math.random()*Asia.length) + 1 
+    const Num3 = Math.floor(Math.random()*Asia.length) + 1 
+
+    setLatin([Asia[Num1], Asia[Num2],Asia[Num3]])
+    setLoading(false)
+  }
+
+  //GET Latin DATA
+  const getLatin = async () => {
+    setLoading(true)
+    const res =  await  fetch('./data.json');
+    const items = await res.json();
+    const Latins =  items.filter(item => item.region.name === 'Latin America and the Caribbean');
+
+    //GET RANDOM NUMBERS
+    const Num1 = Math.floor(Math.random()*Latins.length) + 1 
+    const Num2 = Math.floor(Math.random()*Latins.length) + 1 
+    const Num3 = Math.floor(Math.random()*Latins.length) + 1 
+
+    setAsia([Latins[Num1], Latins[Num2],Latins[Num3]])
+    setLoading(false)
+  }
+
+  //GET EUROPE DATA
+  const getEurope = async () => {
+    setLoading(true)
+    const res =  await  fetch('./data.json');
+    const items = await res.json();
+    const Europes =  items.filter(item => item.region.name === 'Europe and North America');
+
+    //GET RANDOM NUMBERS
+    const Num1 = Math.floor(Math.random()*Europes.length) + 1 
+    const Num2 = Math.floor(Math.random()*Europes.length) + 1 
+    const Num3 = Math.floor(Math.random()*Europes.length) + 1 
+
+    setEurope([Europes[Num1], Europes[Num2],Europes[Num3]])
+    setLoading(false)
+  }
+
+  //GET EUROPE DATA
+  const getArab = async () => {
+    setLoading(true)
+    const res =  await  fetch('./data.json');
+    const items = await res.json();
+    const Arabs =  items.filter(item => item.region.name === 'Arab States');
+
+    //GET RANDOM NUMBERS
+    const Num1 = Math.floor(Math.random()*Arabs.length) + 1 
+    const Num2 = Math.floor(Math.random()*Arabs.length) + 1 
+    const Num3 = Math.floor(Math.random()*Arabs.length) + 1 
+
+    setArab([Arabs[Num1], Arabs[Num2],Arabs[Num3]])
+    setLoading(false)
+  }
 
 
   
@@ -97,10 +174,6 @@ const clickMe = () => {
   return (
     <heritageContext.Provider
       value={{
-        data: state.data,
-        loading: state.loading,
-        natural : state.natural,
-        // getdata,
         getDatas,
         clickMe,
         getRegion,
@@ -110,7 +183,16 @@ const clickMe = () => {
         Countries,
         Categories,
         Regions,
-        display
+        Africa,
+        getAfrica,
+        getAsia,
+        Asia,
+        Latin,
+        getLatin,
+        Europe,
+        getEurope,
+        Arab,
+        getArab
       }}
     >
       {props.children}

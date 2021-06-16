@@ -5,8 +5,18 @@ import heritageContext from '../context/Heritage/heritageContext';
 import Test from '../home/Test';
 import {Link} from 'react-router-dom'
 import Country from '../home/Country';
+import {useHistory} from 'react-router'
+import Africa from '../home/Africa';
+import Europe from '../home/Europe';
+import ArabStates from '../home/ArabStates'
+import Asia from '../home/Asia';
+import Latin from '../home/Latin';
 
 function SelectForm(props) {
+
+    //REACT HISTORY
+    const history = useHistory();
+    
 
     const HeritageContext = useContext(heritageContext);
 
@@ -55,7 +65,6 @@ function SelectForm(props) {
     
 
 
-
     useEffect(() => { 
             if(selection === 'Region'){
                  setRegion(true);
@@ -88,36 +97,31 @@ function SelectForm(props) {
     },[selection])
 
 
-    // const linked = () => {
-    //     if(selection === 'Region'){
-
-
-    //     } else if (selection === 'Category'){
-
-    //     } else if (selection === 'Country'){
-
-    //     } else{
-
-    //         console.log('hello')
-
-    //     }
-
-        
-    // }
-
     //SUBMIT FORM
 
     const handleSubmit = e => {
 
         if(selection === 'Region'){
             HeritageContext.getRegion(e.target[2].value);
+            history.push({
+                pathname:  "/regions"
+             });
+            
             
         } else if(selection === 'Country'){
             HeritageContext.getCountry(value.label);
+            history.push({
+                pathname:  "/countries"
+             });
         } else if(selection === 'Category'){
             HeritageContext.getCategory(e.target[4].value);
+            history.push({
+                pathname:  "/categories"
+             });
         }
         e.preventDefault();
+
+        
     }
 
     return (
@@ -149,11 +153,13 @@ function SelectForm(props) {
                     <option>Natural</option>
             </select>
             <button>select</button>
-            <Link to='/regions'>Regions</Link>
-            <Link to='/countries'>Country</Link>
-            <Link to='/categories'>Categories</Link>
 
             </form>
+            <Africa />
+            <Europe />
+            <ArabStates />
+            <Asia />
+            <Latin />
 
 
 
@@ -162,3 +168,5 @@ function SelectForm(props) {
 }
 
 export default SelectForm;
+
+// export default withRouter(ContactForm)
