@@ -1,11 +1,13 @@
 import React, {useState, useContext, useEffect} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
-import uuid from 'react-uuid'
+import uuid from 'react-uuid';
+import {Link} from 'react-router-dom';
 
 function Africa() {
     const HeritageContext = useContext(heritageContext);
     const Africa = HeritageContext.Africa;
     const getAfrica = HeritageContext.getAfrica;
+    const getAll = HeritageContext.getAll;
     
 
     useEffect(() => {
@@ -33,7 +35,7 @@ function Africa() {
                             <p className='site-name' >{item.name}</p>
                             <div className='bucketlist'>Save to Bucketlist</div>
                             <div className='visited'>Save to Visited</div>
-                            <div className='read-more'>Read More...</div>
+                            <div className='read-more' onClick={getAll} ><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
                 })

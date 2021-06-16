@@ -23,9 +23,22 @@ const HeritageState = (props) => {
   const [Latin, setLatin] = useState([]);
   const [Europe, setEurope] = useState([]);
   const [Arab, setArab] = useState([]);
+  const [Alldata, setAlldata] = useState([])
 
+
+  
 
   const [state, dispatch] = useReducer(heritageReducer, initialState);
+
+  //GET ALL DATA
+
+  const getAll = async() => {
+    setLoading(true);
+    const res =  await  fetch('./data.json');
+    const items = await res.json();
+    setAlldata(items)
+    setLoading(false)
+  }
 
   //Natural
 
@@ -89,8 +102,8 @@ const HeritageState = (props) => {
     const Num2 = Math.floor(Math.random()*Asia.length) + 1 
     const Num3 = Math.floor(Math.random()*Asia.length) + 1 
 
-    setLatin([Asia[Num1], Asia[Num2],Asia[Num3]])
-    setLoading(false)
+    setLatin([Asia[Num1], Asia[Num2],Asia[Num3]]);
+    setLoading(false);
   }
 
   //GET Latin DATA
@@ -125,7 +138,7 @@ const HeritageState = (props) => {
     setLoading(false)
   }
 
-  //GET EUROPE DATA
+  //GET Arab DATA
   const getArab = async () => {
     setLoading(true)
     const res =  await  fetch('./data.json');
@@ -192,7 +205,9 @@ const clickMe = () => {
         Europe,
         getEurope,
         Arab,
-        getArab
+        getArab,
+        Alldata,
+        getAll
       }}
     >
       {props.children}

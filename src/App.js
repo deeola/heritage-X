@@ -9,6 +9,7 @@ import Category from './components/home/Category';
 import Details from './components/home/Details';
 import CategoriesDetails from './components/home/CategoriesDetails';
 import CountriesDetails from './components/home/CountriesDetails';
+import Site from './components/home/Site';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/regions/:id'  component={Details} />
         <Route path='/categories/:id'  component={CategoriesDetails} />
         <Route path='/countries/:id'  component={CountriesDetails} />
+        <Route path='/:id'  component={Site} />
        
           
       </Switch>
@@ -36,6 +38,7 @@ function App() {
     
   );
 }
+
 
 
 export default App;

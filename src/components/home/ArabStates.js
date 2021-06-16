@@ -1,6 +1,9 @@
 import React, {useState, useContext, useEffect} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
+import {Link} from 'react-router-dom';
+
+
 function ArabStates() {
     const HeritageContext = useContext(heritageContext);
     const Arab = HeritageContext.Arab;
@@ -30,7 +33,7 @@ function ArabStates() {
                             <p className='site-name' >{item.name}</p>
                             <div className='bucketlist'>Save to Bucketlist</div>
                             <div className='visited'>Save to Visited</div>
-                            <div className='read-more'>Read More...</div>
+                            <div className='read-more'><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
                 })
