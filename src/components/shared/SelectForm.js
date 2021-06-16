@@ -2,15 +2,8 @@ import React,{useState, useMemo, useContext, useEffect} from 'react';
 import countryList from 'react-select-country-list';
 import Select from 'react-select';
 import heritageContext from '../context/Heritage/heritageContext';
-import Test from '../home/Test';
-import {Link} from 'react-router-dom'
-import Country from '../home/Country';
 import {useHistory} from 'react-router'
-import Africa from '../home/Africa';
-import Europe from '../home/Europe';
-import ArabStates from '../home/ArabStates'
-import Asia from '../home/Asia';
-import Latin from '../home/Latin';
+
 
 function SelectForm(props) {
 
@@ -125,48 +118,38 @@ function SelectForm(props) {
     }
 
     return (
-        <div>
+        <div className='formDiv'>
             <form  onSubmit={handleSubmit}>
-            <select onChange={handleChange}>
-                    <option value='select'>select</option>
+            <select className='mainSelect' onChange={handleChange}>
+                    <option value='select'>Select</option>
                     <option value='Country'>Country</option>
                     <option value='Region'>Region</option>
                     <option value='Category'>Category</option>
             </select>
-            <select style={showSelect()}>
+            <select className='subSelect' style={showSelect()}>
                 <option>Choose</option>
             </select>
-            <select style={showRegion()}>
+            <select className='subSelect' style={showRegion()}>
                     <option>Africa</option>
                     <option>Arab States</option>
                     <option>Asia and the Pacific</option>
                     <option>Europe and North America</option>
                     <option>Latin America and the Caribbean</option>
             </select>
-            <div style={showCountry()}>
-                <Select  options={options} value={value} onChange={changeHandler} />
+            <div className='subSelect' style={showCountry()}>
+                <Select className='subSelectCountry'  options={options} value={value} onChange={changeHandler} />
             </div>
 
-            <select style={showCategory()}>
+            <select className='subSelect' style={showCategory()}>
                     <option>Mixed</option>
                     <option>Cultural</option>
                     <option>Natural</option>
             </select>
-            <button>select</button>
+            <button>search</button>
 
             </form>
-            <Africa />
-            <Europe />
-            <ArabStates />
-            <Asia />
-            <Latin />
-
-
-
         </div>
     )
 }
 
 export default SelectForm;
-
-// export default withRouter(ContactForm)

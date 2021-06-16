@@ -1,8 +1,6 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import 'config';
+@import 'utilities';
+
 
 //HOME
 
@@ -11,3 +9,269 @@ body{
 
 //     }
 // }
+
+header{
+    background:url(../assets/home/mobile/hero-image.jpeg);
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    // z-index: -2;
+
+    &::after{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        content: '';
+        background-color: rgba(0, 0, 0, 0.719);
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    nav{
+        display: flex;
+        width: 80%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        position: relative;
+        z-index: 15;
+
+        .logo{
+            color: $white;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            
+        }
+
+        ul{
+            background-color: $white;
+            position: absolute;
+            top: 3rem;
+            width: 100%;
+            height: 200px;
+            padding: 20px 20px;
+            border-radius: 5px;
+            
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+            li{
+                list-style: none;
+
+            }
+
+        }
+        .hamIcons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
+                cursor: pointer;
+            }
+
+            .hamClose{
+                display: none;
+            }
+        }
+    }
+
+    .navLine{
+        background-color: rgba(255, 255, 255, 0.63);
+        height: 1px;
+        width: 100%;
+        margin-top: 5px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .hero-container{
+        width: 80%;
+        margin: auto;
+        margin-top: 60px;
+        
+        .hero-text{
+
+            position: relative;
+            z-index: 4;
+            align-items:left;
+            margin-top: 100px;
+
+            h1{
+                color: white;
+                margin-bottom: 5px;
+                font-size: 2.5rem;
+                span{
+                    color: $light-blue;
+                }
+            }
+            .Hero-subheading{
+                color: rgba(255, 255, 255, 0.801);
+                line-height: 1.7;
+                font-size: 13px;
+            }
+        }
+
+
+    }
+
+    .formDiv{
+        margin: auto;
+        position: relative;
+        z-index: 1000;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 70px;
+        
+    
+    
+        form{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            .mainSelect{
+                width: 100%;
+                margin-bottom: 10px;
+                height: 37px;
+                background-color: $white;
+                border: unset;
+                outline: none;
+                border-radius: 5px;
+                color: $dark-blue;
+                text-transform: uppercase;
+                font-weight: 700;
+                
+            }
+    
+            .subSelect{
+                width: 100%;
+                margin-bottom: 10px;
+                height: 37px;
+                background-color: $white;
+                border: unset;
+                outline: none;
+                border-radius: 5px;
+                color: $dark-blue;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+    
+            // .css-2b097c-container{
+                
+                
+            // }
+    
+            // Select{
+            //     background-color: white;
+            // }
+    
+            button{
+                width: 50%;
+                height: 37px;
+                background-color: $dark-blue;
+                border: unset;
+                outline: none;
+                border-radius: 5px;
+                color: white;
+                font-size: 15px;
+                margin: auto;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+//BODY
+
+main{
+    margin: 20px auto auto auto;
+    width: 80%;
+
+    .subMain-container{
+
+        .explore-container{
+            color: $dark-blue;
+            .explore{
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+
+            .explore-subtext{
+                margin-bottom: 10px;
+                font-size: 12px;
+            }
+
+        }
+
+        .site-container{
+
+            .site-image{
+                background-color: seagreen;
+                width: 300px;
+                height: 300px;
+                margin-bottom: 8px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .site-country{
+                margin-bottom: 8px;
+                color: $light-blue;
+                font-weight: 600;
+                font-size: 12px;
+            }
+
+            .site-name{
+                margin-bottom: 8px;
+                color: $dark-blue;
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            .bucketlist,.visited,.read-more{
+                background-color: $light-blue;
+                margin-bottom: 15px;
+                width: 50%;
+                font-size: 10px;
+                padding: 10px 8px;
+                border-radius: 5px;
+                color: white;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+
+        .seeMore{
+            /* Rectangle 18 */
+
+            background: rgba(103, 187, 248, 0.17);
+            border-radius: 5px;
+            margin-bottom: 50px;
+            width: 80%;
+            padding: 10px;
+            p{
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $dark-blue;
+
+            }
+            
+        }
+    }
+
+}
+

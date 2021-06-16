@@ -21,19 +21,32 @@ function Asia() {
     
     
     return (
-        <div>  
+        <section className='subMain-container'>  
+            <div className='explore-container'>
+                <p className='explore'>Explore Asia and the Pacific</p>
+                <p className='explore-subtext'>Rugged Landscape and fascinating history</p>
+            </div>
             {
                 Asia.map(item => {
                     return(
-                        <div key={uuid()}>
-                        <h1 >{`Asia: ${item.name}`}</h1>
-                        <p>{item.region.name}</p>
+                        <div className='site-container' key={uuid()}>
+                            <div className='site-image'>
+                                <img  alt={item.name} src={item.image_url}></img>
+                            </div>
+                            <p className='site-country'>{item.states[0].name}</p>
+                            <p className='site-name' >{item.name}</p>
+                            <div className='bucketlist'>Save to Bucketlist</div>
+                            <div className='visited'>Save to Visited</div>
+                            <div className='read-more'>Read More...</div>
                         </div>
                     )
                 })
             }
+            <div className='seeMore'>
+                <p>See More From Asia and the Pacific</p>
+            </div>
 
-        </div>
+        </section>
     )
 }
 

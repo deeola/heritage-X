@@ -7,12 +7,15 @@ function Header() {
         <header>
             <Navbar />
             <div className='navLine'></div>
-            <div>
-                <p className='Welcome to'>WELCOME TO</p>
-                <h1>HERITAGE<span>-X.</span></h1>
-                <p className='Hero-subheading'> Bringing UNESCO World Heritage Sites To Your Doorstep.</p>
+            <div className='hero-container'>
+                <div className='hero-text'>
+                    <h1>HERITAGE<span>-X.</span></h1>
+                    <p className='Hero-subheading'> Bringing UNESCO World Heritage Sites To Your Doorstep.</p>
+                </div>
+                <SelectForm />
             </div>
-            <SelectForm />
+            
+            
         </header>
     )
 }
