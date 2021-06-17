@@ -81,9 +81,9 @@ const HeritageState = (props) => {
     const Africas =  items.filter(item => item.region.name === 'Africa');
 
     //GET RANDOM NUMBERS
-    const Num1 = Math.floor(Math.random()*Africas.length) + 1 
-    const Num2 = Math.floor(Math.random()*Africas.length) + 1 
-    const Num3 = Math.floor(Math.random()*Africas.length) + 1 
+    const Num1 = Math.floor(Math.random()*Africas.length) 
+    const Num2 = Math.floor(Math.random()*Africas.length) 
+    const Num3 = Math.floor(Math.random()*Africas.length) 
 
     setAfrica([Africas[Num1], Africas[Num2],Africas[Num3]])
     setLoading(false)
@@ -101,9 +101,9 @@ const HeritageState = (props) => {
     const Asia =  items.filter(item => item.region.name === 'Asia and the Pacific');
 
     //GET RANDOM NUMBERS
-    const Num1 = Math.floor(Math.random()*Asia.length) + 1 
-    const Num2 = Math.floor(Math.random()*Asia.length) + 1 
-    const Num3 = Math.floor(Math.random()*Asia.length) + 1 
+    const Num1 = Math.floor(Math.random()*Asia.length) 
+    const Num2 = Math.floor(Math.random()*Asia.length)  
+    const Num3 = Math.floor(Math.random()*Asia.length) 
 
     setLatin([Asia[Num1], Asia[Num2],Asia[Num3]]);
     setLoading(false);
@@ -119,9 +119,9 @@ const HeritageState = (props) => {
     const Latins =  items.filter(item => item.region.name === 'Latin America and the Caribbean');
 
     //GET RANDOM NUMBERS
-    const Num1 = Math.floor(Math.random()*Latins.length) + 1 
-    const Num2 = Math.floor(Math.random()*Latins.length) + 1 
-    const Num3 = Math.floor(Math.random()*Latins.length) + 1 
+    const Num1 = Math.floor(Math.random()*Latins.length) 
+    const Num2 = Math.floor(Math.random()*Latins.length) 
+    const Num3 = Math.floor(Math.random()*Latins.length)  
 
     setAsia([Latins[Num1], Latins[Num2],Latins[Num3]])
     setLoading(false)
@@ -135,9 +135,9 @@ const HeritageState = (props) => {
     const Europes =  items.filter(item => item.region.name === 'Europe and North America');
 
     //GET RANDOM NUMBERS
-    const Num1 = Math.floor(Math.random()*Europes.length) + 1 
-    const Num2 = Math.floor(Math.random()*Europes.length) + 1 
-    const Num3 = Math.floor(Math.random()*Europes.length) + 1 
+    const Num1 = Math.floor(Math.random()*Europes.length) 
+    const Num2 = Math.floor(Math.random()*Europes.length) 
+    const Num3 = Math.floor(Math.random()*Europes.length) 
 
     setEurope([Europes[Num1], Europes[Num2],Europes[Num3]])
     setLoading(false)
@@ -151,9 +151,9 @@ const HeritageState = (props) => {
     const Arabs =  items.filter(item => item.region.name === 'Arab States');
 
     //GET RANDOM NUMBERS
-    const Num1 = Math.floor(Math.random()*Arabs.length) + 1 
-    const Num2 = Math.floor(Math.random()*Arabs.length) + 1 
-    const Num3 = Math.floor(Math.random()*Arabs.length) + 1 
+    const Num1 = Math.floor(Math.random()*Arabs.length)
+    const Num2 = Math.floor(Math.random()*Arabs.length) 
+    const Num3 = Math.floor(Math.random()*Arabs.length) 
 
     setArab([Arabs[Num1], Arabs[Num2],Arabs[Num3]])
     setLoading(false)

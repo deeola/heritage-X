@@ -16,6 +16,7 @@ import Latino from './components/home/Latino';
 import Asias from './components/home/Asias';
 import Arabo from './components/home/Arabo';
 import Visited from './components/visited/Visited';
+import Bucketlist from './components/bucketlist/Bucketlist';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/Asias' exact component={Asias} />
         <Route path='/Arabo' exact component={Arabo} />
         <Route path='/Visited'  component={Visited} />
+        <Route path='/Bucketlist'  component={Bucketlist} />
         <Route path='/regions/:id'  component={Details} />
         <Route path='/categories/:id'  component={CategoriesDetails} />
         <Route path='/countries/:id'  component={CountriesDetails} />

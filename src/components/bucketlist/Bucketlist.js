@@ -7,14 +7,14 @@ import uuid from 'react-uuid';
 
 
 
-function Visited() {
+function Bucketlist() {
     const HeritageContext = useContext(heritageContext);
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
+    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
 
-    const [Visited, setVisited] = useState([])
+    const [Bucketlist, setBucketList] = useState([])
     useEffect(() => {
-        const visit = JSON.parse(localStorage.getItem('visited'));
-        setVisited(visit);
+        const Bucket = JSON.parse(localStorage.getItem('buckets'));
+        setBucketList(Bucket);
     }, [])
 
     return (
@@ -23,7 +23,7 @@ function Visited() {
             <Navbar />
             <section className='subMain-container'>  
             {
-                Visited.length !== 0 && Visited.map(item => {
+                Bucketlist.length !== 0 && Bucketlist.map(item => {
                     return(
                         <div className='site-container' key={uuid()}>
                             <div className='site-image'>
@@ -32,9 +32,8 @@ function Visited() {
                             
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
-                            <div className='visited' >Remove</div>
-                            <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }} >Save to Buckelist</div>
-                            
+                            <div className='bucketlist' >Remove</div>
+                            <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
                             <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
@@ -48,4 +47,4 @@ function Visited() {
     )
 }
 
-export default Visited;
+export default Bucketlist

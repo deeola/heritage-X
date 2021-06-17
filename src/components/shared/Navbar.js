@@ -2,6 +2,7 @@ import React,{useContext} from 'react';
 import hamOpen from '../../assets/icons/icon-hamburger.svg';
 import hamClose from '../../assets/icons/icon-close.svg';
 import heritageContext from '../context/Heritage/heritageContext';
+import {Link} from 'react-router-dom';
 
 
 function Navbar() {
@@ -21,8 +22,8 @@ function Navbar() {
 
             <div className='logo'>H-X</div>
             <ul style={ulDisplay()}>
-                <li>Bucketlist</li>
-                <li>Visited</li>
+                <li><Link to='/Bucketlist'>Bucketlist</Link></li>
+                <li><Link to='/Visited'>Visited</Link></li>
                 <li>Login</li>
                 <p>Welcome, <span id='liNAME'>Adeola</span></p>
             </ul>
