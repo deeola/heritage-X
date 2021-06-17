@@ -396,11 +396,66 @@ footer .icons {
 
 .site-container .siteDetailsContainer .site-description h5 {
   margin: 5px 0px;
+  color: #0A3B5F;
 }
 
 .site-container .siteDetailsContainer .site-description .site-description-text {
   font-size: 14px;
   line-height: 1.7;
+}
+
+.site-container .siteDetailsContainer .second-details-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-container .siteDetailsContainer .second-details-div .subCategory {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.site-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category i {
+  font-size: 10px;
+  color: #67BBF8;
+}
+
+.site-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category p {
+  margin-left: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #67BBF8;
+}
+
+.site-container .siteDetailsContainer .second-details-div .subCategory .details-text {
+  font-weight: 700;
+  color: #0A3B5F;
+}
+
+.site-container .siteDetailsContainer .second-details-div .Save-container {
+  margin: 20px 0px;
+}
+
+.site-container .siteDetailsContainer .second-details-div .Save-container .bucketlist, .site-container .siteDetailsContainer .second-details-div .Save-container .visited, .site-container .siteDetailsContainer .second-details-div .Save-container .read-more {
+  background-color: #0A3B5F;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 10px;
+  padding: 10px 8px;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
 }
 
 .site-container .siteDetailsContainer .mapContainerDiv {
