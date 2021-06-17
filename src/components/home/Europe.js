@@ -43,9 +43,7 @@ function Europe() {
                     )
                 })
             }
-            <div className='seeMore'>
-                <p>See More From Europe and North America</p>
-            </div>
+            <Link className='seeMore' to='/Euro'><p>See More From Europe and North America</p></Link>
 
         </section>
     )

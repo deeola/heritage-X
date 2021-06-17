@@ -43,9 +43,7 @@ function Asia() {
                     )
                 })
             }
-            <div className='seeMore'>
-                <p>See More From Asia and the Pacific</p>
-            </div>
+            <Link className='seeMore' to='/Asias'><p>See More From Asia and the Pacific</p></Link>
 
         </section>
     )

@@ -89,6 +89,9 @@ const HeritageState = (props) => {
     setLoading(false)
   }
 
+  //GET AFR0 DATA
+  
+
 
   //GET ASIA DATA
   const getAsia = async () => {
@@ -105,6 +108,8 @@ const HeritageState = (props) => {
     setLatin([Asia[Num1], Asia[Num2],Asia[Num3]]);
     setLoading(false);
   }
+
+
 
   //GET Latin DATA
   const getLatin = async () => {

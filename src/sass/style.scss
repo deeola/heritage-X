@@ -275,3 +275,74 @@ main{
 
 }
 
+
+footer{
+    margin-top: 50px;
+    background: $dark-blue;
+    text-align: center;
+    padding: 30px 0px;
+    nav {
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .logo{
+            color: $white;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        ul {
+          
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          width: 50%;
+          li{
+            list-style: none;
+            margin-top: 10px;
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        }
+      }
+    
+    .footerSecondDiv {
+        margin-top: 20px;
+
+        .footerSecondText {
+            width: 90%;
+            margin: auto;
+            color: white;
+            font-size: 14px;
+        }
+
+    }
+
+    .copyIcon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+    }
+    
+    .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    width: 80% ;
+    margin:30px auto auto auto;
+    cursor: pointer;
+    }
+    
+}
+

@@ -4,38 +4,32 @@ import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
 import {useHistory} from 'react-router'
 
-function Africa() {
+function Latino() {
     const HeritageContext = useContext(heritageContext);
-    const Africa = HeritageContext.Africa;
-    const getAfrica = HeritageContext.getAfrica;
     const getAll = HeritageContext.getAll;
 
+    const [Alldata, setAlldata] = useState([])
 
-    //REACT HISTORY
-    const history = useHistory();
+
+    const getLatinos = async () => {
+        const res =  await  fetch('./data.json');
+        const items = await res.json();
+        const Latinoss =  items.filter(item => item.region.name === 'Latin America and the Caribbean');
+    
+        setAlldata(Latinoss)
+      }
+    
     
 
     useEffect(() => {
-        getAfrica()
+        getLatinos()
     },[])
 
-    // const Afro = () => {
-
-    //     history.push({
-    //         pathname:  "/Africas"
-    //      });
-        
-    // }
-    
     
     return (
         <section className='subMain-container'>  
-            <div className='explore-container'>
-                <p className='explore'>Explore Africa</p>
-                <p className='explore-subtext'>Wildlife, Medinas and Ancient Wonders</p>
-            </div>
             {
-                Africa.map(item => {
+                Alldata.map(item => {
                     return(
                         <div className='site-container' key={uuid()}>
                             <div className='site-image'>
@@ -52,11 +46,8 @@ function Africa() {
                 })
             }
 
-                <Link className='seeMore' to='/Afro'><p>See More From Africa</p></Link>
- 
-
         </section>
     )
 }
 
-export default Africa
+export default Latino;

@@ -37,9 +37,7 @@ function Latin() {
                     )
                 })
             }
-            <div className='seeMore'>
-                <p>See More From Latin America and Caribbean</p>
-            </div>
+            <Link className='seeMore' to='/Latino'><p>See More From Latin America and Caribbean</p></Link>
 
         </section>
     )

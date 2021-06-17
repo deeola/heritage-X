@@ -10,6 +10,11 @@ import Details from './components/home/Details';
 import CategoriesDetails from './components/home/CategoriesDetails';
 import CountriesDetails from './components/home/CountriesDetails';
 import Site from './components/home/Site';
+import Afro from './components/home/Afro';
+import Euro from './components/home/Euro';
+import Latino from './components/home/Latino';
+import Asias from './components/home/Asias';
+import Arabo from './components/home/Arabo';
 
 
 function App() {
@@ -23,17 +28,23 @@ function App() {
         <Route  path="/countries" exact component={Country} /> 
         <Route path="/regions" exact component={Region}  /> 
         <Route  path="/categories" exact component={Category} /> 
+        <Route path='/Afro' exact component={Afro} />
+        <Route path='/Euro' exact component={Euro} />
+        <Route path='/Latino' exact component={Latino} />
+        <Route path='/Asias' exact component={Asias} />
+        <Route path='/Arabo' exact component={Arabo} />
         <Route path='/regions/:id'  component={Details} />
         <Route path='/categories/:id'  component={CategoriesDetails} />
         <Route path='/countries/:id'  component={CountriesDetails} />
         <Route path='/:id'  component={Site} />
-       
-          
+        
+
+                  
       </Switch>
 
       </div>
-      
       </Router>
+      
     </HeritageState>
     
   );
@@ -43,5 +54,6 @@ function App() {
 
 export default App;
 
- 
 
+
+ 

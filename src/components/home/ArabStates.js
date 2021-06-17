@@ -38,9 +38,8 @@ function ArabStates() {
                     )
                 })
             }
-            <div className='seeMore'>
-                <p>See More From Asia States</p>
-            </div>
+
+            <Link className='seeMore' to='/Arabo'><p>See More From Arab States</p></Link>
 
         </section>
 
