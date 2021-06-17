@@ -1,26 +1,48 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import hamOpen from '../../assets/icons/icon-hamburger.svg';
-import hamClose from '../../assets/icons/icon-close.svg'
+import hamClose from '../../assets/icons/icon-close.svg';
+import heritageContext from '../context/Heritage/heritageContext';
+
 
 function Navbar() {
+
+    const HeritageContext = useContext(heritageContext)
+    
+    const displayMenu = HeritageContext.displayMenu;
+    const closeMenu = HeritageContext.closeMenu;
+    const ulDisplay = HeritageContext.ulDisplay;
+    const DisplayCloseIcon = HeritageContext.DisplayCloseIcon;
+    const DisplayOpenIcon = HeritageContext.DisplayOpenIcon;
+
+
     return (
         <nav>
+            <div className='navcontainer'>
+
             <div className='logo'>H-X</div>
-            <ul>
+            <ul style={ulDisplay()}>
                 <li>Bucketlist</li>
                 <li>Visited</li>
                 <li>Login</li>
                 <p>Welcome, <span id='liNAME'>Adeola</span></p>
             </ul>
             <div className='hamIcons'>
-                <div className='hamburger'>
+                <div style={DisplayOpenIcon()}
+          onClick={() => {
+            displayMenu();
+          }} className='hamburger'>
                     <img  src={hamOpen} alt='hamburger'></img>
                 </div>
-                <div className='hamClose'>
+                <div style={DisplayCloseIcon()}
+          onClick={() => {
+            closeMenu();
+          }} className='hamClose'>
                     <img  src={hamClose} alt='closeHamburger'></img>
                 </div>
                 
                 
+            </div>
+
             </div>
         </nav>
     )

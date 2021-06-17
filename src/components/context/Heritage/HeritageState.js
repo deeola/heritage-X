@@ -174,18 +174,92 @@ const HeritageState = (props) => {
         payload: items,
     });
     
-}
+  }
 
 
 
-const clickMe = () => {
-    getDatas();
-}
+  const clickMe = () => {
+      getDatas();
+  }
 
 
 
   //SET LOADING
+  
+  
   const setloading = () => dispatch({ type: set_loading });
+
+
+  //STORE BUCKET LIST
+    const storeTaskInLocalStorages = (task) => {
+      let buckets = [];
+      if (localStorage.getItem("buckets") === null) {
+        buckets = [];
+      } else {
+        buckets = JSON.parse(localStorage.getItem("buckets"));
+      }
+    
+      if (buckets.indexOf(task) == -1) {
+        buckets.push(task);
+      }
+    
+  localStorage.setItem("buckets", JSON.stringify(buckets));
+  }
+
+  //STORE VISITED
+
+  const storeTaskInLocalStoragesVisited = (task) => {
+      let visited = [];
+      if (localStorage.getItem("visited") === null) {
+        visited = [];
+      } else {
+        visited = JSON.parse(localStorage.getItem("visited"));
+      }
+    
+      if (visited.indexOf(task) == -1) {
+        visited.push(task);
+      }
+    
+    localStorage.setItem("visited", JSON.stringify(visited));
+  }
+
+  // Navigation
+
+  const [hamOpen, setHamOpen] = useState(false);
+  const [closeIcon, setCloseIcon] = useState(false);
+  const [openIcon, setOpenIcon] = useState(false);
+
+  const ulDisplay = () => {
+    return hamOpen ? {} : { display: "none" };
+  };
+
+  //DISPLAY CLOSE ICON
+  const DisplayCloseIcon = () => {
+    return closeIcon ? { display: "block" } : { display: "none" };
+  };
+
+  //DISPLAY OPEN ICON
+  const DisplayOpenIcon = () => {
+    return openIcon ? { display: "none" } : { display: "block" };
+  };
+
+  //MENU STYLE
+  const displayMenu = () => {
+    setHamOpen(true);
+    setCloseIcon(true);
+    setOpenIcon(true);
+  };
+
+  const closeMenu = () => {
+    setHamOpen(false);
+    setCloseIcon(false);
+    setOpenIcon(false);
+  };
+
+  
+
+
+
 
   
   //RETURN
@@ -212,7 +286,14 @@ const clickMe = () => {
         Arab,
         getArab,
         Alldata,
-        getAll
+        getAll,
+        storeTaskInLocalStorages,
+        storeTaskInLocalStoragesVisited,
+        DisplayOpenIcon,
+        DisplayCloseIcon,
+        ulDisplay,
+        closeMenu,
+        displayMenu
       }}
     >
       {props.children}

@@ -15,6 +15,7 @@ import Euro from './components/home/Euro';
 import Latino from './components/home/Latino';
 import Asias from './components/home/Asias';
 import Arabo from './components/home/Arabo';
+import Visited from './components/visited/Visited';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path='/Latino' exact component={Latino} />
         <Route path='/Asias' exact component={Asias} />
         <Route path='/Arabo' exact component={Arabo} />
+        <Route path='/Visited'  component={Visited} />
         <Route path='/regions/:id'  component={Details} />
         <Route path='/categories/:id'  component={CategoriesDetails} />
         <Route path='/countries/:id'  component={CountriesDetails} />
@@ -49,7 +51,6 @@ function App() {
     
   );
 }
-
 
 
 export default App;

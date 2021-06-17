@@ -31,53 +31,61 @@ header::after {
 }
 
 header nav {
+  position: relative;
+  z-index: 1050;
+}
+
+header .navcontainer {
   display: flex;
   width: 80%;
   margin: auto;
   justify-content: space-between;
   align-items: center;
   height: 3rem;
-  position: relative;
-  z-index: 15;
+  margin: auto;
 }
 
-header nav .logo {
+header .navcontainer .logo {
   color: #FFFFFF;
   font-size: 25px;
   font-weight: 700;
   cursor: pointer;
 }
 
-header nav ul {
+header .navcontainer ul {
   background-color: #FFFFFF;
   position: absolute;
   top: 3rem;
   width: 100%;
-  height: 200px;
+  height: 300px;
   padding: 20px 20px;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  display: none;
+  margin-top: 6px;
+  background-color: #e6e6e6;
 }
 
-header nav ul li {
+header .navcontainer ul li {
   list-style: none;
+  text-transform: uppercase;
+  color: #0A3B5F;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-header nav .hamIcons {
+header .navcontainer .hamIcons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header nav .hamIcons img {
+header .navcontainer .hamIcons img {
   filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
   cursor: pointer;
 }
 
-header nav .hamIcons .hamClose {
+header .navcontainer .hamIcons .hamClose {
   display: none;
 }
 
@@ -174,52 +182,52 @@ header .formDiv form button {
   text-transform: uppercase;
 }
 
-main {
+main, .afro-container {
   margin: 20px auto auto auto;
   width: 80%;
 }
 
-main .subMain-container .explore-container {
+main .subMain-container .explore-container, .afro-container .subMain-container .explore-container {
   color: #0A3B5F;
 }
 
-main .subMain-container .explore-container .explore {
+main .subMain-container .explore-container .explore, .afro-container .subMain-container .explore-container .explore {
   font-weight: 700;
   margin-bottom: 5px;
 }
 
-main .subMain-container .explore-container .explore-subtext {
+main .subMain-container .explore-container .explore-subtext, .afro-container .subMain-container .explore-container .explore-subtext {
   margin-bottom: 10px;
   font-size: 12px;
 }
 
-main .subMain-container .site-container .site-image {
+main .subMain-container .site-container .site-image, .afro-container .subMain-container .site-container .site-image {
   background-color: seagreen;
   width: 300px;
   height: 300px;
   margin-bottom: 8px;
 }
 
-main .subMain-container .site-container .site-image img {
+main .subMain-container .site-container .site-image img, .afro-container .subMain-container .site-container .site-image img {
   width: 100%;
   height: 100%;
 }
 
-main .subMain-container .site-container .site-country {
+main .subMain-container .site-container .site-country, .afro-container .subMain-container .site-container .site-country {
   margin-bottom: 8px;
   color: #67BBF8;
   font-weight: 600;
   font-size: 12px;
 }
 
-main .subMain-container .site-container .site-name {
+main .subMain-container .site-container .site-name, .afro-container .subMain-container .site-container .site-name {
   margin-bottom: 8px;
   color: #0A3B5F;
   font-weight: 600;
   font-size: 18px;
 }
 
-main .subMain-container .site-container .bucketlist, main .subMain-container .site-container .visited, main .subMain-container .site-container .read-more {
+main .subMain-container .site-container .bucketlist, main .subMain-container .site-container .visited, main .subMain-container .site-container .read-more, .afro-container .subMain-container .site-container .bucketlist, .afro-container .subMain-container .site-container .visited, .afro-container .subMain-container .site-container .read-more {
   background-color: #67BBF8;
   margin-bottom: 15px;
   width: 50%;
@@ -231,7 +239,7 @@ main .subMain-container .site-container .bucketlist, main .subMain-container .si
   font-weight: 700;
 }
 
-main .subMain-container .seeMore {
+main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
   /* Rectangle 18 */
   background: rgba(103, 187, 248, 0.17);
   border-radius: 5px;
@@ -240,13 +248,77 @@ main .subMain-container .seeMore {
   padding: 10px;
 }
 
-main .subMain-container .seeMore p {
+main .subMain-container .seeMore p, .afro-container .subMain-container .seeMore p {
   text-transform: uppercase;
   text-align: center;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 700;
   color: #0A3B5F;
+}
+
+.afro-container {
+  width: 100%;
+  margin-top: 0;
+}
+
+.afro-container .subMain-container {
+  width: 80%;
+  margin: auto;
+}
+
+.afro-container nav {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  position: relative;
+  z-index: 15;
+  background: #0A3B5F;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.afro-container nav .logo {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.afro-container nav ul {
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  height: 200px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+
+.afro-container nav ul li {
+  list-style: none;
+}
+
+.afro-container nav .hamIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.afro-container nav .hamIcons img {
+  filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
+  cursor: pointer;
+}
+
+.afro-container nav .hamIcons .hamClose {
+  display: none;
 }
 
 footer {

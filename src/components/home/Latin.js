@@ -7,6 +7,8 @@ function Latin() {
     const HeritageContext = useContext(heritageContext);
     const Latin = HeritageContext.Latin;
     const getLatin = HeritageContext.getLatin;
+    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
+    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
     
 
     useEffect(() => {
@@ -30,8 +32,8 @@ function Latin() {
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
-                            <div className='bucketlist'>Save to Bucketlist</div>
-                            <div className='visited'>Save to Visited</div>
+                            <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
+                            <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
                             <div className='read-more'><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )

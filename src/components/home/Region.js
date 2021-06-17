@@ -1,30 +1,44 @@
 import React,{useContext} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import {Link} from 'react-router-dom';
+import Navbar from '../shared/Navbar';
+import Footer from '../shared/Footer';
+import uuid from 'react-uuid';
 
 
 function Region() {
 
     const HeritageContext = useContext(heritageContext);
-
     const Regions = HeritageContext.Regions;
+    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
+    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    
+    
     return (
-        <div>
+        <div className='afro-container'>
+            <Navbar />
+            <section className='subMain-container'>  
             {
                 Regions.map(item => {
                     return(
-                        <div>
-                        <h4>{item.states[0].name}</h4>
-                        <img src={item.image_url} alt=''></img>
-                        <h4>{item.name}</h4>
-                        <p>{item.category.name}</p>
-                        <Link to={`/regions/${item.id}`}>Click me</Link>
-                    </div>
+                        <div className='site-container' key={uuid()}>
+                            <div className='site-image'>
+                            <img  alt={item.name} src={item.image_url}></img>
+                            </div>
+                            
+                            <p className='site-country'>{item.states[0].name}</p>
+                            <p className='site-name' >{item.name}</p>
+                            <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
+                            <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
+                            <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
+                        </div>
                     )
                 })
-
             }
-            
+
+            </section>
+            <Footer />
+
         </div>
     )
 }

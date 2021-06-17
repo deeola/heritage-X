@@ -23,14 +23,23 @@ header{
     }
 
     nav{
+        position: relative;
+        z-index: 1050;
+
+    }
+
+    .navcontainer{
         display: flex;
         width: 80%;
         margin: auto;
         justify-content: space-between;
         align-items: center;
         height: 3rem;
-        position: relative;
-        z-index: 15;
+        margin: auto;
+        
+       
+
+        
 
         .logo{
             color: $white;
@@ -45,17 +54,21 @@ header{
             position: absolute;
             top: 3rem;
             width: 100%;
-            height: 200px;
+            height: 300px;
             padding: 20px 20px;
-            border-radius: 5px;
             
             
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            display: none;
+            margin-top: 6px;
+            background-color: rgb(230, 230, 230);
             li{
                 list-style: none;
+                text-transform: uppercase;
+                color: $dark-blue;
+                font-weight: 700;
+                cursor: pointer;
 
             }
 
@@ -122,8 +135,7 @@ header{
         cursor: pointer;
         width: 100%;
         margin-top: 70px;
-        
-    
+
     
         form{
             display: flex;
@@ -185,7 +197,7 @@ header{
 
 //BODY
 
-main{
+main,.afro-container{
     margin: 20px auto auto auto;
     width: 80%;
 
@@ -266,6 +278,151 @@ main{
     }
 
 }
+
+.afro-container{
+    width: 100%;
+    margin-top: 0;
+
+    .subMain-container{
+        width: 80%;
+        margin: auto;
+    }
+
+    nav{
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        position: relative;
+        z-index: 15;
+        background: $dark-blue;
+        padding: 20px;
+        margin-bottom: 30px;
+
+        .logo{
+            color: $white;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            
+        }
+
+        ul{
+            background-color: $white;
+            position: absolute;
+            top: 3rem;
+            width: 100%;
+            height: 200px;
+            padding: 20px 20px;
+            border-radius: 5px;
+            
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+            li{
+                list-style: none;
+
+            }
+
+        }
+        .hamIcons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
+                cursor: pointer;
+            }
+
+            .hamClose{
+                display: none;
+            }
+        }
+    }
+
+}
+
+// .subMain-container{
+
+//     .explore-container{
+//         color: $dark-blue;
+//         .explore{
+//             font-weight: 700;
+//             margin-bottom: 5px;
+//         }
+
+//         .explore-subtext{
+//             margin-bottom: 10px;
+//             font-size: 12px;
+//         }
+
+//     }
+
+//     .site-container{
+
+//         .site-image{
+//             background-color: seagreen;
+//             width: 300px;
+//             height: 300px;
+//             margin-bottom: 8px;
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//             }
+//         }
+//         .site-country{
+//             margin-bottom: 8px;
+//             color: $light-blue;
+//             font-weight: 600;
+//             font-size: 12px;
+//         }
+
+//         .site-name{
+//             margin-bottom: 8px;
+//             color: $dark-blue;
+//             font-weight: 600;
+//             font-size: 18px;
+//         }
+
+//         .bucketlist,.visited,.read-more{
+//             background-color: $light-blue;
+//             margin-bottom: 15px;
+//             width: 50%;
+//             font-size: 10px;
+//             padding: 10px 8px;
+//             border-radius: 5px;
+//             color: white;
+//             text-transform: uppercase;
+//             font-weight: 700;
+//         }
+//     }
+
+//     .seeMore{
+//         /* Rectangle 18 */
+
+//         background: rgba(103, 187, 248, 0.17);
+//         border-radius: 5px;
+//         margin-bottom: 50px;
+//         width: 80%;
+//         padding: 10px;
+//         p{
+//         text-transform: uppercase;
+//         text-align: center;
+//         font-size: 13px;
+//         text-transform: uppercase;
+//         font-weight: 700;
+//         color: $dark-blue;
+
+//         }
+        
+//     }
+// }
+
 
 
 footer{

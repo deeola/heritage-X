@@ -47,6 +47,10 @@ import {
 
 
 function Site({ match }) {
+
+    const HeritageContext = useContext(heritageContext);
+    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
+    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
     
     const [Alldata, setAlldata] = useState([])
 
@@ -177,8 +181,8 @@ function Site({ match }) {
                                 <p className='details-text'>{item.longitude}</p>
                             </div>
                             <div className='Save-container'>
-                                <div className='bucketlist'>Save to Bucketlist</div>
-                                <div className='visited'>Save to Visited</div>
+                                <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
+                                <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
                             </div>
 
 
