@@ -318,3 +318,92 @@ footer .icons {
   margin: 30px auto auto auto;
   cursor: pointer;
 }
+
+.site-container nav {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  position: relative;
+  z-index: 15;
+  background: #0A3B5F;
+  padding: 20px;
+}
+
+.site-container nav .logo {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-container nav ul {
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  height: 200px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+
+.site-container nav ul li {
+  list-style: none;
+}
+
+.site-container nav .hamIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-container nav .hamIcons img {
+  filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
+  cursor: pointer;
+}
+
+.site-container nav .hamIcons .hamClose {
+  display: none;
+}
+
+.site-container .siteDetailsContainer {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.site-container .siteDetailsContainer .site-country-region {
+  font-size: 14px;
+}
+
+.site-container .siteDetailsContainer .siteCountry {
+  margin: 10px 0px 5px 0px;
+}
+
+.site-container .siteDetailsContainer .site-image {
+  margin: 20px 0px;
+}
+
+.site-container .siteDetailsContainer .site-description {
+  margin: 10px 0px;
+}
+
+.site-container .siteDetailsContainer .site-description h5 {
+  margin: 5px 0px;
+}
+
+.site-container .siteDetailsContainer .site-description .site-description-text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.site-container .siteDetailsContainer .mapContainerDiv {
+  width: 100%;
+  height: 400px;
+}

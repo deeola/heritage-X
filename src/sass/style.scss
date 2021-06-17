@@ -2,14 +2,6 @@
 @import 'utilities';
 
 
-//HOME
-
-// #Home{
-//     header{
-
-//     }
-// }
-
 header{
     background:url(../assets/home/mobile/hero-image.jpeg);
     height: 500px;
@@ -346,3 +338,106 @@ footer{
     
 }
 
+
+//SITES
+
+.site-container{
+    nav{
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        position: relative;
+        z-index: 15;
+        background: $dark-blue;
+        padding: 20px;
+
+        .logo{
+            color: $white;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            
+        }
+
+        ul{
+            background-color: $white;
+            position: absolute;
+            top: 3rem;
+            width: 100%;
+            height: 200px;
+            padding: 20px 20px;
+            border-radius: 5px;
+            
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+            li{
+                list-style: none;
+
+            }
+
+        }
+        .hamIcons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
+                cursor: pointer;
+            }
+
+            .hamClose{
+                display: none;
+            }
+        }
+    }
+
+
+    .siteDetailsContainer{
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+
+        .site-country-region{
+            font-size: 14px;
+        }
+
+        .siteCountry{
+            margin: 10px 0px 5px 0px;
+            
+        }
+        .site-image{
+            margin: 20px 0px;
+        }
+
+        .site-description{
+            margin: 10px 0px;
+            h5{
+                margin: 5px 0px;
+            }
+            .site-description-text{
+                font-size: 14px;
+                line-height: 1.7;
+            }
+            
+        }
+
+        .mapContainerDiv{
+            width: 100%;
+            height: 400px;
+        }
+
+        
+    }
+
+
+
+
+
+}

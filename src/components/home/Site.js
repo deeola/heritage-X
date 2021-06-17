@@ -1,11 +1,53 @@
 import React,{useEffect, useContext, useState } from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
+import Navbar from '../shared/Navbar';
+import Footer from '../shared/Footer';
+
+
+import {
+    GoogleMap,
+    withScriptjs,
+    withGoogleMap,
+    Marker,
+  } from "react-google-maps";
+  
+  
+//   function MyMap() {
+//     const BerlinDessau = [
+//       {
+//         lat: 52.520008,
+//         lng: 13.404954,
+//         parkId: 1,
+//         name: "berlin",
+//       },
+//       {
+//         lat: 51.83864,
+//         lng: 12.24555,
+//         parkId: 2,
+//         name: "dessau",
+//       },
+//     ];
+//     return (
+//       <GoogleMap
+//         defaultZoom={7}
+//         defaultCenter={{ lat: 52.520008, lng: 13.404954 }}
+//       >
+//         {BerlinDessau.map((city) => (
+//           <Marker key={city.parkId} position={{ lat: city.lat, lng: city.lng }} />
+//         ))}
+//       </GoogleMap>
+//     );
+//   }
+  
+//   const WrappedMap = withScriptjs(withGoogleMap(MyMap));
+
+
+
+
 
 function Site({ match }) {
     
-    // const HeritageContext = useContext(heritageContext);
-
     const [Alldata, setAlldata] = useState([])
 
 
@@ -27,22 +69,128 @@ function Site({ match }) {
         
         
     },[])
+
+    //MAPS
+    
     
     return (
-        <div>
+        <div className='site-container'>
+            <Navbar />
             {Alldata.length !== 0 && Alldata.map(item => {
 
+                const Laty = Number(item.latitude);
+                const Long = Number(item.longitude)
+
+                function MyMap() {
+                    const BerlinDessau = [
+                      {
+                        lat: Laty,
+                        lng: Long,
+                        parkId: 1
+                      }
+                    ];
+                    return (
+                      <GoogleMap
+                        defaultZoom={7}
+                        defaultCenter={{ lat: Laty, lng:Long}}
+                      >
+                        {BerlinDessau.map((city) => (
+                          <Marker key={city.parkId} position={{ lat: city.lat, lng: city.lng }} />
+                        ))}
+                        {/* {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} /> */}
+                      </GoogleMap>
+                    );
+                  }
+                  
+                  const WrappedMap = withScriptjs(withGoogleMap(MyMap));
+                
+
                 return (
-                    <div key={uuid()}>
-                        <h1>{item.name}</h1>
-                        <h1>{item.latitude}</h1>
-                        <h1>{item.longitude}</h1>
-                        <h1>{item.region.name}</h1>
-                        <img src={item.image_url} alt=''></img>
-                        <p>{item.short_description}</p>
-                        <h1>{item.states[0].name}</h1>
-                        <h1>{item.category.name}</h1>
-                        <h1>{item.date_inscribed}</h1>
+                    
+                    <div className='siteDetailsContainer' key={uuid()}>
+                        <div className='first-details-container'>
+                            <h3 className='siteName'>{item.name}</h3>
+                            <div className='site-country-region'>
+                                <p className='siteCountry'>{item.states[0].name}</p>
+                                <p className='siteRegion'>{item.region.name}</p>
+
+                            </div>
+                            <div className='site-image'>
+                                <img src={item.image_url} alt=''></img>
+                            </div>
+                            <div className='site-description'>
+                                <h5>THE SITE</h5>
+                                <p className='site-description-text'>{item.short_description}</p>
+                            </div>
+                            
+                        </div>
+                        <div className='second-details-div'>
+                            <div className='subCategory'> 
+                                <div className='sub-sub-category'>
+                                    <i className="fas fa-box"></i>
+                                    <p className='details-title'>CATEGORY</p>
+                                    
+                                </div>
+                                <p className='details-text'>{item.category.name}</p>
+                            </div>
+                            <div className='subCategory'> 
+                                <div className='sub-sub-category'>
+                                    <i className="fas fa-location-arrow"></i> 
+                                    <p className='details-title'>COUNTRY</p>  
+                                    
+                                </div>
+                                <p className='details-text'>{item.states[0].name}</p>
+                            </div>
+                            <div className='subCategory'> 
+                                <div className='sub-sub-category'>
+                                    <i className="far fa-calendar-alt"></i> 
+                                    <p className='details-title'>DATE INSCRIBED</p> 
+                                </div>
+                                <p className='details-text'>{item.date_inscribed}</p>
+                            </div>
+                            <div className='subCategory'> 
+                                <div className='sub-sub-category'>
+                                    <i className="fas fa-globe"></i>  
+                                    <p className='details-title'>REGION</p> 
+                                </div>
+                                <p className='details-text'>{item.region.name}</p>
+                            </div>
+                            <div className='subCategory'> 
+                                <div className='sub-sub-category'>
+                                    <i className="fas fa-closed-captioning"></i> 
+                                    <p className='details-title'>COUNTRY CODE</p> 
+                                </div>
+                                <p className='details-text'>{item.iso_codes[0].alpha_2_code}</p>
+                            </div>
+                            <div className='subCategory'> 
+                                <div className='sub-sub-category'>
+                                    <i className="fas fa-grip-lines"></i> 
+                                    <p className='details-title'>Latitude</p> 
+                                </div>
+                                <p className='details-text'>{item.latitude}</p>
+                            </div>
+                            <div className='subCategory'> 
+                                <div className='sub-sub-category'>
+                                    <i className="fas fa-grip-lines-vertical"></i> 
+                                    <p className='details-title'>Longitude</p> 
+                                </div>
+                                <p className='details-text'>{item.longitude}</p>
+                            </div>
+                            <div className='Save-container'>
+                                <div className='bucketlist'>Save to Bucketlist</div>
+                                <div className='visited'>Save to Visited</div>
+                            </div>
+
+
+                        </div>
+                        <div className="mapContainerDiv">
+                            <WrappedMap
+                                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${`AIzaSyDe3n2kCyxwMV82eyQtemz11qqMDrhsfto`}`}
+                                loadingElement={<div style={{ height: "100%" }} />}
+                                containerElement={<div style={{ height: "100%" }} />}
+                                mapElement={<div style={{ height: "100%" }} />}
+                            />
+                        </div>
                     </div>
                         
                         
@@ -50,6 +198,7 @@ function Site({ match }) {
                 )
                 
             })}
+            <Footer />
         </div>
     )
 }
