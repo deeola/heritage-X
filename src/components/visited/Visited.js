@@ -17,6 +17,31 @@ function Visited() {
         setVisited(visit);
     }, [])
 
+    //REMOVE
+    const removeTaskFromLocalStoragesVisited = (items) => {
+        let visited;
+        if (localStorage.getItem("visited") === null) {
+          visited = [];
+      
+          //notify that there is no bucketlist
+        } else {
+          visited = JSON.parse(localStorage.getItem("visited"));
+        }
+
+      
+        visited.forEach( (task, index) => {
+          if (items.id === task.id) {
+
+            visited.splice(index, 1);
+          }
+        });
+      
+        localStorage.setItem("visited", JSON.stringify(visited));
+        setVisited(visited);
+      }
+
+    
+
     return (
         
         <div className='afro-container'>
@@ -32,7 +57,7 @@ function Visited() {
                             
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
-                            <div className='visited' >Remove</div>
+                            <div className='visited remove'  onClick={() => {removeTaskFromLocalStoragesVisited(item) }} >Remove</div>
                             <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }} >Save to Buckelist</div>
                             
                             <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
