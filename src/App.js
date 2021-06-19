@@ -17,6 +17,8 @@ import Asias from './components/home/Asias';
 import Arabo from './components/home/Arabo';
 import Visited from './components/visited/Visited';
 import Bucketlist from './components/bucketlist/Bucketlist';
+import SignUp from './components/login/SignUp';
+import Login from './components/login/Login';
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
         <Route path='/Visited'  component={Visited} />
         <Route path='/Bucketlist'  component={Bucketlist} />
         <Route path='/regions/:id'  component={Details} />
+        <Route path='/SignUp'  component={SignUp} />
+        <Route path='/Login'  component={Login} />
         <Route path='/categories/:id'  component={CategoriesDetails} />
         <Route path='/countries/:id'  component={CountriesDetails} />
         <Route path='/:id'  component={Site} />
@@ -59,4 +63,3 @@ export default App;
 
 
 
- 

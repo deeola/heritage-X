@@ -24,7 +24,7 @@ function Navbar() {
             <ul style={ulDisplay()}>
                 <li><Link to='/Bucketlist'>Bucketlist</Link></li>
                 <li><Link to='/Visited'>Visited</Link></li>
-                <li>Login</li>
+                <li><Link to='/SignUp'>Register</Link></li>
                 <p>Welcome, <span id='liNAME'>Adeola</span></p>
             </ul>
             <div className='hamIcons'>
