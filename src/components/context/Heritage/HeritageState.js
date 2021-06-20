@@ -2,9 +2,17 @@ import React, { useReducer, useState,useEffect } from "react";
 import heritageContext from "./heritageContext";
 import heritageReducer from "./heritageReducer";
 import { get_Data, set_loading,get_Natural } from "../types";
-import axios from 'axios'
+import {useHistory} from 'react-router';
+
 
 const HeritageState = (props) => {
+
+  const history = useHistory();
+
+  
+
+
+  
   //INITIAL STATE
   const initialState = {
     data: [],
@@ -256,6 +264,22 @@ const HeritageState = (props) => {
     setOpenIcon(false);
   };
 
+  //LOADING
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+
+  
+  
+  function Submitform() {
+    
+    setIsSubmitted(true);
+  //   history.push({
+  //     pathname:  "/"
+  //  });
+
+  console.log(history)
+  }
+
   
 
 
@@ -293,7 +317,9 @@ const HeritageState = (props) => {
         DisplayCloseIcon,
         ulDisplay,
         closeMenu,
-        displayMenu
+        displayMenu,
+        isSubmitted,
+        Submitform
       }}
     >
       {props.children}

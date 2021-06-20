@@ -9,7 +9,7 @@ import uuid from 'react-uuid';
 
 function Bucketlist() {
     const HeritageContext = useContext(heritageContext);
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const {isSubmitted, Submitform,storeTaskInLocalStoragesVisited} = HeritageContext;
 
     const [Bucketlist, setBucketList] = useState([])
     useEffect(() => {
@@ -50,7 +50,7 @@ function Bucketlist() {
             <Navbar />
             <section className='subMain-container'>  
             {
-                Bucketlist.length !== 0 && Bucketlist.map(item => {
+                Bucketlist.length !== 0 && isSubmitted ? Bucketlist.map(item => {
                     return(
                         <div className='site-container' key={uuid()}>
                             <div className='site-image'>
@@ -64,7 +64,7 @@ function Bucketlist() {
                             <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
-                })
+                }) : <div>Please login or signup to see your bucketlist</div>
             }
 
             </section>

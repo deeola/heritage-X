@@ -29,7 +29,7 @@ const useSign = (callback, ValidateSign) => {
   //Set to local storage
 
   const signUpLocal = () => {
-    localStorage.setItem("SignUpDetails", JSON.stringify(values));
+    localStorage.setItem("SignUp", JSON.stringify(values));
   };
 
   //On submit Event

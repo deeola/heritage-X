@@ -1,11 +1,18 @@
-import React, { Fragment } from "react";
+import React, {useContext, Fragment } from "react";
 import { Link } from "react-router-dom";
 import useForm from "./useForm";
 import Validate from './Validate';
-const Login = ({Submitform}) => {
+import heritageContext from "../context/Heritage/heritageContext";
+const Login = () => {
+
+  const HeritageContext = useContext(heritageContext);
+  const {isSubmitted, Submitform} = HeritageContext;
+
+
   const {signValues, handleChangeSign, onSubmitSignin,error } = useForm(Submitform, Validate);
   const { mainusername, mainpassword } = signValues;
   return (
+    
     <div className='formDesign'>
       <div className='LoginHeader'>
         <div>

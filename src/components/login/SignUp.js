@@ -1,14 +1,12 @@
-import React, {useState, Fragment} from "react";
+import React, {useContext, Fragment} from "react";
 import { Link } from "react-router-dom";
 import useSign from './useSign'
 import ValidateSign from "./ValidateSign";
+import heritageContext from "../context/Heritage/heritageContext";
 
 const SignUp = () =>{
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  function Submitform() {
-    setIsSubmitted(true);
-  }
+  const HeritageContext = useContext(heritageContext);
+  const {isSubmitted, Submitform} = HeritageContext;
 
     const {values, handleChange,onSubmit,error} = useSign(Submitform,ValidateSign);
     const {username, email, password2,password} = values;

@@ -9,7 +9,8 @@ import uuid from 'react-uuid';
 
 function Visited() {
     const HeritageContext = useContext(heritageContext);
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
+    const {isSubmitted, Submitform,storeTaskInLocalStorages} = HeritageContext;
+
 
     const [Visited, setVisited] = useState([])
     useEffect(() => {
@@ -48,7 +49,7 @@ function Visited() {
             <Navbar />
             <section className='subMain-container'>  
             {
-                Visited.length !== 0 && Visited.map(item => {
+                Visited.length !== 0 && isSubmitted ? Visited.map(item => {
                     return(
                         <div className='site-container' key={uuid()}>
                             <div className='site-image'>
@@ -63,7 +64,7 @@ function Visited() {
                             <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
-                })
+                }) : <div>Please Login to continue</div>
             }
 
             </section>

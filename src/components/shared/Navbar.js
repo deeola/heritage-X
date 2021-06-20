@@ -7,25 +7,30 @@ import {Link} from 'react-router-dom';
 
 function Navbar() {
 
-    const HeritageContext = useContext(heritageContext)
-    
-    const displayMenu = HeritageContext.displayMenu;
-    const closeMenu = HeritageContext.closeMenu;
-    const ulDisplay = HeritageContext.ulDisplay;
-    const DisplayCloseIcon = HeritageContext.DisplayCloseIcon;
-    const DisplayOpenIcon = HeritageContext.DisplayOpenIcon;
+    const HeritageContext = useContext(heritageContext);
+
+    const {displayMenu,closeMenu,ulDisplay,DisplayCloseIcon,DisplayOpenIcon,isSubmitted, Submitform} = HeritageContext;
+
+    //local storage
+
+    const signin = JSON.parse(localStorage.getItem('SignIn'));
+
+    const refreshPage = ()=>{
+        window.location.reload();
+     }
+
 
 
     return (
         <nav>
             <div className='navcontainer'>
-
             <div className='logo'>H-X</div>
             <ul style={ulDisplay()}>
                 <li><Link to='/Bucketlist'>Bucketlist</Link></li>
                 <li><Link to='/Visited'>Visited</Link></li>
-                <li><Link to='/SignUp'>Register</Link></li>
-                <p>Welcome, <span id='liNAME'>Adeola</span></p>
+                {isSubmitted ? '' : <li><Link to='/SignUp'>Register</Link></li>}
+                {isSubmitted ? <li onClick={refreshPage}><Link to='/'>Logout</Link></li> : <li><Link to='/Login'>Login</Link></li>}
+                {isSubmitted && <li>{`Hello, ${signin.mainusername}`}</li> }
             </ul>
             <div className='hamIcons'>
                 <div style={DisplayOpenIcon()}

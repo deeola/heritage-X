@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
+import {useHistory} from 'react-router';
+
 
 const useForm = (callback, Validate) => {
+
+  const history = useHistory();
+  
 
   //GENERAL
 
@@ -14,6 +19,8 @@ const useForm = (callback, Validate) => {
     mainpassword: "",
   });
 
+  console.log(signValues)
+
 
 
   const handleChangeSign = (e) => {
@@ -24,25 +31,32 @@ const useForm = (callback, Validate) => {
     });
   };
 
-
-
-  const onSubmitSignin = (e) => {
-    e.preventDefault();
-    setError(Validate(signValues))
-    signUpLocalSign();
-    setIsSubmitting(true)
-  };
-
   //SET TO LOCAL STORAGE
 
 
-  const signUpLocalSign = () => {
-    localStorage.setItem("SignInDetails", JSON.stringify(signValues));
+  // const signUpLocalSign = () => {
+  //   ;
+  // };
+
+
+
+
+  const onSubmitSignin = (e) => {
+    e.preventDefault(); 
+    localStorage.setItem("SignIn", JSON.stringify(signValues));
+    setError(Validate(signValues))
+    setIsSubmitting(true)
+    
+    
   };
 
+  
   useEffect(() => {
     if(Object.keys(error).length === 0 && isSubmitting){
       callback();
+        history.push({
+      pathname:  "/"
+   });
     }
   },[error])
 

@@ -3,14 +3,16 @@ function Validate(signValues) {
     let errors = {}
 
     //Fetch signup details from local storage
-    const signUpDetails = localStorage.getItem('SignUpDetails');
+    const signUpDetails = localStorage.getItem('SignUp');
 
     const {username, password} = JSON.parse(signUpDetails)
 
 
     //Sign in Fetch
 
-    const SignInDetails = localStorage.getItem('SignInDetails');
+    const SignInDetails = localStorage.getItem('SignIn');
+
+    console.log(SignInDetails)
     const {mainpassword,mainusername} = JSON.parse(SignInDetails);
 
 
