@@ -32,10 +32,7 @@ function Bucketlist() {
       
         buckets.forEach( (task, index) => {
           if (items.id === task.id) {
-              console.log(buckets)
-
             buckets.splice(index, 1);
-            console.log(buckets)
           }
         });
       
@@ -45,12 +42,16 @@ function Bucketlist() {
     
 
     return (
-        
+
         <div className='afro-container'>
-            <Navbar />
-            <section className='subMain-container'>  
+          <Navbar />
+            
+            <section className='subMain-container'> 
+
             {
-                Bucketlist.length !== 0 && isSubmitted ? Bucketlist.map(item => {
+              isSubmitted ?
+              
+                Bucketlist.length !== 0 ? Bucketlist.map(item => {
                     return(
                         <div className='site-container' key={uuid()}>
                             <div className='site-image'>
@@ -64,8 +65,11 @@ function Bucketlist() {
                             <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
-                }) : <div>Please login or signup to see your bucketlist</div>
+                }) : <div>Your BucketList is empty</div>
+
+                   : <div>Kindly login to View Visit List</div>
             }
+           
 
             </section>
             <Footer />

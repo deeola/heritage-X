@@ -268,56 +268,62 @@ main .subMain-container .seeMore p, .afro-container .subMain-container .seeMore 
 }
 
 .afro-container nav {
+  position: relative;
+  z-index: 1050;
+  background-color: #0A3B5F;
+}
+
+.afro-container .navcontainer {
   display: flex;
-  width: 100%;
+  width: 80%;
   margin: auto;
   justify-content: space-between;
   align-items: center;
   height: 3rem;
-  position: relative;
-  z-index: 15;
-  background: #0A3B5F;
-  padding: 20px;
-  margin-bottom: 30px;
+  margin: auto;
 }
 
-.afro-container nav .logo {
+.afro-container .navcontainer .logo {
   color: #FFFFFF;
   font-size: 25px;
   font-weight: 700;
   cursor: pointer;
 }
 
-.afro-container nav ul {
+.afro-container .navcontainer ul {
   background-color: #FFFFFF;
   position: absolute;
-  top: 3rem;
+  top: 2.6rem;
   width: 100%;
-  height: 200px;
+  height: 300px;
   padding: 20px 20px;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  display: none;
+  margin-top: 6px;
+  background-color: #e6e6e6;
 }
 
-.afro-container nav ul li {
+.afro-container .navcontainer ul li {
   list-style: none;
+  text-transform: uppercase;
+  color: #0A3B5F;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.afro-container nav .hamIcons {
+.afro-container .navcontainer .hamIcons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.afro-container nav .hamIcons img {
+.afro-container .navcontainer .hamIcons img {
   filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
   cursor: pointer;
 }
 
-.afro-container nav .hamIcons .hamClose {
+.afro-container .navcontainer .hamIcons .hamClose {
   display: none;
 }
 
@@ -533,4 +539,136 @@ footer .icons {
 .site-container .siteDetailsContainer .mapContainerDiv {
   width: 100%;
   height: 400px;
+}
+
+.form-container nav {
+  position: relative;
+  z-index: 1050;
+  background-color: #0A3B5F;
+}
+
+.form-container .navcontainer {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  margin: auto;
+}
+
+.form-container .navcontainer .logo {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-container .navcontainer ul {
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 2.6rem;
+  width: 100%;
+  height: 300px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 6px;
+  background-color: #e6e6e6;
+}
+
+.form-container .navcontainer ul li {
+  list-style: none;
+  text-transform: uppercase;
+  color: #0A3B5F;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-container .navcontainer .hamIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container .navcontainer .hamIcons img {
+  filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
+  cursor: pointer;
+}
+
+.form-container .navcontainer .hamIcons .hamClose {
+  display: none;
+}
+
+.form-container .formDesigns {
+  width: 80%;
+  margin: 50px auto auto auto;
+}
+
+.form-container .formDesigns i {
+  display: none;
+}
+
+.form-container .formDesigns .LoginHeader {
+  background-color: #0A3B5F;
+  margin-bottom: 20px;
+  color: white;
+  padding: 20px;
+}
+
+.form-container .formDesigns .LoginHeader h3 {
+  margin-bottom: 10px;
+}
+
+.form-container .formDesigns .form-inputss .form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .formDesigns .form-inputss .form-control label {
+  margin-bottom: 10px;
+}
+
+.form-container .formDesigns .form-inputss .form-control input {
+  padding: 10px;
+  margin-bottom: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+}
+
+.form-container .formDesigns .form-inputss .form-control input:focus {
+  border: 1px solid #67BBF8;
+}
+
+.form-container .formDesigns .form-inputss .form-control .error {
+  color: #b93333;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.form-container .formDesigns .form-inputss button {
+  background-color: #0A3B5F;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  margin: 10px 0px;
+  color: white;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.form-container .formDesigns .signinLink {
+  font-size: 14px;
+  color: #0A3B5F;
+}
+
+.form-container .formDesigns .signinLink .link {
+  text-transform: uppercase;
+  color: #0A3B5F;
+  text-decoration: none;
+  font-weight: 600;
 }

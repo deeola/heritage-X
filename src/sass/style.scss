@@ -285,23 +285,26 @@ main,.afro-container{
     width: 100%;
     margin-top: 0;
 
+
     .subMain-container{
         width: 80%;
         margin: auto;
     }
 
     nav{
+        position: relative;
+        z-index: 1050;
+        background-color: $dark-blue;
+
+    }
+    .navcontainer{
         display: flex;
-        width: 100%;
+        width: 80%;
         margin: auto;
         justify-content: space-between;
         align-items: center;
         height: 3rem;
-        position: relative;
-        z-index: 15;
-        background: $dark-blue;
-        padding: 20px;
-        margin-bottom: 30px;
+        margin: auto;    
 
         .logo{
             color: $white;
@@ -314,19 +317,23 @@ main,.afro-container{
         ul{
             background-color: $white;
             position: absolute;
-            top: 3rem;
+            top: 2.6rem;
             width: 100%;
-            height: 200px;
+            height: 300px;
             padding: 20px 20px;
-            border-radius: 5px;
             
             
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            display: none;
+            margin-top: 6px;
+            background-color: rgb(230, 230, 230);
             li{
                 list-style: none;
+                text-transform: uppercase;
+                color: $dark-blue;
+                font-weight: 700;
+                cursor: pointer;
 
             }
 
@@ -346,6 +353,8 @@ main,.afro-container{
             }
         }
     }
+
+    
 
 }
 
@@ -664,3 +673,164 @@ footer{
 
 
 }
+
+//FORMS STYLING
+
+.form-container{
+
+    nav{
+        position: relative;
+        z-index: 1050;
+        background-color: $dark-blue;
+
+    }
+
+    .navcontainer{
+        display: flex;
+        width: 80%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        margin: auto;
+        
+        
+       
+
+        
+
+        .logo{
+            color: $white;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            
+        }
+
+        ul{
+            background-color: $white;
+            position: absolute;
+            top: 2.6rem;
+            width: 100%;
+            height: 300px;
+            padding: 20px 20px;
+            
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 6px;
+            background-color: rgb(230, 230, 230);
+            li{
+                list-style: none;
+                text-transform: uppercase;
+                color: $dark-blue;
+                font-weight: 700;
+                cursor: pointer;
+
+            }
+
+        }
+        .hamIcons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
+                cursor: pointer;
+            }
+
+            .hamClose{
+                display: none;
+            }
+        }
+    }
+
+    //FORMS
+
+    .formDesigns{
+
+        width: 80%;
+        margin: 50px auto auto auto;
+
+        i{
+            display: none;
+        }
+
+        .LoginHeader{
+            background-color: $dark-blue;
+            margin-bottom: 20px;
+            color: white;
+            padding: 20px;
+            h3{
+                margin-bottom: 10px;
+                
+
+            }
+        }
+        
+        .form-inputss{
+
+            .form-control{
+                display: flex;
+                flex-direction: column;
+                label{
+                    margin-bottom: 10px;
+                    
+                }
+                input{
+                    padding: 10px;
+                    margin-bottom: 5px;
+                    outline: none;
+                    border: 1px solid rgb(207, 207, 207);
+                    border-radius: 3px;
+
+                    &:focus{
+                        border: 1px solid $light-blue;
+
+                    }
+                }
+
+                .error{
+                    color: rgb(185, 51, 51);
+                    margin-bottom: 10px;
+                    font-size: 12px;
+                }
+
+                
+            }
+
+            button{
+                background-color:$dark-blue;
+                width: 100%;
+                height: 40px;
+                outline: none;
+                border: none;
+                margin: 10px 0px;
+                color: white;
+                font-weight: 700;
+                font-size: 17px;
+                border-radius: 5px;
+
+            }
+            
+        }
+
+        .signinLink{
+            font-size: 14px;
+            color: $dark-blue;
+
+            .link{
+                text-transform: uppercase;
+                color: $dark-blue;
+                text-decoration: none;
+                font-weight: 600;
+                
+            }
+        }
+    }
+
+}
+
+
