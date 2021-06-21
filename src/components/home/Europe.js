@@ -5,10 +5,7 @@ import {Link} from 'react-router-dom';
 
 function Europe() {
     const HeritageContext = useContext(heritageContext);
-    const Europe = HeritageContext.Europe;
-    const getEurope = HeritageContext.getEurope;
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const {Europe, getEurope, storeTaskInLocalStoragesVisited,storeTaskInLocalStorages} = HeritageContext
     
 
     useEffect(() => {

@@ -12,6 +12,7 @@ function Region() {
     const Regions = HeritageContext.Regions;
     const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
     const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const { Regions, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited} = HeritageContext;
     
     
     return (

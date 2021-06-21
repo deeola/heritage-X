@@ -5,10 +5,7 @@ import {Link} from 'react-router-dom';
 
 function Latin() {
     const HeritageContext = useContext(heritageContext);
-    const Latin = HeritageContext.Latin;
-    const getLatin = HeritageContext.getLatin;
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const {Latin, getLatin, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited} = HeritageContext
     
 
     useEffect(() => {

@@ -5,23 +5,13 @@ import {Link} from 'react-router-dom';
 
 function Asia() {
     const HeritageContext = useContext(heritageContext);
-    const Asia = HeritageContext.Asia;
-    const getAsia = HeritageContext.getAsia;
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const {Asia, getAsia, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited} = HeritageContext
     
 
     useEffect(() => {
         getAsia()
     },[])
 
-    
-      
-    
-    
-    
-
-    
     
     return (
         <section className='subMain-container'>  

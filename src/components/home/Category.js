@@ -7,10 +7,9 @@ import uuid from 'react-uuid';
 
 function Category() {
     const HeritageContext = useContext(heritageContext);
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const { storeTaskInLocalStorages, storeTaskInLocalStoragesVisited, Categories} = HeritageContext
 
-    const Categories = HeritageContext.Categories;
+
     return (
         <div className='afro-container'>
             <Navbar />

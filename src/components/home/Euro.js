@@ -8,9 +8,7 @@ import Footer from '../shared/Footer';
 
 function Euro() {
     const HeritageContext = useContext(heritageContext);
-    const getAll = HeritageContext.getAll;
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const {getAll, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited} = HeritageContext
 
     const [Alldata, setAlldata] = useState([])
 

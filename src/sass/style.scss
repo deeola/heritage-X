@@ -222,7 +222,6 @@ main,.afro-container{
         .site-container{
 
             .site-image{
-                background-color: seagreen;
                 width: 300px;
                 height: 300px;
                 margin-bottom: 8px;
@@ -284,7 +283,8 @@ main,.afro-container{
 .afro-container{
     width: 100%;
     margin-top: 0;
-
+    position: relative;
+    min-height: 100vh;
 
     .subMain-container{
         width: 80%;
@@ -352,6 +352,90 @@ main,.afro-container{
                 display: none;
             }
         }
+    }
+
+
+    .subMain-container{
+        margin-top: 50px;
+
+        .explore-container{
+            color: $dark-blue;
+            .explore{
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+
+            .explore-subtext{
+                margin-bottom: 10px;
+                font-size: 12px;
+            }
+
+        }
+
+        .site-container{
+
+            .site-image{
+                background-color: seagreen;
+                width: 300px;
+                height: 300px;
+                margin-bottom: 8px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .site-country{
+                margin-bottom: 8px;
+                color: $light-blue;
+                font-weight: 600;
+                font-size: 12px;
+            }
+
+            .site-name{
+                margin-bottom: 8px;
+                color: $dark-blue;
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            .bucketlist,.visited,.read-more{
+                background-color: $light-blue;
+                margin-bottom: 15px;
+                width: 50%;
+                font-size: 10px;
+                padding: 10px 8px;
+                border-radius: 5px;
+                color: white;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+
+        .seeMore{
+            /* Rectangle 18 */
+
+            background: rgba(103, 187, 248, 0.17);
+            border-radius: 5px;
+            margin-bottom: 50px;
+            width: 80%;
+            padding: 10px;
+            p{
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $dark-blue;
+
+            }
+            
+        }
+    }
+
+    .bucketempty{
+        width: 300px;
+        height: 300px;
+        text-align: center;
     }
 
     

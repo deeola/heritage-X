@@ -49,8 +49,7 @@ import {
 function Site({ match }) {
 
     const HeritageContext = useContext(heritageContext);
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const {storeTaskInLocalStoragesVisited, storeTaskInLocalStorages} =HeritageContext;
     
     const [Alldata, setAlldata] = useState([])
 

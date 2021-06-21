@@ -65,9 +65,9 @@ function Bucketlist() {
                             <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
-                }) : <div>Your BucketList is empty</div>
+                }) : <div className='bucketempty'>Your BucketList is empty</div>
 
-                   : <div>Kindly login to View Visit List</div>
+                   : <div className='bucketempty'>Kindly login to View Visit List</div>
             }
            
 

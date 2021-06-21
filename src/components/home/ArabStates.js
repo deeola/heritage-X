@@ -2,15 +2,13 @@ import React, {useState, useContext, useEffect} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
+import loadingimage from '../../assets/icons/loadingtwo.gif'
 
 
 function ArabStates() {
     const HeritageContext = useContext(heritageContext);
-    const Arab = HeritageContext.Arab;
-    const getArab = HeritageContext.getArab;
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
-    
+
+    const {Arab, getArab, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited,loading} = HeritageContext
 
     useEffect(() => {
         getArab()
@@ -18,7 +16,7 @@ function ArabStates() {
     
     
     return (
-        <div>  
+        <div> 
             <section className='subMain-container'>  
             <div className='explore-container'>
                 <p className='explore'>Explore Arab States</p>
@@ -29,7 +27,9 @@ function ArabStates() {
                     return(
                         <div className='site-container' key={uuid()}>
                             <div className='site-image'>
-                                <img  alt={item.name} src={item.image_url}></img>
+                            {
+                                     loading ? <img alt='loadinggif' src={loadingimage}></img>  : <img  alt={item.name} src={item.image_url}></img>
+                                }
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>

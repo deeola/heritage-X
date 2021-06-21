@@ -2,15 +2,12 @@ import React, {useState, useContext, useEffect} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
-import {useHistory} from 'react-router'
+import {useHistory} from 'react-router';
+import loadingimage from '../../assets/icons/loadingtwo.gif'
 
 function Africa() {
     const HeritageContext = useContext(heritageContext);
-    const Africa = HeritageContext.Africa;
-    const getAfrica = HeritageContext.getAfrica;
-    const getAll = HeritageContext.getAll;
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const {Africa, getAfrica, getAll, storeTaskInLocalStoragesVisited, storeTaskInLocalStorages, loading} = HeritageContext;
 
 
     //REACT HISTORY
@@ -33,7 +30,10 @@ function Africa() {
                     return(
                         <div className='site-container' key={uuid()}>
                             <div className='site-image'>
-                            <img  alt={item.name} src={item.image_url}></img>
+                                {
+                                    loading ? <img alt='loadinggif' src={loadingimage}></img> : <img  alt={item.name} src={item.image_url}></img>
+                                }
+                            
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>

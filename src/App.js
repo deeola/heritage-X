@@ -6,9 +6,6 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Country from './components/home/Country';
 import Region from './components/home/Region';
 import Category from './components/home/Category';
-import Details from './components/home/Details';
-import CategoriesDetails from './components/home/CategoriesDetails';
-import CountriesDetails from './components/home/CountriesDetails';
 import Site from './components/home/Site';
 import Afro from './components/home/Afro';
 import Euro from './components/home/Euro';
@@ -39,11 +36,8 @@ function App() {
         <Route path='/Arabo' exact component={Arabo} />
         <Route path='/Visited'  component={Visited} />
         <Route path='/Bucketlist'  component={Bucketlist} />
-        <Route path='/regions/:id'  component={Details} />
         <Route path='/SignUp'  component={SignUp} />
         <Route path='/Login'  component={Login} />
-        <Route path='/categories/:id'  component={CategoriesDetails} />
-        <Route path='/countries/:id'  component={CountriesDetails} />
         <Route path='/:id'  component={Site} />
         
 

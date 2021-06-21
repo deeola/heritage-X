@@ -8,11 +8,9 @@ import uuid from 'react-uuid';
 function Country() {
 
     const HeritageContext = useContext(heritageContext);
-    const storeTaskInLocalStorages = HeritageContext.storeTaskInLocalStorages;
-    const storeTaskInLocalStoragesVisited = HeritageContext.storeTaskInLocalStoragesVisited;
+    const {Countries, storeTaskInLocalStoragesVisited, storeTaskInLocalStorages} = HeritageContext
 
-
-    const Countries = HeritageContext.Countries;
+    
     return (
         <div className='afro-container'>
             <Navbar />
