@@ -20,6 +20,7 @@ function Latin() {
                 <p className='explore'>Explore Latin America and Caribbean</p>
                 <p className='explore-subtext'>Amazing landscape and beautiful marine Wildlife</p>
             </div>
+            <div className='grid-container'>
             {
                 Latin.map(item => {
                     return(
@@ -29,14 +30,16 @@ function Latin() {
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
+                            <div className='read-more'><Link className='myLinks' to={`${item.id}`}>Read more...</Link></div>
                             <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
                             <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
-                            <div className='read-more'><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
                 })
             }
-            <Link className='seeMore' to='/Latino'><p>See More From Latin America and Caribbean</p></Link>
+            </div>
+
+            <Link className='seeMoreLink'  to='/Latino'><p className='seeMore'>See More From Latin America and Caribbean</p></Link>
 
         </section>
     )

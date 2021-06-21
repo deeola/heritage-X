@@ -24,6 +24,7 @@ function Africa() {
                 <p className='explore'>Explore Africa</p>
                 <p className='explore-subtext'>Wildlife, Medinas and Ancient Wonders</p>
             </div>
+            <div className='grid-container'>
             {
                 Africa.map(item => {
 
@@ -37,15 +38,20 @@ function Africa() {
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
+                            <div className='read-more' onClick={getAll} ><Link className='myLinks' to={`${item.id}`}>Read more...</Link></div>
                             <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
                             <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
-                            <div className='read-more' onClick={getAll} ><Link to={`${item.id}`}>Read more...</Link></div>
+                            
                         </div>
                     )
                 })
             }
 
-                <Link className='seeMore' to='/Afro'><p>See More From Africa</p></Link>
+
+            </div>
+            
+            
+            <Link className='seeMoreLink'  to='/Afro'><p className='seeMore'>See More From Africa</p></Link>
  
 
         </section>

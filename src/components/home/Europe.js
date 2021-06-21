@@ -26,6 +26,7 @@ function Europe() {
                 <p className='explore'>Explore Europe and North America</p>
                 <p className='explore-subtext'>Historic Architecture  and stunning landscapes</p>
             </div>
+            <div className='grid-container'>
             {
                 Europe.map(item => {
                     return(
@@ -35,14 +36,16 @@ function Europe() {
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
+                            <div className='read-more'  ><Link className='myLinks' to={`${item.id}`}>Read more...</Link></div>
                             <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
                             <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
-                            <div className='read-more'><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
                 })
             }
-            <Link className='seeMore' to='/Euro'><p>See More From Europe and North America</p></Link>
+            </div>
+
+            <Link className='seeMoreLink'  to='/Euro'><p className='seeMore'>See More From Europe and North America</p></Link>
 
         </section>
     )

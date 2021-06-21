@@ -26,10 +26,10 @@ function Navbar() {
             <div className='navcontainer'>
             <div className='logo'>H-X</div>
             <ul style={ulDisplay()}>
-                <li onClick={closeMenu}><Link to='/Bucketlist'>Bucketlist</Link></li>
-                <li onClick={closeMenu}><Link to='/Visited'>Visited</Link></li>
-                {isSubmitted ? '' : <li onClick={closeMenu}><Link to='/SignUp'>Register</Link></li>}
-                {isSubmitted ? <li onClick={refreshPage}><Link to='/'>Logout</Link></li> : <li onClick={closeMenu}><Link to='/Login'>Login</Link></li>}
+                <li onClick={closeMenu}><Link className='myLink' to='/Bucketlist'>Bucketlist</Link></li>
+                <li onClick={closeMenu}><Link className='myLink'  to='/Visited'>Visited</Link></li>
+                {isSubmitted ? '' : <li onClick={closeMenu}><Link className='myLink' to='/SignUp'>Register</Link></li>}
+                {isSubmitted ? <li onClick={refreshPage}><Link className='myLink'  to='/'>Logout</Link></li> : <li onClick={closeMenu}><Link className='myLink'  to='/Login'>Login</Link></li>}
                 {isSubmitted && <li>{`Hello, ${signin.mainusername}`}</li> }
             </ul>
             <div className='hamIcons'>

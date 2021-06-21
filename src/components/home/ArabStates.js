@@ -22,6 +22,7 @@ function ArabStates() {
                 <p className='explore'>Explore Arab States</p>
                 <p className='explore-subtext'>Rich in History and beauty</p>
             </div>
+            <div className='grid-container'>
             {
                 Arab.map(item => {
                     return(
@@ -33,15 +34,16 @@ function ArabStates() {
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
+                            <div className='read-more' ><Link className='myLinks' to={`${item.id}`}>Read more...</Link></div>
                             <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
                             <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
-                            <div className='read-more'><Link to={`${item.id}`}>Read more...</Link></div>
+
                         </div>
                     )
                 })
             }
-
-            <Link className='seeMore' to='/Arabo'><p>See More From Arab States</p></Link>
+            </div>
+            <Link className='seeMoreLink'  to='/Arabo'><p className='seeMore'>See More From Arab States</p></Link>
 
         </section>
 

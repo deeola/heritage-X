@@ -19,6 +19,7 @@ function Asia() {
                 <p className='explore'>Explore Asia and the Pacific</p>
                 <p className='explore-subtext'>Rugged Landscape and fascinating history</p>
             </div>
+            <div className='grid-container'>
             {
                 Asia.map(item => {
                     return(
@@ -28,14 +29,15 @@ function Asia() {
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
+                            <div className='read-more'  ><Link className='myLinks' to={`${item.id}`}>Read more...</Link></div>
                             <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
                             <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
-                            <div className='read-more'><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
                 })
             }
-            <Link className='seeMore' to='/Asias'><p>See More From Asia and the Pacific</p></Link>
+            </div>
+            <Link className='seeMoreLink'  to='/Asias'><p className='seeMore'>See More From Asia and the Pacific</p></Link>
 
         </section>
     )

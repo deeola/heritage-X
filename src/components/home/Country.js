@@ -14,7 +14,8 @@ function Country() {
     return (
         <div className='afro-container'>
             <Navbar />
-            <section className='subMain-container'>  
+            <section className='subMain-container'> 
+            <div className='grid-container'>
             {
                 Countries.map(item => {
                     return(
@@ -25,13 +26,14 @@ function Country() {
                             
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
+                            <div className='read-more' ><Link className='myLinks' to={`${item.id}`}>Read more...</Link></div>
                             <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
                             <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
-                            <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
                         </div>
                     )
                 })
             }
+            </div>
 
             </section>
             <Footer />

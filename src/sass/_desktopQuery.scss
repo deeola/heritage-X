@@ -1,0 +1,79 @@
+@media (min-width:1024px) {
+    header{
+        background:url(../assets/home/desktop/hero-image.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 95vh;
+
+
+        &::after{
+            background-color: rgba(0, 0, 0, 0.774);
+        }
+
+        .hero-container{
+ 
+            margin-top: 180px;
+            
+            .hero-text{
+
+                margin-top: 150px;
+    
+                h1{
+                    font-size: 9rem ;
+                    
+                }
+                .Hero-subheading{
+                    font-size: 19px;
+                    color: $light-blue;
+                }
+            }
+    
+    
+        }
+    
+    }
+
+    main,.afro-container{
+
+        .subMain-container{
+            text-align: left;
+
+            .grid-container{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 20px;
+                text-align: center;
+            }
+
+            .bucketlist,.visited,.read-more{
+                
+                width: 100% !important;
+            }
+
+            .site-name{
+                min-height: 70px;
+                font-size: 15px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .site-container{
+                .read-more{
+                    margin-top: 13px;
+                }
+
+            }
+
+        
+            
+        }
+
+    }
+
+
+    
+
+}

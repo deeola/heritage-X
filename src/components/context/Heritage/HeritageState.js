@@ -91,9 +91,10 @@ const HeritageState = (props) => {
     //GET RANDOM NUMBERS
     const Num1 = Math.floor(Math.random()*Africas.length) 
     const Num2 = Math.floor(Math.random()*Africas.length) 
-    const Num3 = Math.floor(Math.random()*Africas.length) 
+    const Num3 = Math.floor(Math.random()*Africas.length)
+    const Num4 = Math.floor(Math.random()*Africas.length) 
 
-    setAfrica([Africas[Num1], Africas[Num2],Africas[Num3]])
+    setAfrica([Africas[Num1], Africas[Num2],Africas[Num3],Africas[Num4]] )
     setLoading(false)
   }
 
@@ -111,9 +112,10 @@ const HeritageState = (props) => {
     //GET RANDOM NUMBERS
     const Num1 = Math.floor(Math.random()*Asia.length) 
     const Num2 = Math.floor(Math.random()*Asia.length)  
-    const Num3 = Math.floor(Math.random()*Asia.length) 
+    const Num3 = Math.floor(Math.random()*Asia.length)
+    const Num4 = Math.floor(Math.random()*Asia.length) 
 
-    setLatin([Asia[Num1], Asia[Num2],Asia[Num3]]);
+    setLatin([Asia[Num1], Asia[Num2],Asia[Num3],  Asia[Num4]]);
     setLoading(false);
   }
 
@@ -129,9 +131,10 @@ const HeritageState = (props) => {
     //GET RANDOM NUMBERS
     const Num1 = Math.floor(Math.random()*Latins.length) 
     const Num2 = Math.floor(Math.random()*Latins.length) 
-    const Num3 = Math.floor(Math.random()*Latins.length)  
+    const Num3 = Math.floor(Math.random()*Latins.length)
+    const Num4 = Math.floor(Math.random()*Latins.length)   
 
-    setAsia([Latins[Num1], Latins[Num2],Latins[Num3]])
+    setAsia([Latins[Num1], Latins[Num2],Latins[Num3],Latins[Num4]])
     setLoading(false)
   }
 
@@ -145,9 +148,10 @@ const HeritageState = (props) => {
     //GET RANDOM NUMBERS
     const Num1 = Math.floor(Math.random()*Europes.length) 
     const Num2 = Math.floor(Math.random()*Europes.length) 
-    const Num3 = Math.floor(Math.random()*Europes.length) 
+    const Num3 = Math.floor(Math.random()*Europes.length)
+    const Num4 = Math.floor(Math.random()*Europes.length) 
 
-    setEurope([Europes[Num1], Europes[Num2],Europes[Num3]])
+    setEurope([Europes[Num1], Europes[Num2],Europes[Num3], Europes[Num4]])
     setLoading(false)
   }
 
@@ -161,9 +165,10 @@ const HeritageState = (props) => {
     //GET RANDOM NUMBERS
     const Num1 = Math.floor(Math.random()*Arabs.length)
     const Num2 = Math.floor(Math.random()*Arabs.length) 
-    const Num3 = Math.floor(Math.random()*Arabs.length) 
+    const Num3 = Math.floor(Math.random()*Arabs.length)
+    const Num4 = Math.floor(Math.random()*Arabs.length) 
 
-    setArab([Arabs[Num1], Arabs[Num2],Arabs[Num3]])
+    setArab([Arabs[Num1], Arabs[Num2],Arabs[Num3], Arabs[Num4]])
     setLoading(false)
   }
 
