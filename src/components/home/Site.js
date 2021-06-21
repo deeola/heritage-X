@@ -77,7 +77,7 @@ function Site({ match }) {
     
     
     return (
-        <div className='site-container'>
+        <div className='afro-container'>
             <Navbar />
             {Alldata.length !== 0 && Alldata.map(item => {
 

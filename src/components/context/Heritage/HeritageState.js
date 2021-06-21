@@ -264,6 +264,10 @@ const HeritageState = (props) => {
     setOpenIcon(false);
   };
 
+  
+
+
+
   //LOADING
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -273,11 +277,7 @@ const HeritageState = (props) => {
   function Submitform() {
     
     setIsSubmitted(true);
-  //   history.push({
-  //     pathname:  "/"
-  //  });
 
-  console.log(history)
   }
 
   

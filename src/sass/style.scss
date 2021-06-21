@@ -11,7 +11,6 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    // z-index: -2;
 
     &::after{
         width: 100%;
@@ -38,10 +37,7 @@ header{
         align-items: center;
         height: 3rem;
         margin: auto;
-        
-       
-
-        
+    
 
         .logo{
             color: $white;
@@ -169,15 +165,7 @@ header{
                 text-transform: uppercase;
                 font-weight: 700;
             }
-    
-            // .css-2b097c-container{
-                
-                
-            // }
-    
-            // Select{
-            //     background-color: white;
-            // }
+
     
             button{
                 width: 50%;
@@ -195,6 +183,8 @@ header{
         }
     }
 }
+
+
 
 
 //BODY
@@ -220,6 +210,7 @@ main,.afro-container{
         }
 
         .site-container{
+            
 
             .site-image{
                 width: 300px;
@@ -279,6 +270,8 @@ main,.afro-container{
     }
 
 }
+
+
 
 .afro-container{
     width: 100%;
@@ -354,302 +347,7 @@ main,.afro-container{
         }
     }
 
-
-    .subMain-container{
-        margin-top: 50px;
-
-        .explore-container{
-            color: $dark-blue;
-            .explore{
-                font-weight: 700;
-                margin-bottom: 5px;
-            }
-
-            .explore-subtext{
-                margin-bottom: 10px;
-                font-size: 12px;
-            }
-
-        }
-
-        .site-container{
-
-            .site-image{
-                background-color: seagreen;
-                width: 300px;
-                height: 300px;
-                margin-bottom: 8px;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .site-country{
-                margin-bottom: 8px;
-                color: $light-blue;
-                font-weight: 600;
-                font-size: 12px;
-            }
-
-            .site-name{
-                margin-bottom: 8px;
-                color: $dark-blue;
-                font-weight: 600;
-                font-size: 18px;
-            }
-
-            .bucketlist,.visited,.read-more{
-                background-color: $light-blue;
-                margin-bottom: 15px;
-                width: 50%;
-                font-size: 10px;
-                padding: 10px 8px;
-                border-radius: 5px;
-                color: white;
-                text-transform: uppercase;
-                font-weight: 700;
-            }
-        }
-
-        .seeMore{
-            /* Rectangle 18 */
-
-            background: rgba(103, 187, 248, 0.17);
-            border-radius: 5px;
-            margin-bottom: 50px;
-            width: 80%;
-            padding: 10px;
-            p{
-            text-transform: uppercase;
-            text-align: center;
-            font-size: 13px;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: $dark-blue;
-
-            }
-            
-        }
-    }
-
-    .bucketempty{
-        width: 300px;
-        height: 300px;
-        text-align: center;
-    }
-
-    
-
-}
-
-// .subMain-container{
-
-//     .explore-container{
-//         color: $dark-blue;
-//         .explore{
-//             font-weight: 700;
-//             margin-bottom: 5px;
-//         }
-
-//         .explore-subtext{
-//             margin-bottom: 10px;
-//             font-size: 12px;
-//         }
-
-//     }
-
-//     .site-container{
-
-//         .site-image{
-//             background-color: seagreen;
-//             width: 300px;
-//             height: 300px;
-//             margin-bottom: 8px;
-//             img{
-//                 width: 100%;
-//                 height: 100%;
-//             }
-//         }
-//         .site-country{
-//             margin-bottom: 8px;
-//             color: $light-blue;
-//             font-weight: 600;
-//             font-size: 12px;
-//         }
-
-//         .site-name{
-//             margin-bottom: 8px;
-//             color: $dark-blue;
-//             font-weight: 600;
-//             font-size: 18px;
-//         }
-
-//         .bucketlist,.visited,.read-more{
-//             background-color: $light-blue;
-//             margin-bottom: 15px;
-//             width: 50%;
-//             font-size: 10px;
-//             padding: 10px 8px;
-//             border-radius: 5px;
-//             color: white;
-//             text-transform: uppercase;
-//             font-weight: 700;
-//         }
-//     }
-
-//     .seeMore{
-//         /* Rectangle 18 */
-
-//         background: rgba(103, 187, 248, 0.17);
-//         border-radius: 5px;
-//         margin-bottom: 50px;
-//         width: 80%;
-//         padding: 10px;
-//         p{
-//         text-transform: uppercase;
-//         text-align: center;
-//         font-size: 13px;
-//         text-transform: uppercase;
-//         font-weight: 700;
-//         color: $dark-blue;
-
-//         }
-        
-//     }
-// }
-
-
-
-footer{
-    margin-top: 50px;
-    background: $dark-blue;
-    text-align: center;
-    padding: 30px 0px;
-    nav {
-        width: 100%;
-        align-items: center;
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        padding: 0px 20px;
-        justify-content: space-between;
-        flex-direction: column;
-
-        .logo{
-            color: $white;
-            font-size: 25px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-        ul {
-          
-          display: flex;
-          justify-content: space-between;
-          flex-direction: column;
-          width: 50%;
-          li{
-            list-style: none;
-            margin-top: 10px;
-            color: white;
-            font-weight: 500;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-        }
-      }
-    
-    .footerSecondDiv {
-        margin-top: 20px;
-
-        .footerSecondText {
-            width: 90%;
-            margin: auto;
-            color: white;
-            font-size: 14px;
-        }
-
-    }
-
-    .copyIcon {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 20px;
-    color: white;
-    }
-    
-    .icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-    width: 80% ;
-    margin:30px auto auto auto;
-    cursor: pointer;
-    }
-    
-}
-
-
-//SITES
-
-.site-container{
-    nav{
-        display: flex;
-        width: 100%;
-        margin: auto;
-        justify-content: space-between;
-        align-items: center;
-        height: 3rem;
-        position: relative;
-        z-index: 15;
-        background: $dark-blue;
-        padding: 20px;
-
-        .logo{
-            color: $white;
-            font-size: 25px;
-            font-weight: 700;
-            cursor: pointer;
-            
-        }
-
-        ul{
-            background-color: $white;
-            position: absolute;
-            top: 3rem;
-            width: 100%;
-            height: 200px;
-            padding: 20px 20px;
-            border-radius: 5px;
-            
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            display: none;
-            li{
-                list-style: none;
-
-            }
-
-        }
-        .hamIcons{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img{
-                filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
-                cursor: pointer;
-            }
-
-            .hamClose{
-                display: none;
-            }
-        }
-    }
-
+    //SITES
 
     .siteDetailsContainer{
         width: 80%;
@@ -751,12 +449,95 @@ footer{
 
         
     }
+    .subMain-container{
+            margin-top: 50px;
+    }    
 
 
+    .bucketempty{
+        width: 300px;
+        height: 300px;
+        text-align: center;
+    }
 
-
+    
 
 }
+
+
+
+
+footer{
+    margin-top: 50px;
+    background: $dark-blue;
+    text-align: center;
+    padding: 30px 0px;
+    nav {
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .logo{
+            color: $white;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        ul {
+          
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          width: 50%;
+          li{
+            list-style: none;
+            margin-top: 10px;
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        }
+      }
+    
+    .footerSecondDiv {
+        margin-top: 20px;
+
+        .footerSecondText {
+            width: 90%;
+            margin: auto;
+            color: white;
+            font-size: 14px;
+        }
+
+    }
+
+    .copyIcon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+    }
+    
+    .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    width: 80% ;
+    margin:30px auto auto auto;
+    cursor: pointer;
+    }
+    
+}
+
+
 
 //FORMS STYLING
 
@@ -917,4 +698,4 @@ footer{
 
 }
 
-
+@import 'tabQuery';
