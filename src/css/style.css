@@ -858,4 +858,75 @@ footer .icons {
     width: 100%;
     height: 300px !important;
   }
+  footer .footer-container {
+    width: 80%;
+    margin: auto;
+  }
+  footer .footer-container nav {
+    flex-direction: row;
+    padding: unset;
+  }
+  footer .footer-container nav .logo {
+    margin: unset;
+  }
+  footer .footer-container nav ul {
+    flex-direction: row;
+    width: 30%;
+  }
+  footer .footer-container .footerSecondDiv {
+    width: 40%;
+    text-align: left;
+    padding: unset;
+  }
+  footer .footer-container .footerSecondDiv .footerSecondText {
+    margin: unset;
+  }
+  footer .footer-container .copyIcon {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .footer-container .copyIcon .icons {
+    margin: unset;
+    width: 20%;
+  }
+  .siteDetailsContainer {
+    margin-top: 100px !important;
+  }
+  .siteDetailsContainer .site-upper-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .siteDetailsContainer .first-details-container {
+    width: 60%;
+  }
+  .siteDetailsContainer .second-details-div {
+    width: 35%;
+    align-items: right;
+    justify-content: space-between !important;
+  }
+  .siteDetailsContainer .second-details-div .subCategory {
+    width: 100%;
+    text-align: right;
+    margin-top: unset !important;
+  }
+  .siteDetailsContainer .second-details-div .subCategory .sub-sub-category {
+    justify-content: flex-end !important;
+    width: 100%;
+  }
+  .siteDetailsContainer .second-details-div .subCategory .details-text {
+    text-align: right !important;
+    width: 100%;
+  }
+  .siteDetailsContainer .second-details-div .Save-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .siteDetailsContainer .second-details-div .Save-container .bucketlist,
+  .siteDetailsContainer .second-details-div .Save-container .visited {
+    width: 45% !important;
+    cursor: pointer;
+  }
 }

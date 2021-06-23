@@ -12,7 +12,7 @@ function Asia() {
     const HeritageContext = useContext(heritageContext);
     const {Asia, getAsia, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited} = HeritageContext
 
-    let refs = useRef(null)
+
     let revealRefs = useRef([]);
     revealRefs.current = [];
     
@@ -44,8 +44,7 @@ function Asia() {
                         id: `section-${index + 1 }`,
                         trigger:el,
                         start:'top center+=100',
-                        toggleActions:'play none',
-                        markers:true
+                        toggleActions:'play none'
                     }
     
                 })

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import {gsap} from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 function Europe() {
     const HeritageContext = useContext(heritageContext);
@@ -43,8 +43,7 @@ function Europe() {
                         id: `section-${index + 1 }`,
                         trigger:el,
                         start:'top center+=100',
-                        toggleActions:'play none',
-                        markers:true
+                        toggleActions:'play none'
                     }
     
                 })

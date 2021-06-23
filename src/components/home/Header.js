@@ -7,9 +7,7 @@ import { gsap } from 'gsap'
 
 
 function Header() {
-    const HeritageContext = useContext(heritageContext);
-
-    const {hamOpen} = HeritageContext;
+    
 
     let headerRef = useRef(null);
     let heroMain = useRef(null)
@@ -69,20 +67,24 @@ function Header() {
         //HERO ANIMATE
 
         gsap.fromTo(hero, {
-            duration:3,
-            x:2000,
+            
+            x:1920,
+            opacity:0,
 
             ease:'power3.inOut'
         },
         {
-            duration:2,
+            duration:2.5,
             x:0,
+            opacity:1,
             ease:'power3.inOut'
 
         }, 'start')
 
+        //HERO SUB TEXT
+
         gsap.fromTo(heroText,{
-            duration:1.5,
+
             x:-1000,
             opacity:0,
             ease:'power3.inOut'
@@ -95,9 +97,10 @@ function Header() {
 
         }, 'start')
 
+        //FORM ANIMATION
+
 
         gsap.fromTo(formAnimate.current,{
-            duration:1.5,
             x:-1000,
             opacity:0,
             ease:'power3.inOut'
@@ -113,34 +116,11 @@ function Header() {
     }, [])
 
 
-    useEffect(() => {
-        //NAV ANIMATE
-
-
-
-        gsap.fromTo(navMenu.current, {
-            duration:3,
-            x:790,
-            ease:'power3.easeinOut'
-        },{
-            duration:3,
-            x:0,
-            ease:'power3.easeinOut'
-
-        })
-
-        console.log(navMenu.current, hamOpen)
-    
-    
-
-    }, [hamOpen])
-
-    
 
 
     return (
         <header ref={el => headerRef = el}>
-            <Navbar ref={navMenu} />
+            <Navbar />
             <div className='navLine' ></div>
             <div className='hero-container' >
                 <div className='hero-text' ref={el => heroMain= el}>

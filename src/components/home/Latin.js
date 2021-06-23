@@ -13,8 +13,6 @@ function Latin() {
     const {Latin, getLatin, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited} = HeritageContext;
 
     //ANIMATION
-
-    let refs = useRef(null)
     let revealRefs = useRef([]);
     revealRefs.current = [];
     
@@ -46,8 +44,7 @@ function Latin() {
                         id: `section-${index + 1 }`,
                         trigger:el,
                         start:'top center+=100',
-                        toggleActions:'play none',
-                        markers:true
+                        toggleActions:'play none'
                     }
     
                 })

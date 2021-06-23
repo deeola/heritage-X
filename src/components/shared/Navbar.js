@@ -17,6 +17,7 @@ function Navbar(props, ref) {
     DisplayOpenIcon,
     isSubmitted,
     Submitform,
+    hamOpen
   } = HeritageContext;
 
   //local storage
@@ -31,16 +32,34 @@ function Navbar(props, ref) {
 
   //GSAP ANIMATIONS
   const navLogo = useRef(null);
-  const hamIcon = useRef(null)
+  const hamIcon = useRef(null);
+  let navMenu = useRef(null);
+
+
+    useEffect(() => {
+      //NAV ANIMATE
+
+
+
+      gsap.fromTo(navMenu.current, {
+          x:790,
+          ease:'power3.easeinOut'
+      },{
+          duration:3,
+          x:0,
+          ease:'power3.easeinOut'
+
+      })
+
+    }, [hamOpen])
 
   useEffect(() => {
     
     gsap.fromTo(navLogo.current, {
-        duration:2,
         x:-190,
         ease:'power3.easeinOut'
     },{
-        duration:2,
+        duration:1.5,
         x:0,
         ease:'power3.easeinOut'
 
@@ -55,11 +74,10 @@ useEffect(() => {
 
 
     gsap.fromTo(hamIcon.current, {
-      duration:2,
       x:190,
       ease:'power3.easeinOut'
   },{
-      duration:2,
+      duration:1.5,
       x:0,
       ease:'power3.easeinOut'
 
@@ -74,7 +92,7 @@ useEffect(() => {
     <nav>
       <div className="navcontainer" >
         <div className="logo" ref={navLogo}>H-X</div>
-        <ul style={ulDisplay()} ref={ref} {...props}> 
+        <ul style={ulDisplay()} ref={navMenu}> 
           <li onClick={closeMenu}>
             <Link className="myLink" to="/Bucketlist">
               Bucketlist

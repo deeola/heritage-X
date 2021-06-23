@@ -7,7 +7,8 @@ import instagram from '../../assets/icons/icon-instagram.svg';
 function Footer() {
     return (
         <footer>
-           <FooterNav />
+            <div className='footer-container'>
+            <FooterNav />
            <div className="footerSecondDiv">
                 <p className="footerSecondText">
                 Heritage-X is your to-go platform for your Unesco Heritage sites
@@ -29,7 +30,10 @@ function Footer() {
                 </div>
                 </div>
         
-            </div>  
+            </div> 
+
+            </div>
+            
             
         </footer>
     )

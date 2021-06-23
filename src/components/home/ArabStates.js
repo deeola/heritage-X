@@ -50,8 +50,7 @@ function ArabStates() {
                         id: `section-${index + 1 }`,
                         trigger:el,
                         start:'top center+=100',
-                        toggleActions:'play none',
-                        markers:true
+                        toggleActions:'play none'
                     }
     
                 })

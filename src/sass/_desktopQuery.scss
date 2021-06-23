@@ -89,6 +89,120 @@
 
     }
 
+    footer{
+ 
+
+        .footer-container{
+            width: 80%;
+            margin: auto;
+
+            nav{
+                flex-direction: row;
+                padding: unset;
+
+                .logo{
+                    margin: unset;
+                }
+                ul{
+                    flex-direction: row;
+                    width: 30%;
+                }
+            }
+            .footerSecondDiv{
+                width: 40%;
+                text-align: left;
+                padding: unset;
+
+                .footerSecondText{
+                    margin: unset;
+                }
+            }
+
+            .copyIcon{
+                
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .icons{
+                    margin: unset;
+                    width: 20%;
+
+                }
+            }
+        }
+        
+        
+
+    }
+
+    //SITES
+
+    .siteDetailsContainer{
+        // display: grid;
+        // grid-template-columns: repeat(5, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        // background-color: violet;
+        margin-top: 100px !important;
+
+        .site-upper-div{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .first-details-container{
+            width: 60%;
+
+            
+        }
+
+        .second-details-div{
+            width: 35%;
+            align-items: right;
+            justify-content: space-between !important;
+            
+            .subCategory{
+               
+                width: 100%;
+                text-align: right;
+                margin-top: unset !important;
+                .sub-sub-category{
+                    
+                    justify-content: flex-end !important;
+                    width: 100%;
+                
+
+
+                    
+
+                    
+                }
+
+                .details-text{
+                    
+                    text-align: right !important;
+                    width: 100%;
+                }
+                
+            }
+
+            .Save-container{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .bucketlist,
+                .visited{
+                    width: 45% !important;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        
+    }
+
 
     
 

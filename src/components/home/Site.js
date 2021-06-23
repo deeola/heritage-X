@@ -111,6 +111,7 @@ function Site({ match }) {
                 return (
                     
                     <div className='siteDetailsContainer' key={uuid()}>
+                        <div className='site-upper-div'>
                         <div className='first-details-container'>
                             <h3 className='siteName'>{item.name}</h3>
                             <div className='site-country-region'>
@@ -186,6 +187,12 @@ function Site({ match }) {
 
 
                         </div>
+
+
+
+                        </div>
+                        
+                        
                         <div className="mapContainerDiv">
                             <WrappedMap
                                 googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${`AIzaSyDe3n2kCyxwMV82eyQtemz11qqMDrhsfto`}`}
