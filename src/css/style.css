@@ -17,6 +17,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  visibility: hidden;
 }
 
 header::after {
@@ -57,21 +58,25 @@ header .navcontainer ul {
   position: absolute;
   top: 3rem;
   width: 100%;
-  height: 300px;
+  height: 350px;
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 6px;
-  background-color: #e6e6e6;
 }
 
 header .navcontainer ul li {
   list-style: none;
   text-transform: uppercase;
-  color: #0A3B5F;
+  color: #0a5f5f;
   font-weight: 700;
   cursor: pointer;
+}
+
+header .navcontainer ul li .myLink {
+  text-decoration: none;
+  color: #0a5f5f;
 }
 
 header .navcontainer .hamIcons {
@@ -102,13 +107,16 @@ header .hero-container {
   width: 80%;
   margin: auto;
   margin-top: 60px;
+  position: relative;
 }
 
 header .hero-container .hero-text {
-  position: relative;
   z-index: 4;
   align-items: left;
   margin-top: 100px;
+  animation: slidein 2000ms ease-in-out  forwards;
+  position: absolute;
+  position: relative;
 }
 
 header .hero-container .hero-text h1 {
@@ -118,13 +126,15 @@ header .hero-container .hero-text h1 {
 }
 
 header .hero-container .hero-text h1 span {
-  color: #67BBF8;
+  color: #42ad8d;
 }
 
 header .hero-container .hero-text .Hero-subheading {
   color: rgba(255, 255, 255, 0.801);
   line-height: 1.7;
   font-size: 13px;
+  position: absolute;
+  animation: opaque 1s ease-in 2.2s forwards;
 }
 
 header .formDiv {
@@ -133,7 +143,7 @@ header .formDiv {
   z-index: 1000;
   cursor: pointer;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 header .formDiv form {
@@ -150,9 +160,10 @@ header .formDiv form .mainSelect {
   border: unset;
   outline: none;
   border-radius: 5px;
-  color: #0A3B5F;
+  color: #0a5f5f;
   text-transform: uppercase;
   font-weight: 700;
+  cursor: pointer;
 }
 
 header .formDiv form .subSelect {
@@ -163,15 +174,16 @@ header .formDiv form .subSelect {
   border: unset;
   outline: none;
   border-radius: 5px;
-  color: #0A3B5F;
+  color: #0a5f5f;
   text-transform: uppercase;
   font-weight: 700;
+  cursor: pointer;
 }
 
 header .formDiv form button {
   width: 50%;
   height: 37px;
-  background-color: #0A3B5F;
+  background-color: #0a5f5f;
   border: unset;
   outline: none;
   border-radius: 5px;
@@ -180,6 +192,13 @@ header .formDiv form button {
   margin: auto;
   font-weight: 500;
   text-transform: uppercase;
+  transition: 1s;
+}
+
+header .formDiv form button:hover {
+  background-color: #42ad8d;
+  cursor: pointer;
+  transform: scale(0.97);
 }
 
 main, .afro-container {
@@ -193,7 +212,7 @@ main .subMain-container, .afro-container .subMain-container {
 }
 
 main .subMain-container .explore-container, .afro-container .subMain-container .explore-container {
-  color: #0A3B5F;
+  color: #0a5f5f;
 }
 
 main .subMain-container .explore-container .explore, .afro-container .subMain-container .explore-container .explore {
@@ -226,14 +245,14 @@ main .subMain-container .site-container .site-image img, .afro-container .subMai
 
 main .subMain-container .site-container .site-country, .afro-container .subMain-container .site-container .site-country {
   margin-bottom: 8px;
-  color: #67BBF8;
+  color: #42ad8d;
   font-weight: 600;
   font-size: 12px;
 }
 
 main .subMain-container .site-container .site-name, .afro-container .subMain-container .site-container .site-name {
   margin-bottom: 8px;
-  color: #0A3B5F;
+  color: #0a5f5f;
   font-weight: 600;
   font-size: 18px;
 }
@@ -245,7 +264,7 @@ main .subMain-container .site-container .bucketlist, main .subMain-container .si
   font-size: 10px;
   padding: 10px 8px;
   border-radius: 5px;
-  color: #0A3B5F;
+  color: #0a5f5f;
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
@@ -255,7 +274,7 @@ main .subMain-container .site-container .bucketlist, main .subMain-container .si
 
 main .subMain-container .site-container .myLinks, .afro-container .subMain-container .site-container .myLinks {
   text-decoration: none;
-  color: #0A3B5F;
+  color: #0a5f5f;
 }
 
 main .subMain-container .seeMoreLink, .afro-container .subMain-container .seeMoreLink {
@@ -274,7 +293,7 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
   color: #FFFFFF;
   text-decoration: none;
   text-align: center;
-  background-color: #0A3B5F;
+  background-color: #0a5f5f;
   margin-top: 20px;
 }
 
@@ -293,7 +312,7 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 .afro-container nav {
   position: relative;
   z-index: 1050;
-  background-color: #0A3B5F;
+  background-color: #0a5f5f;
 }
 
 .afro-container .navcontainer {
@@ -330,7 +349,7 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 .afro-container .navcontainer ul li {
   list-style: none;
   text-transform: uppercase;
-  color: #0A3B5F;
+  color: #0a5f5f;
   font-weight: 700;
   cursor: pointer;
 }
@@ -374,7 +393,7 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 
 .afro-container .siteDetailsContainer .site-description h5 {
   margin: 5px 0px;
-  color: #0A3B5F;
+  color: #0a5f5f;
 }
 
 .afro-container .siteDetailsContainer .site-description .site-description-text {
@@ -404,19 +423,19 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 
 .afro-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category i {
   font-size: 10px;
-  color: #67BBF8;
+  color: #42ad8d;
 }
 
 .afro-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category p {
   margin-left: 10px;
   font-size: 10px;
   text-transform: uppercase;
-  color: #67BBF8;
+  color: #42ad8d;
 }
 
 .afro-container .siteDetailsContainer .second-details-div .subCategory .details-text {
   font-weight: 700;
-  color: #0A3B5F;
+  color: #0a5f5f;
 }
 
 .afro-container .siteDetailsContainer .second-details-div .Save-container {
@@ -424,7 +443,7 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 }
 
 .afro-container .siteDetailsContainer .second-details-div .Save-container .bucketlist, .afro-container .siteDetailsContainer .second-details-div .Save-container .visited, .afro-container .siteDetailsContainer .second-details-div .Save-container .read-more {
-  background-color: #0A3B5F;
+  background-color: #0a5f5f;
   margin-bottom: 15px;
   width: 100%;
   font-size: 10px;
@@ -453,7 +472,7 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 
 footer {
   margin-top: 50px;
-  background: #0A3B5F;
+  background: #0a5f5f;
   text-align: center;
   padding: 30px 0px;
 }
@@ -524,7 +543,7 @@ footer .icons {
 .form-container nav {
   position: relative;
   z-index: 1050;
-  background-color: #0A3B5F;
+  background-color: #0a5f5f;
 }
 
 .form-container .navcontainer {
@@ -561,7 +580,7 @@ footer .icons {
 .form-container .navcontainer ul li {
   list-style: none;
   text-transform: uppercase;
-  color: #0A3B5F;
+  color: #0a5f5f;
   font-weight: 700;
   cursor: pointer;
 }
@@ -591,7 +610,7 @@ footer .icons {
 }
 
 .form-container .formDesigns .LoginHeader {
-  background-color: #0A3B5F;
+  background-color: #0a5f5f;
   margin-bottom: 20px;
   color: white;
   padding: 20px;
@@ -619,7 +638,7 @@ footer .icons {
 }
 
 .form-container .formDesigns .form-inputss .form-control input:focus {
-  border: 1px solid #67BBF8;
+  border: 1px solid #42ad8d;
 }
 
 .form-container .formDesigns .form-inputss .form-control .error {
@@ -629,7 +648,7 @@ footer .icons {
 }
 
 .form-container .formDesigns .form-inputss button {
-  background-color: #0A3B5F;
+  background-color: #0a5f5f;
   width: 100%;
   height: 40px;
   outline: none;
@@ -643,12 +662,12 @@ footer .icons {
 
 .form-container .formDesigns .signinLink {
   font-size: 14px;
-  color: #0A3B5F;
+  color: #0a5f5f;
 }
 
 .form-container .formDesigns .signinLink .link {
   text-transform: uppercase;
-  color: #0A3B5F;
+  color: #0a5f5f;
   text-decoration: none;
   font-weight: 600;
 }
@@ -689,9 +708,10 @@ footer .icons {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 14px;
+    transition: 1s ease-in-out;
   }
   header .navcontainer ul li .myLink:hover {
-    color: #67BBF8;
+    color: #42ad8d;
   }
   header .navcontainer .hamIcons {
     display: none;
@@ -720,7 +740,7 @@ footer .icons {
   }
   main .subMain-container .grid-container, .afro-container .subMain-container .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     text-align: center;
   }
@@ -736,6 +756,10 @@ footer .icons {
   }
   main .subMain-container .site-container .read-more, .afro-container .subMain-container .site-container .read-more {
     margin-top: 13px;
+  }
+  main .subMain-container .site-image, .afro-container .subMain-container .site-image {
+    width: 100%;
+    height: 400px !important;
   }
   .afro-container .navcontainer {
     width: 80%;
@@ -764,7 +788,7 @@ footer .icons {
     font-size: 14px;
   }
   .afro-container .navcontainer ul li .myLink:hover {
-    color: #67BBF8;
+    color: #42ad8d;
   }
   .afro-container .navcontainer .hamIcons {
     display: none;
@@ -798,15 +822,23 @@ footer .icons {
   }
   header .hero-container .hero-text .Hero-subheading {
     font-size: 19px;
-    color: #67BBF8;
+    color: #42ad8d;
   }
   main .subMain-container, .afro-container .subMain-container {
     text-align: left;
   }
+  main .subMain-container .explore-container .explore, .afro-container .subMain-container .explore-container .explore {
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+  main .subMain-container .explore-container .explore-subtext, .afro-container .subMain-container .explore-container .explore-subtext {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
   main .subMain-container .grid-container, .afro-container .subMain-container .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
     text-align: center;
   }
   main .subMain-container .bucketlist, main .subMain-container .visited, main .subMain-container .read-more, .afro-container .subMain-container .bucketlist, .afro-container .subMain-container .visited, .afro-container .subMain-container .read-more {
@@ -821,5 +853,9 @@ footer .icons {
   }
   main .subMain-container .site-container .read-more, .afro-container .subMain-container .site-container .read-more {
     margin-top: 13px;
+  }
+  main .subMain-container .site-image, .afro-container .subMain-container .site-image {
+    width: 100%;
+    height: 300px !important;
   }
 }

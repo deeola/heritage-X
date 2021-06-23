@@ -1,11 +1,11 @@
-import React,{useState, useMemo, useContext, useEffect} from 'react';
+import React,{useState, useMemo, useContext, useEffect, useRef, forwardRef} from 'react';
 import countryList from 'react-select-country-list';
 import Select from 'react-select';
 import heritageContext from '../context/Heritage/heritageContext';
 import {useHistory} from 'react-router'
 
 
-function SelectForm(props) {
+function SelectForm(props, ref) {
 
     //REACT HISTORY
     const history = useHistory();
@@ -118,7 +118,7 @@ function SelectForm(props) {
     }
 
     return (
-        <div className='formDiv'>
+        <div className='formDiv'  ref={ref} {...props} >
             <form  onSubmit={handleSubmit}>
             <select className='mainSelect' onChange={handleChange}>
                     <option value='select'>Select</option>
@@ -152,4 +152,4 @@ function SelectForm(props) {
     )
 }
 
-export default SelectForm;
+export default forwardRef(SelectForm) ;

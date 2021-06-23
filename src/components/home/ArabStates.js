@@ -1,8 +1,12 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext, useEffect, useRef} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
 import loadingimage from '../../assets/icons/loadingtwo.gif'
+import {gsap} from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger)
 
 
 function ArabStates() {
@@ -10,14 +14,71 @@ function ArabStates() {
 
     const {Arab, getArab, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited,loading} = HeritageContext
 
+
+
+    //ANIMATION
+
+    let refs = useRef(null)
+    let revealRefs = useRef([]);
+    revealRefs.current = [];
+
+
     useEffect(() => {
         getArab()
     },[])
+
+    useEffect(() => {
+
+        if(revealRefs.current.length !== 0){
+            revealRefs.current.forEach( (el, index) => {
+
+            
+            
+                gsap.fromTo(el, {
+                    
+                    opacity:0,
+                    ease:'power3.easeinOut'
+                },
+                     {
+                    
+                    // x:0,
+                    duration:1,
+                    // ease:'none',
+                    opacity:1,
+                    ease:'power3.easeinOut',
+                    scrollTrigger:{
+                        id: `section-${index + 1 }`,
+                        trigger:el,
+                        start:'top center+=100',
+                        toggleActions:'play none',
+                        markers:true
+                    }
+    
+                })
+            })
+            
+
+        }
+
+        
+        
+        
+        
+
+    },[revealRefs.current])
+
+    const addToRefs = (el) => {
+        if(el && !revealRefs.current.includes(el)){
+            revealRefs.current.push(el)
+        }
+
+    }
+
     
     
     return (
         <div> 
-            <section className='subMain-container'>  
+            <section className='subMain-container' >  
             <div className='explore-container'>
                 <p className='explore'>Explore Arab States</p>
                 <p className='explore-subtext'>Rich in History and beauty</p>
@@ -26,7 +87,7 @@ function ArabStates() {
             {
                 Arab.map(item => {
                     return(
-                        <div className='site-container' key={uuid()}>
+                        <div className='site-container' key={uuid()} ref={addToRefs}>
                             <div className='site-image'>
                             {
                                      loading ? <img alt='loadinggif' src={loadingimage}></img>  : <img  alt={item.name} src={item.image_url}></img>

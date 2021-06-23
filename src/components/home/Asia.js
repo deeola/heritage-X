@@ -1,16 +1,73 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext, useEffect, useRef} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
+import {gsap} from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger)
+
 
 function Asia() {
     const HeritageContext = useContext(heritageContext);
     const {Asia, getAsia, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited} = HeritageContext
+
+    let refs = useRef(null)
+    let revealRefs = useRef([]);
+    revealRefs.current = [];
     
 
     useEffect(() => {
         getAsia()
     },[])
+
+    useEffect(() => {
+
+        if(revealRefs.current.length !== 0){
+            revealRefs.current.forEach( (el, index) => {
+
+            
+            
+                gsap.fromTo(el, {
+                    
+                    opacity:0,
+                    ease:'power3.easeinOut'
+                },
+                     {
+                    
+                    // x:0,
+                    duration:1,
+                    // ease:'none',
+                    opacity:1,
+                    ease:'power3.easeinOut',
+                    scrollTrigger:{
+                        id: `section-${index + 1 }`,
+                        trigger:el,
+                        start:'top center+=100',
+                        toggleActions:'play none',
+                        markers:true
+                    }
+    
+                })
+            })
+            
+
+        }
+
+        
+        
+        
+        
+
+    },[revealRefs.current])
+
+    const addToRefs = (el) => {
+        if(el && !revealRefs.current.includes(el)){
+            revealRefs.current.push(el)
+        }
+
+    }
+
 
     
     return (
@@ -23,7 +80,7 @@ function Asia() {
             {
                 Asia.map(item => {
                     return(
-                        <div className='site-container' key={uuid()}>
+                        <div className='site-container' key={uuid()} ref={addToRefs}>
                             <div className='site-image'>
                                 <img  alt={item.name} src={item.image_url}></img>
                             </div>
