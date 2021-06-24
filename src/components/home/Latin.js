@@ -81,7 +81,7 @@ function Latin() {
                     return(
                         <div className='site-container' key={uuid()} ref={addToRefs}>
                             <div className='site-image'>
-                                <img  alt={item.name} src={item.image_url}></img>
+                            <Link className='myLinks' to={`${item.id}`}><img  alt={item.name} src={item.image_url}></img></Link>
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
@@ -94,7 +94,7 @@ function Latin() {
             }
             </div>
 
-            <Link className='seeMoreLink'  to='/Latino'><p className='seeMore'>See More From Latin America and Caribbean</p></Link>
+            <Link className='seeMoreLink'  to='/Latino'><p className='seeMore'>See More From Latin America and Caribbean <i className="fas fa-chevron-right"></i></p></Link>
 
         </section>
     )

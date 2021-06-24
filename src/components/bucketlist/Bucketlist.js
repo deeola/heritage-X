@@ -69,7 +69,7 @@ function Bucketlist() {
                     )
                 }) : <div className='bucketempty'>Your BucketList is empty</div>
 
-                   : <div className='bucketempty'>Kindly login to View Visit List</div>
+                   : <div className='bucketempty'>Kindly login to View Bucket List</div>
             }
             </div>
            

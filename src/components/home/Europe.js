@@ -87,7 +87,7 @@ function Europe() {
                     return(
                         <div className='site-container' key={uuid()} ref={addToRefs}>
                             <div className='site-image'>
-                                <img  alt={item.name} src={item.image_url}></img>
+                            <Link className='myLinks' to={`${item.id}`}><img  alt={item.name} src={item.image_url}></img></Link>
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
@@ -100,7 +100,7 @@ function Europe() {
             }
             </div>
 
-            <Link className='seeMoreLink'  to='/Euro'><p className='seeMore'>See More From Europe and North America</p></Link>
+            <Link className='seeMoreLink'  to='/Euro'><p className='seeMore'>See More From Europe and North America <i className="fas fa-chevron-right"></i></p></Link>
 
         </section>
     )

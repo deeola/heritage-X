@@ -1,3 +1,4 @@
+
 @media (min-width:1024px) {
     header{
         background:url(../assets/home/desktop/hero-image.jpeg);
@@ -21,12 +22,12 @@
                 margin-top: 150px;
     
                 h1{
-                    font-size: 9rem ;
+                    font-size: 7rem ;
                     
                 }
                 .Hero-subheading{
                     font-size: 19px;
-                    color: $light-blue;
+                    color: $red;
                 }
             }
     
@@ -62,7 +63,11 @@
 
             .bucketlist,.visited,.read-more{
                 
-                width: 100% !important;
+                width: 60% !important;
+                border: 1px solid $gray !important;
+                &:hover{
+                    border: none !important;
+                }
             }
 
             .site-name{
@@ -149,10 +154,7 @@
     //SITES
 
     .siteDetailsContainer{
-        // display: grid;
-        // grid-template-columns: repeat(5, 1fr);
-        // grid-template-rows: repeat(2, 1fr);
-        // background-color: violet;
+
         margin-top: 100px !important;
 
         .site-upper-div{
@@ -217,53 +219,7 @@
 
     //FORMS STYLING
 
-    .form-container{
-        .navcontainer{
-
-            width: 80%;
-        
     
-            ul{
-                position: unset;
-                top: unset;
-                width: 60%;
-                height: unset;
-                padding: unset;
-                display: flex !important;
-                flex-direction: row;
-                justify-content: space-between;
-                margin-top: unset;
-                
-                background-color: unset;
-                li{
-                    list-style: none;
-                    text-transform:capitalize;
-                    
-                    font-weight: 600;
-                    cursor: pointer;
-
-                    .myLink{
-                        color: $white;
-                        text-decoration: none;
-                        font-size: 14px;
-                        transition: 1s ease-in-out;
-
-                        &:hover{
-                            color: $light-blue;
-                        }
-                    }
-                    
-                }
-    
-            }
-            .hamIcons{
-                display: none;
-    
-            }
-        }
-
-    }
-
     .formDesigns{
         width: 50% !important;
 
@@ -279,4 +235,18 @@
 
     
 
+}
+
+
+@media (min-width:1202px) {
+    header{
+        .hero-container{
+            .hero-text{
+                h1{
+                    font-size: 9rem;
+
+                }
+            }
+        }
+    }
 }

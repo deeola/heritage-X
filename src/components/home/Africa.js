@@ -115,15 +115,15 @@ function Africa() {
                         <div className='site-container' key={uuid()} ref={addToRefs}>
                             <div className='site-image' >
                                 {
-                                    loading ? <img alt='loadinggif' src={loadingimage}></img> : <img  alt={item.name} src={item.image_url}></img>
+                                    loading ? <img alt='loadinggif' src={loadingimage}></img> : <Link className='myLinks' to={`${item.id}`}><img  alt={item.name} src={item.image_url}></img></Link>
                                 }
                             
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name'   >{item.name}</p>
                             <div className='read-more' onClick={getAll} ><Link className='myLinks' to={`${item.id}`}>Read more...</Link></div>
-                            <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist</div>
-                            <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
+                            <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }}>Save to Bucketlist  </div>
+                            <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited </div>
                             
                         </div>
                     )
@@ -134,7 +134,7 @@ function Africa() {
             </div>
             
             
-            <Link className='seeMoreLink'  to='/Afro'><p className='seeMore'>See More From Africa</p></Link>
+            <Link className='seeMoreLink'  to='/Afro'><p className='seeMore'>See More From Africa <i className="fas fa-chevron-right"></i></p> </Link>
  
 
         </section>

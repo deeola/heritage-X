@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState ,forwardRef} from "react
 import hamOpens from "../../assets/icons/icon-hamburger.svg";
 import hamClose from "../../assets/icons/icon-close.svg";
 import heritageContext from "../context/Heritage/heritageContext";
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import {Power3} from 'gsap'
 import {gsap} from "gsap";
 
@@ -45,7 +45,7 @@ function Navbar(props, ref) {
           x:790,
           ease:'power3.easeinOut'
       },{
-          duration:3,
+          duration:1,
           x:0,
           ease:'power3.easeinOut'
 
@@ -59,7 +59,7 @@ function Navbar(props, ref) {
         x:-190,
         ease:'power3.easeinOut'
     },{
-        duration:1.5,
+        duration:1,
         x:0,
         ease:'power3.easeinOut'
 
@@ -77,7 +77,7 @@ useEffect(() => {
       x:190,
       ease:'power3.easeinOut'
   },{
-      duration:1.5,
+      duration:1,
       x:0,
       ease:'power3.easeinOut'
 
@@ -91,38 +91,38 @@ useEffect(() => {
   return (
     <nav>
       <div className="navcontainer" >
-        <div className="logo" ref={navLogo}>H-X</div>
+        <div className="logo" ref={navLogo}><Link className='logoLink' to='/'>H<span>-</span>X</Link></div>
         <ul style={ulDisplay()} ref={navMenu}> 
           <li onClick={closeMenu}>
-            <Link className="myLink" to="/Bucketlist">
+            <NavLink className="myLink" activeClassName="actives" to="/Bucketlist">
               Bucketlist
-            </Link>
+            </NavLink>
           </li>
           <li onClick={closeMenu}>
-            <Link className="myLink" to="/Visited">
+            <NavLink className="myLink" activeClassName="actives" to="/Visited">
               Visited
-            </Link>
+            </NavLink>
           </li>
           {isSubmitted ? (
             ""
           ) : (
             <li onClick={closeMenu}>
-              <Link className="myLink" to="/SignUp">
+              <NavLink className="myLink" activeClassName="actives" to="/SignUp">
                 Register
-              </Link>
+              </NavLink>
             </li>
           )}
           {isSubmitted ? (
             <li onClick={refreshPage}>
-              <Link className="myLink" to="/">
+              <Link className="myLink" activeClassName="actives" to="/">
                 Logout
               </Link>
             </li>
           ) : (
             <li onClick={closeMenu}>
-              <Link className="myLink" to="/Login">
+              <NavLink className="myLink" activeClassName="actives" to="/Login">
                 Login
-              </Link>
+              </NavLink>
             </li>
           )}
           {isSubmitted && <li className='usernameLi'>{`Hello, ${signin.mainusername}`}</li>}

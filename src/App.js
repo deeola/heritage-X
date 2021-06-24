@@ -16,6 +16,7 @@ import Visited from './components/visited/Visited';
 import Bucketlist from './components/bucketlist/Bucketlist';
 import SignUp from './components/login/SignUp';
 import Login from './components/login/Login';
+import Layer from './components/shared/Layer';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
 
                   
       </Switch>
+      <Layer />
 
       </div>
       </Router>

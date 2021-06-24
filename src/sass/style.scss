@@ -1,7 +1,9 @@
 @import 'config';
 @import 'utilities';
 
-
+body{
+    position: relative;
+}
 
 
 header{
@@ -47,6 +49,15 @@ header{
             font-size: 25px;
             font-weight: 700;
             cursor: pointer;
+
+            .logoLink{
+                color: white;
+                text-decoration: none;
+
+                span{
+                    color: $red;
+                }
+            }
             
         }
 
@@ -55,22 +66,22 @@ header{
             position: absolute;
             top: 3rem;
             width: 100%;
-            height: 350px;
+            height: 300px;
             padding: 20px 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             margin-top: 6px;
+            border-radius: 0px 0px 0px 10px;
             li{
                 list-style: none;
                 text-transform: uppercase;
-                color: $dark-blue;
                 font-weight: 700;
                 cursor: pointer;
 
                 .myLink{
                     text-decoration: none;
-                    color: $dark-blue;
+                    color: $black;
                     
                 }
 
@@ -133,16 +144,17 @@ header{
                 font-size: 2.5rem;
                 
                 span{
-                    color: $light-blue;
+                    color: $red;
                 }
                 
             }
             .Hero-subheading{
-                color: rgba(255, 255, 255, 0.801);
+                color: $red;
                 line-height: 1.7;
                 font-size: 13px;
                 position: absolute;
-                animation: opaque 1s ease-in 2.2s forwards ;
+               font-weight: 600;
+                
                 // opacity: 0;
                 
                 
@@ -175,7 +187,7 @@ header{
                 border: unset;
                 outline: none;
                 border-radius: 5px;
-                color: $dark-blue;
+                color: $black;
                 text-transform: uppercase;
                 font-weight: 700;
                 cursor: pointer;
@@ -190,7 +202,7 @@ header{
                 border: unset;
                 outline: none;
                 border-radius: 5px;
-                color: $dark-blue;
+                color: $black;
                 text-transform: uppercase;
                 font-weight: 700;
                 cursor: pointer;
@@ -200,7 +212,7 @@ header{
             button{
                 width: 50%;
                 height: 37px;
-                background-color: $dark-blue;
+                background-color: $red;
                 border: unset;
                 outline: none;
                 border-radius: 5px;
@@ -212,7 +224,7 @@ header{
                 transition: 1s;
 
                 &:hover{
-                    background-color: $light-blue;
+                    background-color: darken($red, 5%);
                     cursor: pointer;
                     transform: scale(0.97);
                 }
@@ -220,48 +232,6 @@ header{
         }
     }
 }
-
-
-
-
-// //KEYFRAMES
-
-// @keyframes slidein {
-//     from {
-//      left: -150%;
-     
-//     }
-  
-//     to {
-//      left: 0%;
-//     }
-// }
-
-
-// @keyframes opaque {
-//     from {
-//      opacity: 0;
-     
-//     }
-  
-//     to {
-//      opacity: 1;
-//     }
-// }
-
-// @keyframes navbar {
-//     from {
-//      left: 100%;
-     
-//     }
-  
-//     to {
-//      left: 0%;
-//     }
-// }
-
-
-
 
 
 //BODY
@@ -275,7 +245,7 @@ main,.afro-container{
         text-align: center;
 
         .explore-container{
-            color: $dark-blue;
+            color: $black;
             .explore{
                 font-weight: 700;
                 margin-bottom: 5px;
@@ -284,6 +254,7 @@ main,.afro-container{
             .explore-subtext{
                 margin-bottom: 10px;
                 font-size: 12px;
+                color: $gray;
             }
 
         }
@@ -310,37 +281,57 @@ main,.afro-container{
             }
             .site-country{
                 margin-bottom: 8px;
-                color: $light-blue;
+                color: $gray;
                 font-weight: 600;
                 font-size: 12px;
             }
 
             .site-name{
                 margin-bottom: 8px;
-                color: $dark-blue;
+                color: $black;
                 font-weight: 600;
                 font-size: 18px;
             }
 
             .bucketlist,.visited,.read-more{
-                background-color: rgba(59, 59, 112, 0.24);
+                border:  2px solid $gray;
                 margin-bottom: 10px;
                 width: 70%;
                 font-size: 10px;
                 padding: 10px 8px;
                 border-radius: 5px;
-                color: $dark-blue;
+                color: $gray;
                 text-transform: uppercase;
                 font-weight: 700;
                 text-align: center;
                 margin: auto auto 10px auto;
                 cursor: pointer;
+                transition: 500ms ease-in;
+
+                &:hover{
+                    background-color: $red;
+                    color: $white;
+                    border:none;
+                }
+
+                i{
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
 
             }
 
             .myLinks{
                 text-decoration: none;
-                color: $dark-blue;
+               color:$gray;
+               
+               
+
+               &:hover{
+                background-color: $red;
+                color: $white;
+                border:none;
+            }
                 
             }
         }
@@ -348,22 +339,34 @@ main,.afro-container{
         .seeMoreLink{
             text-decoration: none;
             cursor: pointer;
+            
+            
+            
         }
 
         .seeMore{
             border-radius: 5px;
             width: 100%;
             padding: 10px;
-            text-transform: capitalize;
             font-size: 13px;
             text-transform: uppercase;
             font-weight: 500;
             color: $white;
             text-decoration: none;
             text-align: center;
-            background-color: $dark-blue;
+            background-color: $red;
             margin-top: 20px;
+
+            i{
+                display: none;
+                
+                
+            }
+
+            
         }
+
+        
 
         
     }
@@ -386,7 +389,7 @@ main,.afro-container{
     nav{
         position: relative;
         z-index: 1050;
-        background-color: $dark-blue;
+        background-color: $black;
 
     }
     .navcontainer{
@@ -403,6 +406,17 @@ main,.afro-container{
             font-size: 25px;
             font-weight: 700;
             cursor: pointer;
+
+            
+
+            .logoLink{
+                color: white;
+                text-decoration: none;
+
+                span{
+                    color: $red;
+                }
+            }
             
         }
 
@@ -419,15 +433,25 @@ main,.afro-container{
             flex-direction: column;
             justify-content: space-between;
             margin-top: 6px;
-            background-color: rgb(230, 230, 230);
+            background-color: $white;
+            border-radius: 0px 0px 0px 10px;
             li{
                 list-style: none;
                 text-transform: uppercase;
-                color: $dark-blue;
                 font-weight: 700;
                 cursor: pointer;
 
+                .myLink{
+                    text-decoration: none;
+                    color: $black;
+                    
+                }
+
+
+
             }
+
+            
 
         }
         .hamIcons{
@@ -469,7 +493,7 @@ main,.afro-container{
             margin: 10px 0px;
             h5{
                 margin: 5px 0px;
-                color: $dark-blue;
+                color: $red;
             }
             .site-description-text{
                 font-size: 14px;
@@ -502,14 +526,14 @@ main,.afro-container{
                     i{
 
                         font-size: 10px;
-                        color: $light-blue;
+                        color: $gray;
                     }
                     p{
 
                         margin-left: 10px;
                         font-size: 10px;
                         text-transform: uppercase;
-                        color: $light-blue;
+                        color: $gray;
                         
 
                     }
@@ -517,7 +541,9 @@ main,.afro-container{
 
                 .details-text{
                     font-weight: 700;
-                    color: $dark-blue;
+                    color: $black;
+                    text-align: center;
+                    text-transform: capitalize;
                 }
 
             }
@@ -526,13 +552,13 @@ main,.afro-container{
                 margin: 20px 0px;
 
                 .bucketlist,.visited,.read-more{
-                    background-color: $dark-blue;
+                    background-color: $red;
                     margin-bottom: 15px;
                     width: 100%;
                     font-size: 10px;
                     padding: 10px 8px;
                     border-radius: 5px;
-                    color: white;
+                    color: $white;
                     text-transform: uppercase;
                     font-weight: 700;
                     text-align: center;
@@ -568,7 +594,7 @@ main,.afro-container{
 
 footer{
     margin-top: 50px;
-    background: $dark-blue;
+    background: $black;
     text-align: center;
     padding: 30px 0px;
     nav {
@@ -580,6 +606,9 @@ footer{
         padding: 0px 20px;
         justify-content: space-between;
         flex-direction: column;
+        position: relative;
+        z-index: 900 !important;
+        
 
         .logo{
             color: $white;
@@ -596,10 +625,15 @@ footer{
           li{
             list-style: none;
             margin-top: 10px;
-            color: white;
             font-weight: 500;
             text-transform: uppercase;
             cursor: pointer;
+
+            .myLink{
+                text-decoration: none;
+                color: $white;
+                
+            }
         }
         }
       }
@@ -610,7 +644,7 @@ footer{
         .footerSecondText {
             width: 90%;
             margin: auto;
-            color: white;
+            color: $white;
             font-size: 14px;
         }
 
@@ -645,7 +679,7 @@ footer{
     nav{
         position: relative;
         z-index: 1050;
-        background-color: $dark-blue;
+        background-color: $black;
 
     }
 
@@ -668,6 +702,15 @@ footer{
             font-size: 25px;
             font-weight: 700;
             cursor: pointer;
+
+            .logoLink{
+                color: $white;
+                text-decoration: none;
+
+                span{
+                    color: $red;
+                }
+            }
             
         }
 
@@ -684,13 +727,19 @@ footer{
             flex-direction: column;
             justify-content: space-between;
             margin-top: 6px;
-            background-color: rgb(230, 230, 230);
+            background-color: $white;
+            border-radius: 0px 0px 0px 10px;
             li{
                 list-style: none;
                 text-transform: uppercase;
-                color: $dark-blue;
                 font-weight: 700;
                 cursor: pointer;
+
+                .myLink{
+                    text-decoration: none;
+                    color: $black;
+                    
+                }
 
             }
             
@@ -724,10 +773,11 @@ footer{
         }
 
         .LoginHeader{
-            background-color: $dark-blue;
+            background-color: $black;
             margin-bottom: 20px;
             color: white;
             padding: 20px;
+            border-radius: 4px;
             h3{
                 margin-bottom: 10px;
                 
@@ -767,7 +817,7 @@ footer{
             }
 
             button{
-                background-color:$dark-blue;
+                background-color:$black;
                 width: 100%;
                 height: 40px;
                 outline: none;
@@ -784,11 +834,11 @@ footer{
 
         .signinLink{
             font-size: 14px;
-            color: $dark-blue;
+            color: $gray;
 
             .link{
                 text-transform: uppercase;
-                color: $dark-blue;
+                color: $black;
                 text-decoration: none;
                 font-weight: 600;
                 
@@ -797,6 +847,19 @@ footer{
     }
 
 }
+
+
+.layer {
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.76);
+   
+  }
+
 
 
 @import 'tabQuery';

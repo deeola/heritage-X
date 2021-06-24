@@ -22,7 +22,7 @@ function Region() {
                     return(
                         <div className='site-container' key={uuid()}>
                             <div className='site-image'>
-                            <img  alt={item.name} src={item.image_url}></img>
+                            <Link className='myLinks' to={`${item.id}`}><img  alt={item.name} src={item.image_url}></img></Link>
                             </div>
                             
                             <p className='site-country'>{item.states[0].name}</p>

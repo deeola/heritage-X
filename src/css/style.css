@@ -10,6 +10,10 @@ img {
   display: block;
 }
 
+body {
+  position: relative;
+}
+
 header {
   background: url(../assets/home/mobile/hero-image.jpeg);
   height: 500px;
@@ -53,30 +57,39 @@ header .navcontainer .logo {
   cursor: pointer;
 }
 
+header .navcontainer .logo .logoLink {
+  color: white;
+  text-decoration: none;
+}
+
+header .navcontainer .logo .logoLink span {
+  color: #f76d6d;
+}
+
 header .navcontainer ul {
   background-color: #FFFFFF;
   position: absolute;
   top: 3rem;
   width: 100%;
-  height: 350px;
+  height: 300px;
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 6px;
+  border-radius: 0px 0px 0px 10px;
 }
 
 header .navcontainer ul li {
   list-style: none;
   text-transform: uppercase;
-  color: #0a5f5f;
   font-weight: 700;
   cursor: pointer;
 }
 
 header .navcontainer ul li .myLink {
   text-decoration: none;
-  color: #0a5f5f;
+  color: #201f1f;
 }
 
 header .navcontainer ul .usernameLi {
@@ -130,15 +143,15 @@ header .hero-container .hero-text h1 {
 }
 
 header .hero-container .hero-text h1 span {
-  color: #42ad8d;
+  color: #f76d6d;
 }
 
 header .hero-container .hero-text .Hero-subheading {
-  color: rgba(255, 255, 255, 0.801);
+  color: #f76d6d;
   line-height: 1.7;
   font-size: 13px;
   position: absolute;
-  animation: opaque 1s ease-in 2.2s forwards;
+  font-weight: 600;
 }
 
 header .formDiv {
@@ -164,7 +177,7 @@ header .formDiv form .mainSelect {
   border: unset;
   outline: none;
   border-radius: 5px;
-  color: #0a5f5f;
+  color: #201f1f;
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
@@ -178,7 +191,7 @@ header .formDiv form .subSelect {
   border: unset;
   outline: none;
   border-radius: 5px;
-  color: #0a5f5f;
+  color: #201f1f;
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
@@ -187,7 +200,7 @@ header .formDiv form .subSelect {
 header .formDiv form button {
   width: 50%;
   height: 37px;
-  background-color: #0a5f5f;
+  background-color: #f76d6d;
   border: unset;
   outline: none;
   border-radius: 5px;
@@ -200,7 +213,7 @@ header .formDiv form button {
 }
 
 header .formDiv form button:hover {
-  background-color: #42ad8d;
+  background-color: #f65555;
   cursor: pointer;
   transform: scale(0.97);
 }
@@ -216,7 +229,7 @@ main .subMain-container, .afro-container .subMain-container {
 }
 
 main .subMain-container .explore-container, .afro-container .subMain-container .explore-container {
-  color: #0a5f5f;
+  color: #201f1f;
 }
 
 main .subMain-container .explore-container .explore, .afro-container .subMain-container .explore-container .explore {
@@ -227,6 +240,7 @@ main .subMain-container .explore-container .explore, .afro-container .subMain-co
 main .subMain-container .explore-container .explore-subtext, .afro-container .subMain-container .explore-container .explore-subtext {
   margin-bottom: 10px;
   font-size: 12px;
+  color: #727171;
 }
 
 main .subMain-container .grid-container, .afro-container .subMain-container .grid-container {
@@ -249,36 +263,54 @@ main .subMain-container .site-container .site-image img, .afro-container .subMai
 
 main .subMain-container .site-container .site-country, .afro-container .subMain-container .site-container .site-country {
   margin-bottom: 8px;
-  color: #42ad8d;
+  color: #727171;
   font-weight: 600;
   font-size: 12px;
 }
 
 main .subMain-container .site-container .site-name, .afro-container .subMain-container .site-container .site-name {
   margin-bottom: 8px;
-  color: #0a5f5f;
+  color: #201f1f;
   font-weight: 600;
   font-size: 18px;
 }
 
 main .subMain-container .site-container .bucketlist, main .subMain-container .site-container .visited, main .subMain-container .site-container .read-more, .afro-container .subMain-container .site-container .bucketlist, .afro-container .subMain-container .site-container .visited, .afro-container .subMain-container .site-container .read-more {
-  background-color: rgba(59, 59, 112, 0.24);
+  border: 2px solid #727171;
   margin-bottom: 10px;
   width: 70%;
   font-size: 10px;
   padding: 10px 8px;
   border-radius: 5px;
-  color: #0a5f5f;
+  color: #727171;
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
   margin: auto auto 10px auto;
   cursor: pointer;
+  transition: 500ms ease-in;
+}
+
+main .subMain-container .site-container .bucketlist:hover, main .subMain-container .site-container .visited:hover, main .subMain-container .site-container .read-more:hover, .afro-container .subMain-container .site-container .bucketlist:hover, .afro-container .subMain-container .site-container .visited:hover, .afro-container .subMain-container .site-container .read-more:hover {
+  background-color: #f76d6d;
+  color: #FFFFFF;
+  border: none;
+}
+
+main .subMain-container .site-container .bucketlist i, main .subMain-container .site-container .visited i, main .subMain-container .site-container .read-more i, .afro-container .subMain-container .site-container .bucketlist i, .afro-container .subMain-container .site-container .visited i, .afro-container .subMain-container .site-container .read-more i {
+  margin-left: 10px;
+  font-size: 14px;
 }
 
 main .subMain-container .site-container .myLinks, .afro-container .subMain-container .site-container .myLinks {
   text-decoration: none;
-  color: #0a5f5f;
+  color: #727171;
+}
+
+main .subMain-container .site-container .myLinks:hover, .afro-container .subMain-container .site-container .myLinks:hover {
+  background-color: #f76d6d;
+  color: #FFFFFF;
+  border: none;
 }
 
 main .subMain-container .seeMoreLink, .afro-container .subMain-container .seeMoreLink {
@@ -290,15 +322,18 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
   border-radius: 5px;
   width: 100%;
   padding: 10px;
-  text-transform: capitalize;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 500;
   color: #FFFFFF;
   text-decoration: none;
   text-align: center;
-  background-color: #0a5f5f;
+  background-color: #f76d6d;
   margin-top: 20px;
+}
+
+main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore i {
+  display: none;
 }
 
 .afro-container {
@@ -316,7 +351,7 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 .afro-container nav {
   position: relative;
   z-index: 1050;
-  background-color: #0a5f5f;
+  background-color: #201f1f;
 }
 
 .afro-container .navcontainer {
@@ -336,6 +371,15 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
   cursor: pointer;
 }
 
+.afro-container .navcontainer .logo .logoLink {
+  color: white;
+  text-decoration: none;
+}
+
+.afro-container .navcontainer .logo .logoLink span {
+  color: #f76d6d;
+}
+
 .afro-container .navcontainer ul {
   background-color: #FFFFFF;
   position: absolute;
@@ -347,15 +391,20 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 6px;
-  background-color: #e6e6e6;
+  background-color: #FFFFFF;
+  border-radius: 0px 0px 0px 10px;
 }
 
 .afro-container .navcontainer ul li {
   list-style: none;
   text-transform: uppercase;
-  color: #0a5f5f;
   font-weight: 700;
   cursor: pointer;
+}
+
+.afro-container .navcontainer ul li .myLink {
+  text-decoration: none;
+  color: #201f1f;
 }
 
 .afro-container .navcontainer .hamIcons {
@@ -397,7 +446,7 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 
 .afro-container .siteDetailsContainer .site-description h5 {
   margin: 5px 0px;
-  color: #0a5f5f;
+  color: #f76d6d;
 }
 
 .afro-container .siteDetailsContainer .site-description .site-description-text {
@@ -427,19 +476,21 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 
 .afro-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category i {
   font-size: 10px;
-  color: #42ad8d;
+  color: #727171;
 }
 
 .afro-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category p {
   margin-left: 10px;
   font-size: 10px;
   text-transform: uppercase;
-  color: #42ad8d;
+  color: #727171;
 }
 
 .afro-container .siteDetailsContainer .second-details-div .subCategory .details-text {
   font-weight: 700;
-  color: #0a5f5f;
+  color: #201f1f;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .afro-container .siteDetailsContainer .second-details-div .Save-container {
@@ -447,13 +498,13 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 }
 
 .afro-container .siteDetailsContainer .second-details-div .Save-container .bucketlist, .afro-container .siteDetailsContainer .second-details-div .Save-container .visited, .afro-container .siteDetailsContainer .second-details-div .Save-container .read-more {
-  background-color: #0a5f5f;
+  background-color: #f76d6d;
   margin-bottom: 15px;
   width: 100%;
   font-size: 10px;
   padding: 10px 8px;
   border-radius: 5px;
-  color: white;
+  color: #FFFFFF;
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
@@ -476,7 +527,7 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
 
 footer {
   margin-top: 50px;
-  background: #0a5f5f;
+  background: #201f1f;
   text-align: center;
   padding: 30px 0px;
 }
@@ -490,6 +541,8 @@ footer nav {
   padding: 0px 20px;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
+  z-index: 900 !important;
 }
 
 footer nav .logo {
@@ -509,10 +562,14 @@ footer nav ul {
 footer nav ul li {
   list-style: none;
   margin-top: 10px;
-  color: white;
   font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+footer nav ul li .myLink {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 footer .footerSecondDiv {
@@ -522,7 +579,7 @@ footer .footerSecondDiv {
 footer .footerSecondDiv .footerSecondText {
   width: 90%;
   margin: auto;
-  color: white;
+  color: #FFFFFF;
   font-size: 14px;
 }
 
@@ -547,7 +604,7 @@ footer .icons {
 .form-container nav {
   position: relative;
   z-index: 1050;
-  background-color: #0a5f5f;
+  background-color: #201f1f;
 }
 
 .form-container .navcontainer {
@@ -567,6 +624,15 @@ footer .icons {
   cursor: pointer;
 }
 
+.form-container .navcontainer .logo .logoLink {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.form-container .navcontainer .logo .logoLink span {
+  color: #f76d6d;
+}
+
 .form-container .navcontainer ul {
   background-color: #FFFFFF;
   position: absolute;
@@ -578,15 +644,20 @@ footer .icons {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 6px;
-  background-color: #e6e6e6;
+  background-color: #FFFFFF;
+  border-radius: 0px 0px 0px 10px;
 }
 
 .form-container .navcontainer ul li {
   list-style: none;
   text-transform: uppercase;
-  color: #0a5f5f;
   font-weight: 700;
   cursor: pointer;
+}
+
+.form-container .navcontainer ul li .myLink {
+  text-decoration: none;
+  color: #201f1f;
 }
 
 .form-container .navcontainer .hamIcons {
@@ -614,10 +685,11 @@ footer .icons {
 }
 
 .form-container .formDesigns .LoginHeader {
-  background-color: #0a5f5f;
+  background-color: #201f1f;
   margin-bottom: 20px;
   color: white;
   padding: 20px;
+  border-radius: 4px;
 }
 
 .form-container .formDesigns .LoginHeader h3 {
@@ -652,7 +724,7 @@ footer .icons {
 }
 
 .form-container .formDesigns .form-inputss button {
-  background-color: #0a5f5f;
+  background-color: #201f1f;
   width: 100%;
   height: 40px;
   outline: none;
@@ -666,17 +738,41 @@ footer .icons {
 
 .form-container .formDesigns .signinLink {
   font-size: 14px;
-  color: #0a5f5f;
+  color: #727171;
 }
 
 .form-container .formDesigns .signinLink .link {
   text-transform: uppercase;
-  color: #0a5f5f;
+  color: #201f1f;
   text-decoration: none;
   font-weight: 600;
 }
 
+.layer {
+  position: absolute;
+  top: 0vh;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
 @media (min-width: 760px) {
+  .actives {
+    position: relative !important;
+    color: #f76d6d !important;
+  }
+  .actives::after {
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    color: #FFFFFF;
+    bottom: -10px;
+    content: "";
+    left: 13px;
+    margin: 10px auto auto auto;
+  }
   header {
     background: url(../assets/home/tablet/hero-image.jpeg);
     background-position: center;
@@ -712,10 +808,10 @@ footer .icons {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 14px;
-    transition: 1s ease-in-out;
+    transition: 500ms ease-in-out;
   }
   header .navcontainer ul li .myLink:hover {
-    color: #42ad8d;
+    color: #f76d6d;
   }
   header .navcontainer ul li .usernameLi {
     color: #FFFFFF !important;
@@ -725,6 +821,9 @@ footer .icons {
   }
   header .hero-container .hero-text h1 {
     font-size: 5rem;
+  }
+  header .hero-container .hero-text .Hero-subheading {
+    color: white;
   }
   header .formDiv form {
     flex-direction: row;
@@ -752,7 +851,7 @@ footer .icons {
     text-align: center;
   }
   main .subMain-container .bucketlist, main .subMain-container .visited, main .subMain-container .read-more, .afro-container .subMain-container .bucketlist, .afro-container .subMain-container .visited, .afro-container .subMain-container .read-more {
-    width: 100% !important;
+    width: 60% !important;
   }
   main .subMain-container .site-name, .afro-container .subMain-container .site-name {
     min-height: 70px;
@@ -767,6 +866,35 @@ footer .icons {
   main .subMain-container .site-image, .afro-container .subMain-container .site-image {
     width: 100%;
     height: 400px !important;
+    transition: 300ms ease-in;
+    cursor: pointer;
+  }
+  main .subMain-container .site-image:hover, .afro-container .subMain-container .site-image:hover {
+    transform: scale(0.95);
+  }
+  main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-transform: capitalize !important;
+    font-size: 20px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #f76d6d;
+    text-decoration: none;
+    text-align: left;
+    background-color: unset;
+    margin-top: 20px;
+  }
+  main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore i {
+    display: block;
+    display: inline;
+    margin-left: 10px;
+    text-align: center;
+  }
+  main .subMain-container .seeMore:hover, .afro-container .subMain-container .seeMore:hover {
+    background-color: #f76d6d;
+    color: white;
   }
   .afro-container .navcontainer {
     width: 80%;
@@ -795,7 +923,7 @@ footer .icons {
     font-size: 14px;
   }
   .afro-container .navcontainer ul li .myLink:hover {
-    color: #42ad8d;
+    color: #f76d6d;
   }
   .afro-container .navcontainer ul li .usernameLi {
     color: #FFFFFF;
@@ -806,6 +934,42 @@ footer .icons {
   .afro-container .mapContainerDiv {
     width: 100%;
     height: 500px !important;
+  }
+  .form-container .navcontainer {
+    width: 80%;
+  }
+  .form-container .navcontainer ul {
+    position: unset;
+    top: unset;
+    width: 60%;
+    height: unset;
+    padding: unset;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: unset;
+    background-color: unset;
+  }
+  .form-container .navcontainer ul li {
+    list-style: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .form-container .navcontainer ul li .myLink {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 1s ease-in-out;
+  }
+  .form-container .navcontainer ul li .myLink:hover {
+    color: #f76d6d;
+  }
+  .form-container .navcontainer .hamIcons {
+    display: none;
+  }
+  .layer {
+    display: none;
   }
 }
 
@@ -832,11 +996,11 @@ footer .icons {
     margin-top: 150px;
   }
   header .hero-container .hero-text h1 {
-    font-size: 9rem;
+    font-size: 7rem;
   }
   header .hero-container .hero-text .Hero-subheading {
     font-size: 19px;
-    color: #42ad8d;
+    color: #f76d6d;
   }
   main .subMain-container, .afro-container .subMain-container {
     text-align: left;
@@ -856,7 +1020,11 @@ footer .icons {
     text-align: center;
   }
   main .subMain-container .bucketlist, main .subMain-container .visited, main .subMain-container .read-more, .afro-container .subMain-container .bucketlist, .afro-container .subMain-container .visited, .afro-container .subMain-container .read-more {
-    width: 100% !important;
+    width: 60% !important;
+    border: 1px solid #727171 !important;
+  }
+  main .subMain-container .bucketlist:hover, main .subMain-container .visited:hover, main .subMain-container .read-more:hover, .afro-container .subMain-container .bucketlist:hover, .afro-container .subMain-container .visited:hover, .afro-container .subMain-container .read-more:hover {
+    border: none !important;
   }
   main .subMain-container .site-name, .afro-container .subMain-container .site-name {
     min-height: 70px;
@@ -947,39 +1115,6 @@ footer .icons {
     width: 45% !important;
     cursor: pointer;
   }
-  .form-container .navcontainer {
-    width: 80%;
-  }
-  .form-container .navcontainer ul {
-    position: unset;
-    top: unset;
-    width: 60%;
-    height: unset;
-    padding: unset;
-    display: flex !important;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: unset;
-    background-color: unset;
-  }
-  .form-container .navcontainer ul li {
-    list-style: none;
-    text-transform: capitalize;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .form-container .navcontainer ul li .myLink {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 1s ease-in-out;
-  }
-  .form-container .navcontainer ul li .myLink:hover {
-    color: #42ad8d;
-  }
-  .form-container .navcontainer .hamIcons {
-    display: none;
-  }
   .formDesigns {
     width: 50% !important;
   }
@@ -988,5 +1123,11 @@ footer .icons {
   }
   .formDesigns .form-control {
     margin-bottom: 30px !important;
+  }
+}
+
+@media (min-width: 1202px) {
+  header .hero-container .hero-text h1 {
+    font-size: 9rem;
   }
 }

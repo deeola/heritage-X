@@ -89,7 +89,7 @@ function ArabStates() {
                         <div className='site-container' key={uuid()} ref={addToRefs}>
                             <div className='site-image'>
                             {
-                                     loading ? <img alt='loadinggif' src={loadingimage}></img>  : <img  alt={item.name} src={item.image_url}></img>
+                                     loading ? <img alt='loadinggif' src={loadingimage}></img>  : <Link className='myLinks' to={`${item.id}`}><img  alt={item.name} src={item.image_url}></img></Link>
                                 }
                             </div>
                             <p className='site-country'>{item.states[0].name}</p>
@@ -103,7 +103,7 @@ function ArabStates() {
                 })
             }
             </div>
-            <Link className='seeMoreLink'  to='/Arabo'><p className='seeMore'>See More From Arab States</p></Link>
+            <Link className='seeMoreLink'  to='/Arabo'><p className='seeMore'>See More From Arab States <i className="fas fa-chevron-right"></i></p></Link>
 
         </section>
 

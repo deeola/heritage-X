@@ -68,13 +68,13 @@ function Header() {
 
         gsap.fromTo(hero, {
             
-            x:1920,
+            x:520,
             opacity:0,
 
             ease:'power3.inOut'
         },
         {
-            duration:2.5,
+            duration:1.5,
             x:0,
             opacity:1,
             ease:'power3.inOut'
@@ -85,7 +85,7 @@ function Header() {
 
         gsap.fromTo(heroText,{
 
-            x:-1000,
+            x:-500,
             opacity:0,
             ease:'power3.inOut'
 
