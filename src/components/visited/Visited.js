@@ -48,6 +48,7 @@ function Visited() {
         <div className='afro-container'>
             <Navbar />
             <section className='subMain-container'>
+            <div className='grid-container'>
               {
                 isSubmitted ? 
                   Visited.length !== 0 ?  Visited.map(item => {
@@ -59,17 +60,19 @@ function Visited() {
                               
                               <p className='site-country'>{item.states[0].name}</p>
                               <p className='site-name' >{item.name}</p>
+                              <div className='read-more' ><Link className='myLinks' to={`${item.id}`}>Read more...</Link></div>
                               <div className='visited remove'  onClick={() => {removeTaskFromLocalStoragesVisited(item) }} >Remove</div>
                               <div className='bucketlist' onClick={() => {storeTaskInLocalStorages(item) }} >Save to Buckelist</div>
                               
-                              <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
+                             
                           </div>
                       )
                   }) : <div className='bucketempty'>Your Visit List is empty</div>
 
                   : <div className='bucketempty'>Kindly login to View Visit List</div>
 
-              }  
+              } 
+              </div>
             
 
             </section>

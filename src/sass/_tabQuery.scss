@@ -46,6 +46,10 @@
                             color: $light-blue;
                         }
                     }
+
+                    .usernameLi{
+                        color: $white !important;
+                    }
                     
                 }
     
@@ -174,6 +178,9 @@
                         }
                     }
                     
+                    .usernameLi{
+                        color: $white;
+                    }
                 }
     
             }
@@ -193,3 +200,6 @@
     }
 }
 
+.usernameLi{
+    color: $white !important;
+}

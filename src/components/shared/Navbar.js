@@ -125,7 +125,7 @@ useEffect(() => {
               </Link>
             </li>
           )}
-          {isSubmitted && <li>{`Hello, ${signin.mainusername}`}</li>}
+          {isSubmitted && <li className='usernameLi'>{`Hello, ${signin.mainusername}`}</li>}
         </ul>
         <div className="hamIcons" ref={hamIcon} >
           <div

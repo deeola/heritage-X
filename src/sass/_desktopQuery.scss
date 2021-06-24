@@ -89,6 +89,16 @@
 
     }
 
+    .afro-container{
+        
+        .mapContainerDiv{
+            width: 100%;
+            height: 500px !important;
+            
+        }
+        
+    }
+
     footer{
  
 
@@ -201,6 +211,69 @@
             
         }
         
+    }
+
+    //FORM STYLING
+
+    //FORMS STYLING
+
+    .form-container{
+        .navcontainer{
+
+            width: 80%;
+        
+    
+            ul{
+                position: unset;
+                top: unset;
+                width: 60%;
+                height: unset;
+                padding: unset;
+                display: flex !important;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: unset;
+                
+                background-color: unset;
+                li{
+                    list-style: none;
+                    text-transform:capitalize;
+                    
+                    font-weight: 600;
+                    cursor: pointer;
+
+                    .myLink{
+                        color: $white;
+                        text-decoration: none;
+                        font-size: 14px;
+                        transition: 1s ease-in-out;
+
+                        &:hover{
+                            color: $light-blue;
+                        }
+                    }
+                    
+                }
+    
+            }
+            .hamIcons{
+                display: none;
+    
+            }
+        }
+
+    }
+
+    .formDesigns{
+        width: 50% !important;
+
+        .LoginHeader{
+            margin-bottom: 50px !important;
+        }
+
+        .form-control{
+            margin-bottom: 30px !important;
+        }
     }
 
 

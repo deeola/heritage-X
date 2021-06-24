@@ -79,6 +79,10 @@ header .navcontainer ul li .myLink {
   color: #0a5f5f;
 }
 
+header .navcontainer ul .usernameLi {
+  color: #FFFFFF;
+}
+
 header .navcontainer .hamIcons {
   display: flex;
   justify-content: center;
@@ -713,6 +717,9 @@ footer .icons {
   header .navcontainer ul li .myLink:hover {
     color: #42ad8d;
   }
+  header .navcontainer ul li .usernameLi {
+    color: #FFFFFF !important;
+  }
   header .navcontainer .hamIcons {
     display: none;
   }
@@ -790,6 +797,9 @@ footer .icons {
   .afro-container .navcontainer ul li .myLink:hover {
     color: #42ad8d;
   }
+  .afro-container .navcontainer ul li .usernameLi {
+    color: #FFFFFF;
+  }
   .afro-container .navcontainer .hamIcons {
     display: none;
   }
@@ -797,6 +807,10 @@ footer .icons {
     width: 100%;
     height: 500px !important;
   }
+}
+
+.usernameLi {
+  color: #FFFFFF !important;
 }
 
 @media (min-width: 1024px) {
@@ -857,6 +871,10 @@ footer .icons {
   main .subMain-container .site-image, .afro-container .subMain-container .site-image {
     width: 100%;
     height: 300px !important;
+  }
+  .afro-container .mapContainerDiv {
+    width: 100%;
+    height: 500px !important;
   }
   footer .footer-container {
     width: 80%;
@@ -928,5 +946,47 @@ footer .icons {
   .siteDetailsContainer .second-details-div .Save-container .visited {
     width: 45% !important;
     cursor: pointer;
+  }
+  .form-container .navcontainer {
+    width: 80%;
+  }
+  .form-container .navcontainer ul {
+    position: unset;
+    top: unset;
+    width: 60%;
+    height: unset;
+    padding: unset;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: unset;
+    background-color: unset;
+  }
+  .form-container .navcontainer ul li {
+    list-style: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .form-container .navcontainer ul li .myLink {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 1s ease-in-out;
+  }
+  .form-container .navcontainer ul li .myLink:hover {
+    color: #42ad8d;
+  }
+  .form-container .navcontainer .hamIcons {
+    display: none;
+  }
+  .formDesigns {
+    width: 50% !important;
+  }
+  .formDesigns .LoginHeader {
+    margin-bottom: 50px !important;
+  }
+  .formDesigns .form-control {
+    margin-bottom: 30px !important;
   }
 }

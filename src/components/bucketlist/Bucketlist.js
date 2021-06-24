@@ -47,6 +47,7 @@ function Bucketlist() {
           <Navbar />
             
             <section className='subMain-container'> 
+            <div className='grid-container'>
 
             {
               isSubmitted ?
@@ -60,15 +61,17 @@ function Bucketlist() {
                             
                             <p className='site-country'>{item.states[0].name}</p>
                             <p className='site-name' >{item.name}</p>
+                            <div className='read-more' ><Link className='myLinks' to={`${item.id}`}>Read more...</Link></div>
                             <div className='bucketlist remove' onClick={() => { removeTaskFromLocalStorages(item)}} >Remove</div>
                             <div className='visited' onClick={() => {storeTaskInLocalStoragesVisited(item) }}>Save to Visited</div>
-                            <div className='read-more'  ><Link to={`${item.id}`}>Read more...</Link></div>
+                            
                         </div>
                     )
                 }) : <div className='bucketempty'>Your BucketList is empty</div>
 
                    : <div className='bucketempty'>Kindly login to View Visit List</div>
             }
+            </div>
            
 
             </section>
