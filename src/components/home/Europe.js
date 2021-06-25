@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect,useRef} from 'react';
+import React, { useContext, useEffect,useRef} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
@@ -11,13 +11,13 @@ function Europe() {
     const HeritageContext = useContext(heritageContext);
     const {Europe, getEurope, storeTaskInLocalStoragesVisited,storeTaskInLocalStorages} = HeritageContext
 
-    let refs = useRef(null)
     let revealRefs = useRef([]);
     revealRefs.current = [];
     
 
     useEffect(() => {
         getEurope()
+        // eslint-disable-next-line
     },[])
 
     useEffect(() => {
@@ -51,12 +51,7 @@ function Europe() {
             
 
         }
-
-        
-        
-        
-        
-
+        // eslint-disable-next-line
     },[revealRefs.current])
 
     const addToRefs = (el) => {

@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useRef, useState ,forwardRef} from "react";
+import React, { useContext, useEffect, useRef ,forwardRef} from "react";
 import hamOpens from "../../assets/icons/icon-hamburger.svg";
 import hamClose from "../../assets/icons/icon-close.svg";
 import heritageContext from "../context/Heritage/heritageContext";
 import { Link, NavLink} from "react-router-dom";
-import {Power3} from 'gsap'
 import {gsap} from "gsap";
 
 function Navbar(props, ref) {
@@ -16,7 +15,6 @@ function Navbar(props, ref) {
     DisplayCloseIcon,
     DisplayOpenIcon,
     isSubmitted,
-    Submitform,
     hamOpen
   } = HeritageContext;
 
@@ -50,7 +48,7 @@ function Navbar(props, ref) {
           ease:'power3.easeinOut'
 
       })
-
+      // eslint-disable-next-line
     }, [hamOpen])
 
   useEffect(() => {
@@ -65,7 +63,7 @@ function Navbar(props, ref) {
 
     })
 
-    
+    // eslint-disable-next-line
 }, [])
 
 
@@ -84,7 +82,7 @@ useEffect(() => {
   })
 
 
-  
+  // eslint-disable-next-line
 }, [])
 
 

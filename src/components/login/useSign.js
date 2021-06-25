@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import ValidateSign from "./ValidateSign";
-
 const useSign = (callback, ValidateSign) => {
 
   //GENERAL
@@ -47,6 +45,7 @@ const useSign = (callback, ValidateSign) => {
       if(Object.keys(error).length === 0 && isSubmitting){
           callback()
       }
+      // eslint-disable-next-line
   }, [error])
 
 

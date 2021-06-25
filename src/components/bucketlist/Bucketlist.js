@@ -9,7 +9,7 @@ import uuid from 'react-uuid';
 
 function Bucketlist() {
     const HeritageContext = useContext(heritageContext);
-    const {isSubmitted, Submitform,storeTaskInLocalStoragesVisited} = HeritageContext;
+    const {isSubmitted,storeTaskInLocalStoragesVisited} = HeritageContext;
 
     const [Bucketlist, setBucketList] = useState([])
     useEffect(() => {

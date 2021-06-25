@@ -1,26 +1,10 @@
-import React, { useReducer, useState,useEffect } from "react";
+import React, {useState} from "react";
 import heritageContext from "./heritageContext";
-import heritageReducer from "./heritageReducer";
-import { get_Data, set_loading,get_Natural } from "../types";
-import {useHistory} from 'react-router';
 
 
 const HeritageState = (props) => {
 
-  const history = useHistory();
 
-  
-
-
-  
-  //INITIAL STATE
-  const initialState = {
-    data: [],
-    countries:[],
-    categories:[],
-    regions:[],
-    loading: false
-  };
 
   const [Countries, SetCountries] = useState([]);
   const [Categories, SetCategories] = useState([]);
@@ -35,8 +19,6 @@ const HeritageState = (props) => {
 
 
   
-
-  const [state, dispatch] = useReducer(heritageReducer, initialState);
 
   //GET ALL DATA
 
@@ -92,7 +74,7 @@ const HeritageState = (props) => {
     const Num1 = Math.floor(Math.random()*Africas.length) 
     const Num2 = Math.floor(Math.random()*Africas.length) 
     const Num3 = Math.floor(Math.random()*Africas.length)
-    const Num4 = Math.floor(Math.random()*Africas.length) 
+
 
     setAfrica([Africas[Num1], Africas[Num2],Africas[Num3]] )
     setLoading(false)
@@ -113,7 +95,7 @@ const HeritageState = (props) => {
     const Num1 = Math.floor(Math.random()*Asia.length) 
     const Num2 = Math.floor(Math.random()*Asia.length)  
     const Num3 = Math.floor(Math.random()*Asia.length)
-    const Num4 = Math.floor(Math.random()*Asia.length) 
+
 
     setLatin([Asia[Num1], Asia[Num2],Asia[Num3]]);
     setLoading(false);
@@ -132,7 +114,7 @@ const HeritageState = (props) => {
     const Num1 = Math.floor(Math.random()*Latins.length) 
     const Num2 = Math.floor(Math.random()*Latins.length) 
     const Num3 = Math.floor(Math.random()*Latins.length)
-    const Num4 = Math.floor(Math.random()*Latins.length)   
+ 
 
     setAsia([Latins[Num1], Latins[Num2],Latins[Num3]])
     setLoading(false)
@@ -149,7 +131,7 @@ const HeritageState = (props) => {
     const Num1 = Math.floor(Math.random()*Europes.length) 
     const Num2 = Math.floor(Math.random()*Europes.length) 
     const Num3 = Math.floor(Math.random()*Europes.length)
-    const Num4 = Math.floor(Math.random()*Europes.length) 
+
 
     setEurope([Europes[Num1], Europes[Num2],Europes[Num3]])
     setLoading(false)
@@ -166,41 +148,12 @@ const HeritageState = (props) => {
     const Num1 = Math.floor(Math.random()*Arabs.length)
     const Num2 = Math.floor(Math.random()*Arabs.length) 
     const Num3 = Math.floor(Math.random()*Arabs.length)
-    const Num4 = Math.floor(Math.random()*Arabs.length) 
+ 
 
     setArab([Arabs[Num1], Arabs[Num2],Arabs[Num3]])
     setLoading(false)
   }
 
-
-  
-  const  getDatas = async() => {
-    setloading();
-    const res =  await  fetch('./data.json');
-
-    const items = await res.json();
-
-    console.log(items)
-
-    dispatch({
-        type: get_Data,
-        payload: items,
-    });
-    
-  }
-
-
-
-  const clickMe = () => {
-      getDatas();
-  }
-
-
-
-  //SET LOADING
-  
-  
-  const setloading = () => dispatch({ type: set_loading });
 
 
   //STORE BUCKET LIST
@@ -212,7 +165,7 @@ const HeritageState = (props) => {
         buckets = JSON.parse(localStorage.getItem("buckets"));
       }
     
-      if (buckets.indexOf(task) == -1) {
+      if (buckets.indexOf(task) === -1) {
         buckets.push(task);
       }
     
@@ -229,7 +182,7 @@ const HeritageState = (props) => {
         visited = JSON.parse(localStorage.getItem("visited"));
       }
     
-      if (visited.indexOf(task) == -1) {
+      if (visited.indexOf(task) === -1) {
         visited.push(task);
       }
     
@@ -295,8 +248,7 @@ const HeritageState = (props) => {
   return (
     <heritageContext.Provider
       value={{
-        getDatas,
-        clickMe,
+
         getRegion,
         loading,
         getCategory,

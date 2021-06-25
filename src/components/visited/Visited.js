@@ -9,13 +9,14 @@ import uuid from 'react-uuid';
 
 function Visited() {
     const HeritageContext = useContext(heritageContext);
-    const {isSubmitted, Submitform,storeTaskInLocalStorages} = HeritageContext;
+    const {isSubmitted,storeTaskInLocalStorages} = HeritageContext;
 
 
     const [Visited, setVisited] = useState([])
     useEffect(() => {
         const visit = JSON.parse(localStorage.getItem('visited'));
         setVisited(visit);
+        // eslint-disable-next-line
     }, [])
 
     //REMOVE

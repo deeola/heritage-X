@@ -1,4 +1,4 @@
-import React, {useContext, Fragment} from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import useSign from './useSign'
 import ValidateSign from "./ValidateSign";
@@ -8,7 +8,7 @@ import Footer from "../shared/Footer";
 
 const SignUp = () =>{
   const HeritageContext = useContext(heritageContext);
-  const {isSubmitted, Submitform} = HeritageContext;
+  const {Submitform} = HeritageContext;
 
     const {values, handleChange,onSubmit,error} = useSign(Submitform,ValidateSign);
     const {username, email, password2,password} = values;

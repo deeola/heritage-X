@@ -2,7 +2,6 @@ import React, {useState, useContext, useEffect} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
-import {useHistory} from 'react-router';
 import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
 
@@ -13,7 +12,7 @@ import Footer from '../shared/Footer';
 
 function Afro() {
     const HeritageContext = useContext(heritageContext);
-    const {getAll, storeTaskInLocalStorages, storeTaskInLocalStoragesVisited} = HeritageContext
+    const { storeTaskInLocalStorages, storeTaskInLocalStoragesVisited} = HeritageContext
 
     const [Alldata, setAlldata] = useState([]);
 
@@ -32,6 +31,7 @@ function Afro() {
 
     useEffect(() => {
         getAfro()
+        // eslint-disable-next-line
     },[])
 
 

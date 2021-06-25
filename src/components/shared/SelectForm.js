@@ -1,4 +1,4 @@
-import React,{useState, useMemo, useContext, useEffect, useRef, forwardRef} from 'react';
+import React,{useState, useMemo, useContext, useEffect, forwardRef} from 'react';
 import countryList from 'react-select-country-list';
 import Select from 'react-select';
 import heritageContext from '../context/Heritage/heritageContext';

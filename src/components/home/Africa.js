@@ -1,8 +1,7 @@
-import React, {useState, useContext, useEffect, useRef} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
-import {useHistory} from 'react-router';
 import loadingimage from '../../assets/icons/loadingtwo.gif';
 import {gsap} from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,9 +13,6 @@ function Africa() {
     const HeritageContext = useContext(heritageContext);
     const {Africa, getAfrica, getAll, storeTaskInLocalStoragesVisited, storeTaskInLocalStorages, loading} = HeritageContext;
 
-
-    //REACT HISTORY
-    const history = useHistory();
 
     //ANIMATION
 
@@ -48,7 +44,7 @@ function Africa() {
 
         }, 'start')
 
-        
+        // eslint-disable-next-line
     },[])
 
 
@@ -84,12 +80,7 @@ function Africa() {
             
 
         }
-
-        
-        
-        
-        
-
+        // eslint-disable-next-line
     },[revealRefs.current])
 
     const addToRefs = (el) => {

@@ -2,7 +2,6 @@ import React, {useState, useContext, useEffect} from 'react';
 import heritageContext from '../context/Heritage/heritageContext';
 import uuid from 'react-uuid';
 import {Link} from 'react-router-dom';
-import {useHistory} from 'react-router';
 import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
 
@@ -25,6 +24,7 @@ function Arabo() {
 
     useEffect(() => {
         getArabo()
+        // eslint-disable-next-line
     },[])
 
     

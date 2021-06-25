@@ -1,7 +1,7 @@
-import React,{useEffect, useRef, useContext} from 'react';
+import React,{useEffect, useRef} from 'react';
 import Navbar from '../shared/Navbar';
 import SelectForm from '../shared/SelectForm';
-import heritageContext from '../context/Heritage/heritageContext';
+
 
 import { gsap } from 'gsap'
 
@@ -12,9 +12,6 @@ function Header() {
     let headerRef = useRef(null);
     let heroMain = useRef(null)
     let formAnimate = useRef(null)
-    let navMenu = useRef(null);
-    let navLogo = useRef(null);
-
     
 
 
@@ -23,45 +20,6 @@ function Header() {
 
         const hero = heroMain.firstElementChild;
         const heroText = hero.nextSibling;
-
-        //NAV ANIMATE
-
-        // if(hamOpen === false){
-
-        //     gsap.fromTo(navMenu.current,{
-        //         duration:5,
-        //         // x:1000,
-        //         opacity:0,
-        //         ease:'power3.inOut'
-    
-        //     },{
-        //         duration:1.5,
-        //         // x:0,
-        //         opacity:1,
-        //         ease:'power3.inOut'
-    
-        //     }, 'start')
-        // }
-    
-            
-        //  else if(hamOpen===false){
-        //     gsap.fromTo(navMenu.current,{
-        //         duration:1.5,
-        //         x:-1000,
-        //         opacity:0,
-        //         ease:'power3.inOut'
-    
-        //     },{
-        //         duration:1.5,
-        //         x:0,
-        //         opacity:1,
-        //         ease:'power3.inOut'
-    
-        //     }, )
-    
-
-        // }
-
         
 
         //HERO ANIMATE
