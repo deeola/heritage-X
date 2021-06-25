@@ -16,12 +16,12 @@ body {
 
 header {
   background: url(../assets/home/mobile/hero-image.jpeg);
-  height: 500px;
+  visibility: hidden;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  visibility: hidden;
+  height: 70vh;
 }
 
 header::after {
@@ -41,13 +41,14 @@ header nav {
 }
 
 header .navcontainer {
-  display: flex;
-  width: 80%;
   margin: auto;
-  justify-content: space-between;
-  align-items: center;
   height: 3rem;
   margin: auto;
+  display: flex;
+  flex-direction: unset;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
 }
 
 header .navcontainer .logo {
@@ -70,14 +71,15 @@ header .navcontainer ul {
   background-color: #FFFFFF;
   position: absolute;
   top: 3rem;
-  width: 100%;
   height: 300px;
   padding: 20px 20px;
+  margin-top: 6px;
+  border-radius: 0px 0px 0px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 6px;
-  border-radius: 0px 0px 0px 10px;
+  align-items: unset;
+  width: 100%;
 }
 
 header .navcontainer ul li {
@@ -98,8 +100,10 @@ header .navcontainer ul .usernameLi {
 
 header .navcontainer .hamIcons {
   display: flex;
+  flex-direction: unset;
   justify-content: center;
   align-items: center;
+  width: unset;
 }
 
 header .navcontainer .hamIcons img {
@@ -131,8 +135,6 @@ header .hero-container .hero-text {
   z-index: 4;
   align-items: left;
   margin-top: 100px;
-  animation: slidein 2000ms ease-in-out  forwards;
-  position: absolute;
   position: relative;
 }
 
@@ -165,30 +167,18 @@ header .formDiv {
 
 header .formDiv form {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: unset;
+  width: unset;
 }
 
-header .formDiv form .mainSelect {
-  width: 100%;
+header .formDiv form .mainSelect, header .formDiv form .subSelect {
   margin-bottom: 10px;
+  width: 100%;
   height: 37px;
   background-color: #FFFFFF;
-  border: unset;
-  outline: none;
-  border-radius: 5px;
-  color: #201f1f;
-  text-transform: uppercase;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-header .formDiv form .subSelect {
-  width: 100%;
-  margin-bottom: 10px;
-  height: 37px;
-  background-color: #FFFFFF;
-  border: unset;
+  border: none;
   outline: none;
   border-radius: 5px;
   color: #201f1f;
@@ -198,18 +188,18 @@ header .formDiv form .subSelect {
 }
 
 header .formDiv form button {
+  margin: auto;
   width: 50%;
   height: 37px;
   background-color: #f76d6d;
-  border: unset;
+  border: none;
   outline: none;
   border-radius: 5px;
-  color: white;
-  font-size: 15px;
-  margin: auto;
-  font-weight: 500;
+  color: #FFFFFF;
   text-transform: uppercase;
-  transition: 1s;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 300ms ease-in;
 }
 
 header .formDiv form button:hover {
@@ -245,7 +235,6 @@ main .subMain-container .explore-container .explore-subtext, .afro-container .su
 
 main .subMain-container .grid-container, .afro-container .subMain-container .grid-container {
   display: grid;
-  flex-direction: column;
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 30px;
 }
@@ -278,6 +267,8 @@ main .subMain-container .site-container .site-name, .afro-container .subMain-con
 main .subMain-container .site-container .bucketlist, main .subMain-container .site-container .visited, main .subMain-container .site-container .read-more, .afro-container .subMain-container .site-container .bucketlist, .afro-container .subMain-container .site-container .visited, .afro-container .subMain-container .site-container .read-more {
   border: 2px solid #727171;
   margin-bottom: 10px;
+  margin: auto auto 10px auto;
+  transition: 500ms ease-in;
   width: 70%;
   font-size: 10px;
   padding: 10px 8px;
@@ -286,9 +277,7 @@ main .subMain-container .site-container .bucketlist, main .subMain-container .si
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
-  margin: auto auto 10px auto;
   cursor: pointer;
-  transition: 500ms ease-in;
 }
 
 main .subMain-container .site-container .bucketlist:hover, main .subMain-container .site-container .visited:hover, main .subMain-container .site-container .read-more:hover, .afro-container .subMain-container .site-container .bucketlist:hover, .afro-container .subMain-container .site-container .visited:hover, .afro-container .subMain-container .site-container .read-more:hover {
@@ -320,16 +309,18 @@ main .subMain-container .seeMoreLink, .afro-container .subMain-container .seeMor
 
 main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
   border-radius: 5px;
-  width: 100%;
-  padding: 10px;
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #FFFFFF;
   text-decoration: none;
-  text-align: center;
   background-color: #f76d6d;
   margin-top: 20px;
+  width: 100%;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
 }
 
 main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore i {
@@ -355,13 +346,14 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
 }
 
 .afro-container .navcontainer {
-  display: flex;
-  width: 80%;
   margin: auto;
-  justify-content: space-between;
-  align-items: center;
   height: 3rem;
   margin: auto;
+  display: flex;
+  flex-direction: unset;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
 }
 
 .afro-container .navcontainer .logo {
@@ -384,15 +376,16 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   background-color: #FFFFFF;
   position: absolute;
   top: 2.6rem;
-  width: 100%;
   height: 300px;
   padding: 20px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-top: 6px;
   background-color: #FFFFFF;
   border-radius: 0px 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: unset;
+  width: 100%;
 }
 
 .afro-container .navcontainer ul li {
@@ -409,8 +402,10 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
 
 .afro-container .navcontainer .hamIcons {
   display: flex;
+  flex-direction: unset;
   justify-content: center;
   align-items: center;
+  width: unset;
 }
 
 .afro-container .navcontainer .hamIcons img {
@@ -459,6 +454,7 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .afro-container .siteDetailsContainer .second-details-div .subCategory {
@@ -467,6 +463,7 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .afro-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category {
@@ -502,12 +499,13 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   margin-bottom: 15px;
   width: 100%;
   font-size: 10px;
-  padding: 10px 8px;
+  padding: 10px;
   border-radius: 5px;
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
+  cursor: pointer;
 }
 
 .afro-container .siteDetailsContainer .mapContainerDiv {
@@ -533,16 +531,16 @@ footer {
 }
 
 footer nav {
-  width: 100%;
   align-items: center;
   margin-top: 10px;
-  display: flex;
-  align-items: center;
   padding: 0px 20px;
-  justify-content: space-between;
-  flex-direction: column;
   position: relative;
   z-index: 900 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 footer nav .logo {
@@ -554,8 +552,9 @@ footer nav .logo {
 
 footer nav ul {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: unset;
   width: 50%;
 }
 
@@ -584,21 +583,23 @@ footer .footerSecondDiv .footerSecondText {
 }
 
 footer .copyIcon {
-  width: 100%;
+  margin-top: 20px;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
-  color: white;
+  align-items: unset;
+  width: 100%;
 }
 
 footer .icons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
   margin: 30px auto auto auto;
   cursor: pointer;
+  display: flex;
+  flex-direction: unset;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
 }
 
 .form-container nav {
@@ -608,13 +609,14 @@ footer .icons {
 }
 
 .form-container .navcontainer {
-  display: flex;
-  width: 80%;
   margin: auto;
-  justify-content: space-between;
-  align-items: center;
   height: 3rem;
   margin: auto;
+  display: flex;
+  flex-direction: unset;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
 }
 
 .form-container .navcontainer .logo {
@@ -637,15 +639,16 @@ footer .icons {
   background-color: #FFFFFF;
   position: absolute;
   top: 2.6rem;
-  width: 100%;
   height: 300px;
   padding: 20px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-top: 6px;
   background-color: #FFFFFF;
   border-radius: 0px 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: unset;
+  width: 100%;
 }
 
 .form-container .navcontainer ul li {
@@ -662,8 +665,10 @@ footer .icons {
 
 .form-container .navcontainer .hamIcons {
   display: flex;
+  flex-direction: unset;
   justify-content: center;
   align-items: center;
+  width: unset;
 }
 
 .form-container .navcontainer .hamIcons img {
@@ -685,20 +690,48 @@ footer .icons {
 }
 
 .form-container .formDesigns .LoginHeader {
-  background-color: #201f1f;
+  background-color: #f76d6d;
   margin-bottom: 20px;
   color: white;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 5px;
+  background-image: url(../assets/home/desktop/hero-image.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: unset;
+}
+
+.form-container .formDesigns .LoginHeader::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.719);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 5px;
 }
 
 .form-container .formDesigns .LoginHeader h3 {
   margin-bottom: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.form-container .formDesigns .LoginHeader p {
+  position: relative;
+  z-index: 10;
 }
 
 .form-container .formDesigns .form-inputss .form-control {
   display: flex;
   flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  width: unset;
 }
 
 .form-container .formDesigns .form-inputss .form-control label {
@@ -714,7 +747,7 @@ footer .icons {
 }
 
 .form-container .formDesigns .form-inputss .form-control input:focus {
-  border: 1px solid #42ad8d;
+  border: 1px solid #201f1f;
 }
 
 .form-container .formDesigns .form-inputss .form-control .error {
@@ -724,16 +757,19 @@ footer .icons {
 }
 
 .form-container .formDesigns .form-inputss button {
-  background-color: #201f1f;
-  width: 100%;
-  height: 40px;
+  background-color: #f76d6d;
   outline: none;
   border: none;
   margin: 10px 0px;
-  color: white;
-  font-weight: 700;
-  font-size: 17px;
+  width: 100%;
+  font-size: unset;
+  padding: 10px;
   border-radius: 5px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
 }
 
 .form-container .formDesigns .signinLink {
@@ -779,6 +815,7 @@ footer .icons {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    height: 50vh;
   }
   header::after {
     background-color: rgba(0, 0, 0, 0.562);
@@ -789,13 +826,15 @@ footer .icons {
   header .navcontainer ul {
     position: unset;
     top: unset;
-    width: 60%;
     height: unset;
     padding: unset;
-    display: flex !important;
+    margin-top: unset;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: unset;
+    align-items: unset;
+    width: 60%;
+    display: flex !important;
     background-color: unset;
   }
   header .navcontainer ul li {
@@ -826,8 +865,11 @@ footer .icons {
     color: white;
   }
   header .formDiv form {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   header .formDiv form .mainSelect {
     width: 37%;
@@ -857,8 +899,10 @@ footer .icons {
     min-height: 70px;
     font-size: 15px !important;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: unset;
   }
   main .subMain-container .site-container .read-more, .afro-container .subMain-container .site-container .read-more {
     margin-top: 13px;
@@ -902,13 +946,15 @@ footer .icons {
   .afro-container .navcontainer ul {
     position: unset;
     top: unset;
-    width: 60%;
     height: unset;
     padding: unset;
-    display: flex !important;
+    margin-top: unset;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: unset;
+    align-items: center;
+    width: 60%;
+    display: flex !important;
     background-color: unset;
   }
   .afro-container .navcontainer ul li {
@@ -941,14 +987,16 @@ footer .icons {
   .form-container .navcontainer ul {
     position: unset;
     top: unset;
-    width: 60%;
     height: unset;
     padding: unset;
-    display: flex !important;
-    flex-direction: row;
-    justify-content: space-between;
     margin-top: unset;
     background-color: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    display: flex !important;
   }
   .form-container .navcontainer ul li {
     list-style: none;
@@ -967,6 +1015,15 @@ footer .icons {
   }
   .form-container .navcontainer .hamIcons {
     display: none;
+  }
+  .form-container .formDesigns .LoginHeader {
+    background-image: url(../assets/home/mobile/hero-image.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: unset;
+    padding: 50px 20px;
   }
   .layer {
     display: none;
@@ -1042,7 +1099,7 @@ footer .icons {
   }
   .afro-container .mapContainerDiv {
     width: 100%;
-    height: 500px !important;
+    height: 450px !important;
   }
   footer .footer-container {
     width: 80%;
@@ -1068,9 +1125,11 @@ footer .icons {
     margin: unset;
   }
   footer .footer-container .copyIcon {
+    display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
   footer .footer-container .copyIcon .icons {
     margin: unset;
@@ -1080,15 +1139,25 @@ footer .icons {
     margin-top: 100px !important;
   }
   .siteDetailsContainer .site-upper-div {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: unset;
+    width: unset;
   }
   .siteDetailsContainer .first-details-container {
     width: 60%;
   }
+  .siteDetailsContainer .first-details-container .site-image {
+    width: 100%;
+    display: block;
+  }
+  .siteDetailsContainer .first-details-container .site-description {
+    display: block;
+  }
   .siteDetailsContainer .second-details-div {
-    width: 35%;
+    width: 35% !important;
     align-items: right;
     justify-content: space-between !important;
   }
@@ -1106,9 +1175,11 @@ footer .icons {
     width: 100%;
   }
   .siteDetailsContainer .second-details-div .Save-container {
-    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
   .siteDetailsContainer .second-details-div .Save-container .bucketlist,
   .siteDetailsContainer .second-details-div .Save-container .visited {
@@ -1120,9 +1191,22 @@ footer .icons {
   }
   .formDesigns .LoginHeader {
     margin-bottom: 50px !important;
+    background-image: url(../assets/home/tablet/hero-image.jpeg) !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: unset;
+    padding: 60px 20px !important;
   }
   .formDesigns .form-control {
     margin-bottom: 30px !important;
+  }
+  .formDesigns button {
+    transition: 300ms ease-in !important;
+  }
+  .formDesigns button:hover {
+    background-color: #201f1f !important;
   }
 }
 

@@ -16,10 +16,8 @@
       }
     header{
         background:url(../assets/home/tablet/hero-image.jpeg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
+    
+        @include header(center, cover, no-repeat,relative, 50vh);
 
         &::after{
 
@@ -35,13 +33,12 @@
             ul{
                 position: unset;
                 top: unset;
-                width: 60%;
+                
                 height: unset;
                 padding: unset;
-                display: flex !important;
-                flex-direction: row;
-                justify-content: space-between;
                 margin-top: unset;
+                @include flex(row,space-between, unset,60%);
+                display: flex !important;
                 
                 background-color: unset;
                 li{
@@ -94,8 +91,8 @@
 
         .formDiv{
             form{
-                flex-direction: row;
-                align-items: center;
+                
+                @include flex(row,space-between, center,100%);
                 .mainSelect{
                     width: 37%;
                     margin-bottom: unset;
@@ -144,9 +141,8 @@
             .site-name{
                 min-height: 70px;
                 font-size: 15px !important;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                
+                @include flex(row,center,center,unset);
             }
 
             .site-container{
@@ -219,13 +215,13 @@
             ul{
                 position: unset;
                 top: unset;
-                width: 60%;
+                
                 height: unset;
                 padding: unset;
-                display: flex !important;
-                flex-direction: row;
-                justify-content: space-between;
+                
                 margin-top: unset;
+                @include flex(row,space-between, center,60%);
+                display: flex !important;
                 
                 background-color: unset;
                 li{
@@ -277,15 +273,15 @@
             ul{
                 position: unset;
                 top: unset;
-                width: 60%;
                 height: unset;
                 padding: unset;
-                display: flex !important;
-                flex-direction: row;
-                justify-content: space-between;
+                
                 margin-top: unset;
                 
                 background-color: unset;
+
+                @include flex(row,space-between, center,60%);
+                display: flex !important;
                 li{
                     list-style: none;
                     text-transform:capitalize;
@@ -310,6 +306,15 @@
             .hamIcons{
                 display: none;
     
+            }
+        }
+
+
+        .formDesigns{
+            .LoginHeader{
+                background-image: url(../assets/home/mobile/hero-image.jpeg);
+                @include header(center, cover, no-repeat,relative, unset);
+                padding: 50px 20px;
             }
         }
 

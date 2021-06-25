@@ -2,11 +2,9 @@
 @media (min-width:1024px) {
     header{
         background:url(../assets/home/desktop/hero-image.jpeg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        height: 95vh;
+        @include header(center, cover, no-repeat,relative, 95vh);
+
+
 
 
         &::after{
@@ -98,7 +96,7 @@
         
         .mapContainerDiv{
             width: 100%;
-            height: 500px !important;
+            height: 450px !important;
             
         }
         
@@ -134,11 +132,7 @@
             }
 
             .copyIcon{
-                
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-
+                @include flex(row,space-between, center,100%);
                 .icons{
                     margin: unset;
                     width: 20%;
@@ -158,19 +152,31 @@
         margin-top: 100px !important;
 
         .site-upper-div{
-            display: flex;
-            justify-content: space-between;
             margin-bottom: 50px;
+            @include flex(row,space-between, unset,unset);
+            
         }
 
         .first-details-container{
             width: 60%;
 
+            .site-image{
+                width: 100%;
+                display: block;
+            }
+
+            .site-description{
+                display: block;
+                
+            }
+
+            
+
             
         }
 
         .second-details-div{
-            width: 35%;
+            width: 35% !important;
             align-items: right;
             justify-content: space-between !important;
             
@@ -183,11 +189,6 @@
                     
                     justify-content: flex-end !important;
                     width: 100%;
-                
-
-
-                    
-
                     
                 }
 
@@ -200,9 +201,8 @@
             }
 
             .Save-container{
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
+                
+                @include flex(row,space-between, center,100%);
 
                 .bucketlist,
                 .visited{
@@ -221,14 +221,25 @@
 
     
     .formDesigns{
+
         width: 50% !important;
 
         .LoginHeader{
             margin-bottom: 50px !important;
+            background-image: url(../assets/home/tablet/hero-image.jpeg) !important;
+            @include header(center, cover , no-repeat,relative, unset);
+            padding: 60px 20px !important;
         }
 
         .form-control{
             margin-bottom: 30px !important;
+        }
+
+        button{
+            transition: 300ms ease-in !important;
+            &:hover{
+                background-color: $black !important;
+            }
         }
     }
 

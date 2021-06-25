@@ -24,6 +24,7 @@ const SignUp = () =>{
             </div>
             <i className="fas fa-user-plus"></i>
           </div>
+          
           <div className='form-control'>
               <label htmlFor='username'>Username</label>
               <input onChange={handleChange} placeholder='username' name='username' type='text' id='username' value={username}></input>

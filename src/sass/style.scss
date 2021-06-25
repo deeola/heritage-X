@@ -8,23 +8,12 @@ body{
 
 header{
     background:url(../assets/home/mobile/hero-image.jpeg);
-    height: 500px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
     visibility: hidden;
+    @include header(center, cover, no-repeat,relative, 70vh);
     
 
     &::after{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        content: '';
-        background-color: rgba(0, 0, 0, 0.719);
-        top: 0;
-        left: 0;
-        z-index: 1;
+        @include headerAfter;
     }
 
     nav{
@@ -34,13 +23,12 @@ header{
     }
 
     .navcontainer{
-        display: flex;
-        width: 80%;
+
         margin: auto;
-        justify-content: space-between;
-        align-items: center;
+
         height: 3rem;
         margin: auto;
+        @include flex(unset,space-between, center,80%);
         
     
 
@@ -65,14 +53,11 @@ header{
             background-color: $white;
             position: absolute;
             top: 3rem;
-            width: 100%;
             height: 300px;
             padding: 20px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             margin-top: 6px;
             border-radius: 0px 0px 0px 10px;
+            @include flex(column,space-between, unset,100%);
             li{
                 list-style: none;
                 text-transform: uppercase;
@@ -95,9 +80,8 @@ header{
 
         }
         .hamIcons{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    
+            @include flex(unset,center, center,unset);
 
             img{
                 filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
@@ -134,8 +118,6 @@ header{
             z-index: 4;
             align-items:left;
             margin-top: 100px;
-            animation: slidein 2000ms ease-in-out  forwards ;
-            position: absolute;
             position: relative;
 
             h1{
@@ -153,11 +135,7 @@ header{
                 line-height: 1.7;
                 font-size: 13px;
                 position: absolute;
-               font-weight: 600;
-                
-                // opacity: 0;
-                
-                
+               font-weight: 600; 
             
             }
         }
@@ -176,52 +154,24 @@ header{
 
     
         form{
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            .mainSelect{
-                width: 100%;
+            
+            @include flex(column,space-between, unset,unset);
+            .mainSelect, .subSelect{
+               
                 margin-bottom: 10px;
-                height: 37px;
-                background-color: $white;
-                border: unset;
-                outline: none;
-                border-radius: 5px;
-                color: $black;
-                text-transform: uppercase;
-                font-weight: 700;
-                cursor: pointer;
+            
+                @include formButton(100%, $white, $black,700);
                 
             }
-    
-            .subSelect{
-                width: 100%;
-                margin-bottom: 10px;
-                height: 37px;
-                background-color: $white;
-                border: unset;
-                outline: none;
-                border-radius: 5px;
-                color: $black;
-                text-transform: uppercase;
-                font-weight: 700;
-                cursor: pointer;
-            }
+
 
     
             button{
-                width: 50%;
-                height: 37px;
-                background-color: $red;
-                border: unset;
-                outline: none;
-                border-radius: 5px;
-                color: white;
-                font-size: 15px;
+                
                 margin: auto;
-                font-weight: 500;
-                text-transform: uppercase;
-                transition: 1s;
+                
+                @include formButton(50%, $red, $white,500);
+                transition: 300ms ease-in;
 
                 &:hover{
                     background-color: darken($red, 5%);
@@ -261,7 +211,6 @@ main,.afro-container{
 
         .grid-container{
             display: grid;
-            flex-direction: column;
             grid-template-columns: repeat(1, 1fr);
             grid-row-gap: 30px;
             
@@ -296,17 +245,10 @@ main,.afro-container{
             .bucketlist,.visited,.read-more{
                 border:  2px solid $gray;
                 margin-bottom: 10px;
-                width: 70%;
-                font-size: 10px;
-                padding: 10px 8px;
-                border-radius: 5px;
-                color: $gray;
-                text-transform: uppercase;
-                font-weight: 700;
-                text-align: center;
                 margin: auto auto 10px auto;
-                cursor: pointer;
                 transition: 500ms ease-in;
+
+                @include siteButtons(70%, 10px,10px 8px, $gray, 700);
 
                 &:hover{
                     background-color: $red;
@@ -346,16 +288,13 @@ main,.afro-container{
 
         .seeMore{
             border-radius: 5px;
-            width: 100%;
-            padding: 10px;
-            font-size: 13px;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: $white;
+            
             text-decoration: none;
-            text-align: center;
+            
             background-color: $red;
             margin-top: 20px;
+
+            @include siteButtons(100%, 13px, 10px, $white, 500);
 
             i{
                 display: none;
@@ -393,13 +332,12 @@ main,.afro-container{
 
     }
     .navcontainer{
-        display: flex;
-        width: 80%;
+        
         margin: auto;
-        justify-content: space-between;
-        align-items: center;
+        
         height: 3rem;
-        margin: auto;    
+        margin: auto;  
+        @include flex(unset,space-between, center,80%);  
 
         .logo{
             color: $white;
@@ -424,17 +362,14 @@ main,.afro-container{
             background-color: $white;
             position: absolute;
             top: 2.6rem;
-            width: 100%;
+            
             height: 300px;
             padding: 20px 20px;
-            
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+
             margin-top: 6px;
             background-color: $white;
             border-radius: 0px 0px 0px 10px;
+            @include flex(column,space-between, unset,100%);
             li{
                 list-style: none;
                 text-transform: uppercase;
@@ -455,9 +390,8 @@ main,.afro-container{
 
         }
         .hamIcons{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        
+            @include flex(unset,center, center,unset);
 
             img{
                 filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
@@ -476,7 +410,7 @@ main,.afro-container{
         width: 80%;
         margin: auto;
         margin-top: 30px;
-
+        
         .site-country-region{
             font-size: 14px;
         }
@@ -487,6 +421,8 @@ main,.afro-container{
         }
         .site-image{
             margin: 20px 0px;
+            
+            
         }
 
         .site-description{
@@ -503,19 +439,12 @@ main,.afro-container{
         }
 
         .second-details-div{
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex(column,center,center,100%);
 
             .subCategory{
 
                 margin-top: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                @include flex(column,center, center,100%);
 
                 
                 .sub-sub-category{
@@ -550,18 +479,13 @@ main,.afro-container{
 
             .Save-container{
                 margin: 20px 0px;
+                
 
                 .bucketlist,.visited,.read-more{
                     background-color: $red;
                     margin-bottom: 15px;
-                    width: 100%;
-                    font-size: 10px;
-                    padding: 10px 8px;
-                    border-radius: 5px;
-                    color: $white;
-                    text-transform: uppercase;
-                    font-weight: 700;
-                    text-align: center;
+                    @include siteButtons(100%, 10px, 10px, $white, 700);
+                    
                 }
             }
         }
@@ -598,16 +522,15 @@ footer{
     text-align: center;
     padding: 30px 0px;
     nav {
-        width: 100%;
+        
         align-items: center;
         margin-top: 10px;
-        display: flex;
-        align-items: center;
+        
         padding: 0px 20px;
-        justify-content: space-between;
-        flex-direction: column;
+        
         position: relative;
         z-index: 900 !important;
+        @include flex(column,space-between, center,100%);
         
 
         .logo{
@@ -617,11 +540,8 @@ footer{
             cursor: pointer;
         }
         ul {
-          
-          display: flex;
-          justify-content: space-between;
-          flex-direction: column;
-          width: 50%;
+
+          @include flex(column,space-between, unset,50%);
           li{
             list-style: none;
             margin-top: 10px;
@@ -651,21 +571,16 @@ footer{
     }
 
     .copyIcon {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin-top: 20px;
     color: white;
+    @include flex(column,center, unset,100%);
     }
     
     .icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-    width: 80% ;
+    
     margin:30px auto auto auto;
     cursor: pointer;
+    @include flex(unset,space-between, center,80%);
     }
     
 }
@@ -684,13 +599,12 @@ footer{
     }
 
     .navcontainer{
-        display: flex;
-        width: 80%;
+
         margin: auto;
-        justify-content: space-between;
-        align-items: center;
+        
         height: 3rem;
         margin: auto;
+        @include flex(unset,space-between, center,80%);
         
         
        
@@ -718,17 +632,13 @@ footer{
             background-color: $white;
             position: absolute;
             top: 2.6rem;
-            width: 100%;
+
             height: 300px;
             padding: 20px 20px;
-            
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             margin-top: 6px;
             background-color: $white;
             border-radius: 0px 0px 0px 10px;
+            @include flex(column,space-between, unset,100%);
             li{
                 list-style: none;
                 text-transform: uppercase;
@@ -746,9 +656,8 @@ footer{
 
         }
         .hamIcons{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            
+            @include flex(unset,center, center,unset);
 
             img{
                 filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
@@ -773,13 +682,29 @@ footer{
         }
 
         .LoginHeader{
-            background-color: $black;
+            background-color: $red;
             margin-bottom: 20px;
             color: white;
             padding: 20px;
-            border-radius: 4px;
+            border-radius: 5px;
+            background-image: url(../assets/home/desktop/hero-image.jpeg);
+            @include header(center, cover, no-repeat,relative, unset);
+            
+
+            &::after{
+            @include headerAfter;
+            border-radius: 5px;
+            }
             h3{
                 margin-bottom: 10px;
+                position: relative;
+                z-index: 10;
+                
+
+            }
+            p{
+                position: relative;
+                z-index: 10;
                 
 
             }
@@ -788,8 +713,8 @@ footer{
         .form-inputss{
 
             .form-control{
-                display: flex;
-                flex-direction: column;
+            
+                @include flex(column,unset, unset,unset);
                 label{
                     margin-bottom: 10px;
                     
@@ -802,7 +727,7 @@ footer{
                     border-radius: 3px;
 
                     &:focus{
-                        border: 1px solid $light-blue;
+                        border: 1px solid $black;
 
                     }
                 }
@@ -817,16 +742,12 @@ footer{
             }
 
             button{
-                background-color:$black;
-                width: 100%;
-                height: 40px;
+                background-color:$red;
+                
                 outline: none;
                 border: none;
                 margin: 10px 0px;
-                color: white;
-                font-weight: 700;
-                font-size: 17px;
-                border-radius: 5px;
+                @include siteButtons(100%, unset, 10px, $white, 500);
 
             }
             
