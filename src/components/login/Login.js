@@ -24,7 +24,7 @@ const Login = () => {
             </div>
             <i className="fas fa-sign-in-alt"></i>
           </div>
-        <form className='form-inputss' onSubmit={onSubmitSignin}>
+        <form className='form-inputss' onSubmit={onSubmitSignin} noValidate>
           <div className='form-control'>
             <label htmlFor="username">
               Username

@@ -11,6 +11,8 @@ function Visited() {
     const HeritageContext = useContext(heritageContext);
     const {isSubmitted,storeTaskInLocalStorages} = HeritageContext;
 
+    
+
 
     const [Visited, setVisited] = useState([])
     useEffect(() => {
@@ -18,6 +20,7 @@ function Visited() {
         setVisited(visit);
         // eslint-disable-next-line
     }, [])
+
 
     //REMOVE
     const removeTaskFromLocalStoragesVisited = (items) => {
@@ -51,7 +54,9 @@ function Visited() {
             <section className='subMain-container'>
             <div className='grid-container'>
               {
-                isSubmitted ? 
+                Visited !== null ?
+                
+                isSubmitted  ? 
                   Visited.length !== 0 ?  Visited.map(item => {
                       return(
                           <div className='site-container' key={uuid()}>
@@ -71,6 +76,8 @@ function Visited() {
                   }) : <div className='bucketempty'>Your Visit List is empty</div>
 
                   : <div className='bucketempty'>Kindly login to View Visit List</div>
+
+                  : <div className='bucketempty'>Your Visit List is empty or Kindly login to check this session</div>
 
               } 
               </div>

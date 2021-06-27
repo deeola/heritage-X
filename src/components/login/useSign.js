@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
+import {useHistory} from 'react-router';
+
+
 const useSign = (callback, ValidateSign) => {
+  const history = useHistory();
 
   //GENERAL
 
@@ -33,17 +37,25 @@ const useSign = (callback, ValidateSign) => {
   //On submit Event
 
   const onSubmit = (e) => {
-    e.preventDefault();
+    
     setError(ValidateSign(values))
     setIsSubmitting(true)
+    
+    e.preventDefault();
 
 
-    signUpLocal();
+    
   }; 
 
   useEffect(() => {
       if(Object.keys(error).length === 0 && isSubmitting){
           callback()
+          signUpLocal();
+          history.push({
+            pathname:  "/Login"
+         });
+          
+          
       }
       // eslint-disable-next-line
   }, [error])

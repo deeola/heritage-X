@@ -1,6 +1,6 @@
 import '../src/css/style.css';
 import Home from '../src/components/home/Home';
-import React from 'react';
+import React,{useEffect} from 'react';
 import HeritageState from './components/context/Heritage/HeritageState';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Country from './components/home/Country';
@@ -19,7 +19,28 @@ import Login from './components/login/Login';
 import Layer from './components/shared/Layer';
 
 
+
 function App() {
+
+  // let  visited = [];
+  
+  // const bucket = () => {
+  //   let buckets = [];
+  //     if (localStorage.getItem("buckets") === null) {
+  //       buckets = [];
+  //     } 
+  //   localStorage.setItem("buckets", JSON.stringify(buckets));
+    
+  //   console.log(buckets)
+  // }
+
+  // useEffect(() => {
+  //   localStorage.setItem("visited", JSON.stringify(visited));
+  //   bucket()
+  // })
+
+
+
   return (
     <HeritageState>
       <Router>

@@ -50,9 +50,10 @@ function Bucketlist() {
             <div className='grid-container'>
 
             {
+              Bucketlist !== null ?
               isSubmitted ?
               
-                Bucketlist.length !== 0 ? Bucketlist.map(item => {
+                Bucketlist.length !== 0   ? Bucketlist.map(item => {
                     return(
                         <div className='site-container' key={uuid()}>
                             <div className='site-image'>
@@ -70,6 +71,7 @@ function Bucketlist() {
                 }) : <div className='bucketempty'>Your BucketList is empty</div>
 
                    : <div className='bucketempty'>Kindly login to View Bucket List</div>
+                   : <div className='bucketempty'>Your BucketList is empty or kindly login to check your bucketlist</div>
             }
             </div>
            

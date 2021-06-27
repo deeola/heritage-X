@@ -238,6 +238,14 @@ const HeritageState = (props) => {
 
   }
 
+  const [signuptrue, setSignuptrue] = useState(false)
+
+
+  function  SubmitSignUp(){
+    setSignuptrue(true)
+
+  }
+
   
 
 
@@ -277,7 +285,9 @@ const HeritageState = (props) => {
         displayMenu,
         isSubmitted,
         Submitform,
-        hamOpen
+        hamOpen,
+        signuptrue,
+        SubmitSignUp
       }}
     >
       {props.children}

@@ -8,15 +8,23 @@ import Footer from "../shared/Footer";
 
 const SignUp = () =>{
   const HeritageContext = useContext(heritageContext);
-  const {Submitform} = HeritageContext;
+  const {SubmitSignUp} = HeritageContext;
 
-    const {values, handleChange,onSubmit,error} = useSign(Submitform,ValidateSign);
+  // const dee = () => {
+  //   return(
+  //     <div>
+  //       signed in
+  //     </div>
+  //   )
+  // }
+
+    const {values, handleChange,onSubmit,error} = useSign(SubmitSignUp,ValidateSign);
     const {username, email, password2,password} = values;
     return (
       <div className='form-container'>
         <Navbar />
         <div className='formDesigns'>
-        <form className='form-inputss'  onSubmit={onSubmit}>
+        <form className='form-inputss'  onSubmit={onSubmit} noValidate>
           <div className='LoginHeader'>
             <div>
               <h3>Sign Up</h3>
