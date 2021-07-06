@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import {useHistory} from 'react-router';
-
+import { useHistory } from "react-router";
 
 const useSign = (callback, ValidateSign) => {
   const history = useHistory();
@@ -8,9 +7,9 @@ const useSign = (callback, ValidateSign) => {
   //GENERAL
 
   const [error, setError] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    //SIGN UP
+  //SIGN UP
   const [values, setValue] = useState({
     username: "",
     email: "",
@@ -37,38 +36,28 @@ const useSign = (callback, ValidateSign) => {
   //On submit Event
 
   const onSubmit = (e) => {
-    
-    setError(ValidateSign(values))
-    setIsSubmitting(true)
-    
+    setError(ValidateSign(values));
+    setIsSubmitting(true);
+
     e.preventDefault();
-
-
-    
-  }; 
+  };
 
   useEffect(() => {
-      if(Object.keys(error).length === 0 && isSubmitting){
-          callback()
-          signUpLocal();
-          history.push({
-            pathname:  "/Login"
-         });
-          
-          
-      }
-      // eslint-disable-next-line
-  }, [error])
-
-
-
-
+    if (Object.keys(error).length === 0 && isSubmitting) {
+      callback();
+      signUpLocal();
+      history.push({
+        pathname: "/Login",
+      });
+    }
+    // eslint-disable-next-line
+  }, [error]);
 
   return {
     handleChange,
     values,
     onSubmit,
-    error
+    error,
   };
 };
 

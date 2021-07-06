@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useRef ,forwardRef} from "react";
+import React, { useContext, useEffect, useRef, forwardRef } from "react";
 import hamOpens from "../../assets/icons/icon-hamburger.svg";
 import hamClose from "../../assets/icons/icon-close.svg";
 import heritageContext from "../context/Heritage/heritageContext";
-import { Link, NavLink} from "react-router-dom";
-import {gsap} from "gsap";
+import { Link, NavLink } from "react-router-dom";
+import { gsap } from "gsap";
 
 function Navbar(props, ref) {
   const HeritageContext = useContext(heritageContext);
@@ -15,7 +15,7 @@ function Navbar(props, ref) {
     DisplayCloseIcon,
     DisplayOpenIcon,
     isSubmitted,
-    hamOpen
+    hamOpen,
   } = HeritageContext;
 
   //local storage
@@ -33,66 +33,73 @@ function Navbar(props, ref) {
   const hamIcon = useRef(null);
   let navMenu = useRef(null);
 
+  useEffect(() => {
+    //NAV ANIMATE
 
-    useEffect(() => {
-      //NAV ANIMATE
-
-
-
-      gsap.fromTo(navMenu.current, {
-          x:790,
-          ease:'power3.easeinOut'
-      },{
-          duration:1,
-          x:0,
-          ease:'power3.easeinOut'
-
-      })
-      // eslint-disable-next-line
-    }, [hamOpen])
+    gsap.fromTo(
+      navMenu.current,
+      {
+        x: 790,
+        ease: "power3.easeinOut",
+      },
+      {
+        duration: 1,
+        x: 0,
+        ease: "power3.easeinOut",
+      }
+    );
+    // eslint-disable-next-line
+  }, [hamOpen]);
 
   useEffect(() => {
-    
-    gsap.fromTo(navLogo.current, {
-        x:-190,
-        ease:'power3.easeinOut'
-    },{
-        duration:1,
-        x:0,
-        ease:'power3.easeinOut'
-
-    })
+    gsap.fromTo(
+      navLogo.current,
+      {
+        x: -190,
+        ease: "power3.easeinOut",
+      },
+      {
+        duration: 1,
+        x: 0,
+        ease: "power3.easeinOut",
+      }
+    );
 
     // eslint-disable-next-line
-}, [])
+  }, []);
 
+  useEffect(() => {
+    gsap.fromTo(
+      hamIcon.current,
+      {
+        x: 190,
+        ease: "power3.easeinOut",
+      },
+      {
+        duration: 1,
+        x: 0,
+        ease: "power3.easeinOut",
+      }
+    );
 
-
-useEffect(() => {
-
-
-    gsap.fromTo(hamIcon.current, {
-      x:190,
-      ease:'power3.easeinOut'
-  },{
-      duration:1,
-      x:0,
-      ease:'power3.easeinOut'
-
-  })
-
-
-  // eslint-disable-next-line
-}, [])
-
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <nav>
-      <div className="navcontainer" >
-        <div className="logo" ref={navLogo}><Link className='logoLink' to='/'>H<span>-</span>X</Link></div>
-        <ul style={ulDisplay()} ref={navMenu}> 
+      <div className="navcontainer">
+        <div className="logo" ref={navLogo}>
+          <Link className="logoLink" to="/">
+            H<span>-</span>X
+          </Link>
+        </div>
+        <ul style={ulDisplay()} ref={navMenu}>
           <li onClick={closeMenu}>
-            <NavLink className="myLink" activeClassName="actives" to="/Bucketlist">
+            <NavLink
+              className="myLink"
+              activeClassName="actives"
+              to="/Bucketlist"
+            >
               Bucketlist
             </NavLink>
           </li>
@@ -105,7 +112,11 @@ useEffect(() => {
             ""
           ) : (
             <li onClick={closeMenu}>
-              <NavLink className="myLink" activeClassName="actives" to="/SignUp">
+              <NavLink
+                className="myLink"
+                activeClassName="actives"
+                to="/SignUp"
+              >
                 Register
               </NavLink>
             </li>
@@ -123,9 +134,11 @@ useEffect(() => {
               </NavLink>
             </li>
           )}
-          {isSubmitted && <li className='usernameLi'>{`Hello, ${signin.mainusername}`}</li>}
+          {isSubmitted && (
+            <li className="usernameLi">{`Hello, ${signin.mainusername}`}</li>
+          )}
         </ul>
-        <div className="hamIcons" ref={hamIcon} >
+        <div className="hamIcons" ref={hamIcon}>
           <div
             style={DisplayOpenIcon()}
             onClick={() => {

@@ -1,43 +1,33 @@
 function Validate(signValues) {
+  let errors = {};
 
-    let errors = {}
+  //Fetch signup details from local storage
+  const signUpDetails = localStorage.getItem("SignUp");
 
-    //Fetch signup details from local storage
-    const signUpDetails = localStorage.getItem('SignUp');
+  const { username, password } = JSON.parse(signUpDetails);
 
-    const {username, password} = JSON.parse(signUpDetails)
+  //Sign in Fetch
 
+  const SignInDetails = localStorage.getItem("SignIn");
 
-    //Sign in Fetch
+  console.log(SignInDetails);
+  const { mainpassword, mainusername } = JSON.parse(SignInDetails);
 
-    const SignInDetails = localStorage.getItem('SignIn');
+  //
 
-    console.log(SignInDetails)
-    const {mainpassword,mainusername} = JSON.parse(SignInDetails);
+  if (!signValues.mainusername) {
+    errors.mainusername = "username cannot be empty";
+  } else if (mainusername !== username) {
+    errors.mainusername = "username not correct";
+  }
 
+  if (!signValues.mainpassword) {
+    errors.mainpassword = "password cannot be empty";
+  } else if (mainpassword !== password) {
+    errors.mainpassword = "password not correct";
+  }
 
-
-
-    //
-
-    if(!signValues.mainusername){
-        errors.mainusername = 'username cannot be empty'
-    } else if (mainusername !== username){
-        errors.mainusername = 'username not correct'
-    }
-
-
-    if(!signValues.mainpassword){
-        errors.mainpassword = 'password cannot be empty'
-    } else if (mainpassword !== password){
-        errors.mainpassword = 'password not correct'
-    }
-
-    return errors;
-
-
-
+  return errors;
 }
 
-
-export default Validate
+export default Validate;

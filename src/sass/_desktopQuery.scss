@@ -1,263 +1,217 @@
+@media (min-width: 1024px) {
+  header {
+    background: url(../assets/home/desktop/hero-image.jpeg);
+    @include header(center, cover, no-repeat, relative, 95vh);
 
-@media (min-width:1024px) {
-    header{
-        background:url(../assets/home/desktop/hero-image.jpeg);
-        @include header(center, cover, no-repeat,relative, 95vh);
-
-
-
-
-        &::after{
-            background-color: rgba(0, 0, 0, 0.774);
-        }
-
-        .hero-container{
- 
-            margin-top: 180px;
-            
-            .hero-text{
-
-                margin-top: 150px;
-    
-                h1{
-                    font-size: 7rem ;
-                    
-                }
-                .Hero-subheading{
-                    font-size: 19px;
-                    color: $red;
-                }
-            }
-    
-    
-        }
-    
+    &::after {
+      background-color: rgba(0, 0, 0, 0.774);
     }
 
-    main,.afro-container{
+    .hero-container {
+      margin-top: 180px;
 
-        .subMain-container{
-            text-align: left;
+      .hero-text {
+        margin-top: 150px;
 
-            .explore-container{
-                .explore{
-                    margin-bottom: 10px;
-                    font-size: 26px;
-                }
-    
-                .explore-subtext{
-                    margin-bottom: 30px;
-                    font-size: 16px;
-                }
-    
-            }
+        h1 {
+          font-size: 7rem;
+        }
+        .Hero-subheading {
+          font-size: 19px;
+          color: $red;
+        }
+      }
+    }
+  }
 
-            .grid-container{
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 30px;
-                text-align: center;
-            }
+  main,
+  .afro-container {
+    .subMain-container {
+      text-align: left;
 
-            .bucketlist,.visited,.read-more{
-                
-                width: 60% !important;
-                border: 1px solid $gray !important;
-                &:hover{
-                    border: none !important;
-                }
-            }
-
-            .site-name{
-                min-height: 70px;
-                font-size: 15px !important;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .site-container{
-                .read-more{
-                    margin-top: 13px;
-                }
-
-            }
-            .site-image{
-                width: 100%;
-                height:300px !important;
-            }
-
-            
+      .explore-container {
+        .explore {
+          margin-bottom: 10px;
+          font-size: 26px;
         }
 
+        .explore-subtext {
+          margin-bottom: 30px;
+          font-size: 16px;
+        }
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        text-align: center;
+      }
+
+      .bucketlist,
+      .visited,
+      .read-more {
+        width: 60% !important;
+        border: 1px solid $gray !important;
+        &:hover {
+          border: none !important;
+        }
+      }
+
+      .site-name {
+        min-height: 70px;
+        font-size: 15px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .site-container {
+        .read-more {
+          margin-top: 13px;
+        }
+      }
+      .site-image {
+        width: 100%;
+        height: 300px !important;
+      }
+    }
+  }
+
+  .afro-container {
+    .mapContainerDiv {
+      width: 100%;
+      height: 450px !important;
+    }
+  }
+
+  footer {
+    .footer-container {
+      width: 80%;
+      margin: auto;
+
+      nav {
+        flex-direction: row;
+        padding: unset;
+
+        .logo {
+          margin: unset;
+        }
+        ul {
+          flex-direction: row;
+          width: 30%;
+        }
+      }
+      .footerSecondDiv {
+        width: 40%;
+        text-align: left;
+        padding: unset;
+
+        .footerSecondText {
+          margin: unset;
+        }
+      }
+
+      .copyIcon {
+        @include flex(row, space-between, center, 100%);
+        .icons {
+          margin: unset;
+          width: 20%;
+        }
+      }
+    }
+  }
+
+  //SITES
+
+  .siteDetailsContainer {
+    margin-top: 100px !important;
+
+    .site-upper-div {
+      margin-bottom: 50px;
+      @include flex(row, space-between, unset, unset);
     }
 
-    .afro-container{
-        
-        .mapContainerDiv{
-            width: 100%;
-            height: 450px !important;
-            
-        }
-        
+    .first-details-container {
+      width: 60%;
+
+      .site-image {
+        width: 100%;
+        display: block;
+      }
+
+      .site-description {
+        display: block;
+      }
     }
 
-    footer{
- 
+    .second-details-div {
+      width: 35% !important;
+      align-items: right;
+      justify-content: space-between !important;
 
-        .footer-container{
-            width: 80%;
-            margin: auto;
-
-            nav{
-                flex-direction: row;
-                padding: unset;
-
-                .logo{
-                    margin: unset;
-                }
-                ul{
-                    flex-direction: row;
-                    width: 30%;
-                }
-            }
-            .footerSecondDiv{
-                width: 40%;
-                text-align: left;
-                padding: unset;
-
-                .footerSecondText{
-                    margin: unset;
-                }
-            }
-
-            .copyIcon{
-                @include flex(row,space-between, center,100%);
-                .icons{
-                    margin: unset;
-                    width: 20%;
-
-                }
-            }
+      .subCategory {
+        width: 100%;
+        text-align: right;
+        margin-top: unset !important;
+        .sub-sub-category {
+          justify-content: flex-end !important;
+          width: 100%;
         }
-        
-        
 
+        .details-text {
+          text-align: right !important;
+          width: 100%;
+        }
+      }
+
+      .Save-container {
+        @include flex(row, space-between, center, 100%);
+
+        .bucketlist,
+        .visited {
+          width: 45% !important;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  //FORM STYLING
+
+  //FORMS STYLING
+
+  .formDesigns {
+    width: 50% !important;
+
+    .LoginHeader {
+      margin-bottom: 50px !important;
+      background-image: url(../assets/home/tablet/hero-image.jpeg) !important;
+      @include header(center, cover, no-repeat, relative, unset);
+      padding: 60px 20px !important;
     }
 
-    //SITES
-
-    .siteDetailsContainer{
-
-        margin-top: 100px !important;
-
-        .site-upper-div{
-            margin-bottom: 50px;
-            @include flex(row,space-between, unset,unset);
-            
-        }
-
-        .first-details-container{
-            width: 60%;
-
-            .site-image{
-                width: 100%;
-                display: block;
-            }
-
-            .site-description{
-                display: block;
-                
-            }
-
-            
-
-            
-        }
-
-        .second-details-div{
-            width: 35% !important;
-            align-items: right;
-            justify-content: space-between !important;
-            
-            .subCategory{
-               
-                width: 100%;
-                text-align: right;
-                margin-top: unset !important;
-                .sub-sub-category{
-                    
-                    justify-content: flex-end !important;
-                    width: 100%;
-                    
-                }
-
-                .details-text{
-                    
-                    text-align: right !important;
-                    width: 100%;
-                }
-                
-            }
-
-            .Save-container{
-                
-                @include flex(row,space-between, center,100%);
-
-                .bucketlist,
-                .visited{
-                    width: 45% !important;
-                    cursor: pointer;
-                }
-            }
-            
-        }
-        
+    .form-control {
+      margin-bottom: 30px !important;
     }
 
-    //FORM STYLING
-
-    //FORMS STYLING
-
-    
-    .formDesigns{
-
-        width: 50% !important;
-
-        .LoginHeader{
-            margin-bottom: 50px !important;
-            background-image: url(../assets/home/tablet/hero-image.jpeg) !important;
-            @include header(center, cover , no-repeat,relative, unset);
-            padding: 60px 20px !important;
-        }
-
-        .form-control{
-            margin-bottom: 30px !important;
-        }
-
-        button{
-            transition: 300ms ease-in !important;
-            &:hover{
-                background-color: $black !important;
-            }
-        }
+    button {
+      transition: 300ms ease-in !important;
+      &:hover {
+        background-color: $black !important;
+      }
     }
-
-
-    
-
+  }
 }
 
-
-@media (min-width:1202px) {
-    header{
-        .hero-container{
-            .hero-text{
-                h1{
-                    font-size: 9rem;
-
-                }
-            }
+@media (min-width: 1202px) {
+  header {
+    .hero-container {
+      .hero-text {
+        h1 {
+          font-size: 9rem;
         }
+      }
     }
+  }
 }

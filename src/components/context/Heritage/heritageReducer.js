@@ -1,4 +1,4 @@
-import { get_Data, get_Natural, set_loading} from "../types";
+import { get_Data, get_Natural, set_loading } from "../types";
 // eslint-disable-next-line
 export default (state, action) => {
   switch (action.type) {
@@ -8,7 +8,7 @@ export default (state, action) => {
         data: action.payload,
         loading: false,
       };
-      case get_Natural:
+    case get_Natural:
       return {
         ...state,
         natural: action.payload,
@@ -24,4 +24,3 @@ export default (state, action) => {
       return state;
   }
 };
-

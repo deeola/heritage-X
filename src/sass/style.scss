@@ -1,787 +1,663 @@
-@import 'config';
-@import 'utilities';
+@import "config";
+@import "utilities";
 
-body{
+body {
+  position: relative;
+}
+
+header {
+  background: url(../assets/home/mobile/hero-image.jpeg);
+  visibility: hidden;
+  @include header(center, cover, no-repeat, relative, 70vh);
+
+  &::after {
+    @include headerAfter;
+  }
+
+  nav {
     position: relative;
-}
+    z-index: 1050;
+  }
 
+  .navcontainer {
+    margin: auto;
 
-header{
-    background:url(../assets/home/mobile/hero-image.jpeg);
-    visibility: hidden;
-    @include header(center, cover, no-repeat,relative, 70vh);
-    
+    height: 3rem;
+    margin: auto;
+    @include flex(unset, space-between, center, 80%);
 
-    &::after{
-        @include headerAfter;
-    }
+    .logo {
+      color: $white;
+      font-size: 25px;
+      font-weight: 700;
+      cursor: pointer;
 
-    nav{
-        position: relative;
-        z-index: 1050;
+      .logoLink {
+        color: white;
+        text-decoration: none;
 
-    }
-
-    .navcontainer{
-
-        margin: auto;
-
-        height: 3rem;
-        margin: auto;
-        @include flex(unset,space-between, center,80%);
-        
-    
-
-        .logo{
-            color: $white;
-            font-size: 25px;
-            font-weight: 700;
-            cursor: pointer;
-
-            .logoLink{
-                color: white;
-                text-decoration: none;
-
-                span{
-                    color: $red;
-                }
-            }
-            
+        span {
+          color: $red;
         }
-
-        ul{
-            background-color: $white;
-            position: absolute;
-            top: 3rem;
-            height: 300px;
-            padding: 20px 20px;
-            margin-top: 6px;
-            border-radius: 0px 0px 0px 10px;
-            @include flex(column,space-between, unset,100%);
-            li{
-                list-style: none;
-                text-transform: uppercase;
-                font-weight: 700;
-                cursor: pointer;
-
-                .myLink{
-                    text-decoration: none;
-                    color: $black;
-                    
-                }
-
-                
-
-            }
-
-            .usernameLi{
-                color: $white;
-            }
-
-        }
-        .hamIcons{
-    
-            @include flex(unset,center, center,unset);
-
-            img{
-                filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
-                cursor: pointer;
-            }
-
-            .hamClose{
-                display: none;
-            }
-        }
+      }
     }
 
-    .navLine{
-        background-color: rgba(255, 255, 255, 0.63);
-        height: 1px;
-        width: 100%;
-        margin-top: 5px;
-        position: relative;
-        z-index: 5;
-    }
-
-    .hero-container{
-        width: 80%;
-        margin: auto;
-        margin-top: 60px;
-        position: relative;
-        
-        
-        
-        
-        .hero-text{
-
-            
-            z-index: 4;
-            align-items:left;
-            margin-top: 100px;
-            position: relative;
-
-            h1{
-                color: white;
-                margin-bottom: 5px;
-                font-size: 2.5rem;
-                
-                span{
-                    color: $red;
-                }
-                
-            }
-            .Hero-subheading{
-                color: $red;
-                line-height: 1.7;
-                font-size: 13px;
-                position: absolute;
-               font-weight: 600; 
-            
-            }
-        }
-
-
-    }
-
-    .formDiv{
-        margin: auto;
-        position: relative;
-        z-index: 1000;
+    ul {
+      background-color: $white;
+      position: absolute;
+      top: 3rem;
+      height: 300px;
+      padding: 20px 20px;
+      margin-top: 6px;
+      border-radius: 0px 0px 0px 10px;
+      @include flex(column, space-between, unset, 100%);
+      li {
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: 700;
         cursor: pointer;
-        width: 100%;
-        margin-top: 100px;
-        
 
-    
-        form{
-            
-            @include flex(column,space-between, unset,unset);
-            .mainSelect, .subSelect{
-               
-                margin-bottom: 10px;
-            
-                @include formButton(100%, $white, $black,700);
-                
-            }
-
-
-    
-            button{
-                
-                margin: auto;
-                
-                @include formButton(50%, $red, $white,500);
-                transition: 300ms ease-in;
-
-                &:hover{
-                    background-color: darken($red, 5%);
-                    cursor: pointer;
-                    transform: scale(0.97);
-                }
-            }
+        .myLink {
+          text-decoration: none;
+          color: $black;
         }
-    }
-}
+      }
 
+      .usernameLi {
+        color: $white;
+      }
+    }
+    .hamIcons {
+      @include flex(unset, center, center, unset);
+
+      img {
+        filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg)
+          brightness(108%) contrast(100%);
+        cursor: pointer;
+      }
+
+      .hamClose {
+        display: none;
+      }
+    }
+  }
+
+  .navLine {
+    background-color: rgba(255, 255, 255, 0.63);
+    height: 1px;
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .hero-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    position: relative;
+
+    .hero-text {
+      z-index: 4;
+      align-items: left;
+      margin-top: 100px;
+      position: relative;
+
+      h1 {
+        color: white;
+        margin-bottom: 5px;
+        font-size: 2.5rem;
+
+        span {
+          color: $red;
+        }
+      }
+      .Hero-subheading {
+        color: $red;
+        line-height: 1.7;
+        font-size: 13px;
+        position: absolute;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .formDiv {
+    margin: auto;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 100px;
+
+    form {
+      @include flex(column, space-between, unset, unset);
+      .mainSelect,
+      .subSelect {
+        margin-bottom: 10px;
+
+        @include formButton(100%, $white, $black, 700);
+      }
+
+      button {
+        margin: auto;
+
+        @include formButton(50%, $red, $white, 500);
+        transition: 300ms ease-in;
+
+        &:hover {
+          background-color: darken($red, 5%);
+          cursor: pointer;
+          transform: scale(0.97);
+        }
+      }
+    }
+  }
+}
 
 //BODY
 
-main,.afro-container{
-    margin: 20px auto auto auto;
-    width: 80%;
-
-    .subMain-container{
-        margin-bottom: 50px;
-        text-align: center;
-
-        .explore-container{
-            color: $black;
-            .explore{
-                font-weight: 700;
-                margin-bottom: 5px;
-            }
-
-            .explore-subtext{
-                margin-bottom: 10px;
-                font-size: 12px;
-                color: $gray;
-            }
-
-        }
-
-        .grid-container{
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-row-gap: 30px;
-            
-        }
-
-        .site-container{
-            
-
-            .site-image{
-                width: 100%;
-                height: 300px;
-                margin-bottom: 8px;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .site-country{
-                margin-bottom: 8px;
-                color: $gray;
-                font-weight: 600;
-                font-size: 12px;
-            }
-
-            .site-name{
-                margin-bottom: 8px;
-                color: $black;
-                font-weight: 600;
-                font-size: 18px;
-            }
-
-            .bucketlist,.visited,.read-more{
-                border:  2px solid $gray;
-                margin-bottom: 10px;
-                margin: auto auto 10px auto;
-                transition: 500ms ease-in;
-
-                @include siteButtons(70%, 10px,10px 8px, $gray, 700);
-
-                &:hover{
-                    background-color: $red;
-                    color: $white;
-                    border:none;
-                }
-
-                i{
-                    margin-left: 10px;
-                    font-size: 14px;
-                }
-
-            }
-
-            .myLinks{
-                text-decoration: none;
-               color:$gray;
-               
-               
-
-               &:hover{
-                background-color: $red;
-                color: $white;
-                border:none;
-            }
-                
-            }
-        }
-
-        .seeMoreLink{
-            text-decoration: none;
-            cursor: pointer;
-            
-            
-            
-        }
-
-        .seeMore{
-            border-radius: 5px;
-            
-            text-decoration: none;
-            
-            background-color: $red;
-            margin-top: 20px;
-
-            @include siteButtons(100%, 13px, 10px, $white, 500);
-
-            i{
-                display: none;
-                
-                
-            }
-
-            
-        }
-
-        
-
-        
-    }
-
-}
-
-
-
-.afro-container{
-    width: 100%;
-    margin-top: 0;
-    position: relative;
-    min-height: 100vh;
-
-    .subMain-container{
-        width: 80%;
-        margin: auto;
-    }
-
-    nav{
-        position: relative;
-        z-index: 1050;
-        background-color: $black;
-
-    }
-    .navcontainer{
-        
-        margin: auto;
-        
-        height: 3rem;
-        margin: auto;  
-        @include flex(unset,space-between, center,80%);  
-
-        .logo{
-            color: $white;
-            font-size: 25px;
-            font-weight: 700;
-            cursor: pointer;
-
-            
-
-            .logoLink{
-                color: white;
-                text-decoration: none;
-
-                span{
-                    color: $red;
-                }
-            }
-            
-        }
-
-        ul{
-            background-color: $white;
-            position: absolute;
-            top: 2.6rem;
-            
-            height: 300px;
-            padding: 20px 20px;
-
-            margin-top: 6px;
-            background-color: $white;
-            border-radius: 0px 0px 0px 10px;
-            @include flex(column,space-between, unset,100%);
-            li{
-                list-style: none;
-                text-transform: uppercase;
-                font-weight: 700;
-                cursor: pointer;
-
-                .myLink{
-                    text-decoration: none;
-                    color: $black;
-                    
-                }
-
-
-
-            }
-
-            
-
-        }
-        .hamIcons{
-        
-            @include flex(unset,center, center,unset);
-
-            img{
-                filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
-                cursor: pointer;
-            }
-
-            .hamClose{
-                display: none;
-            }
-        }
-    }
-
-    //SITES
-
-    .siteDetailsContainer{
-        width: 80%;
-        margin: auto;
-        margin-top: 30px;
-        
-        .site-country-region{
-            font-size: 14px;
-        }
-
-        .siteCountry{
-            margin: 10px 0px 5px 0px;
-            
-        }
-        .site-image{
-            margin: 20px 0px;
-            
-            
-        }
-
-        .site-description{
-            margin: 10px 0px;
-            h5{
-                margin: 5px 0px;
-                color: $red;
-            }
-            .site-description-text{
-                font-size: 14px;
-                line-height: 1.7;
-            }
-            
-        }
-
-        .second-details-div{
-            @include flex(column,center,center,100%);
-
-            .subCategory{
-
-                margin-top: 20px;
-                @include flex(column,center, center,100%);
-
-                
-                .sub-sub-category{
-
-                    display: flex;
-                    margin-bottom: 10px;
-
-                    i{
-
-                        font-size: 10px;
-                        color: $gray;
-                    }
-                    p{
-
-                        margin-left: 10px;
-                        font-size: 10px;
-                        text-transform: uppercase;
-                        color: $gray;
-                        
-
-                    }
-                }
-
-                .details-text{
-                    font-weight: 700;
-                    color: $black;
-                    text-align: center;
-                    text-transform: capitalize;
-                }
-
-            }
-
-            .Save-container{
-                margin: 20px 0px;
-                
-
-                .bucketlist,.visited,.read-more{
-                    background-color: $red;
-                    margin-bottom: 15px;
-                    @include siteButtons(100%, 10px, 10px, $white, 700);
-                    
-                }
-            }
-        }
-
-        .mapContainerDiv{
-            width: 100%;
-            height: 400px;
-            
-        }
-
-        
-    }
-    .subMain-container{
-            margin-top: 50px;
-    }    
-
-
-    .bucketempty{
-        width: 300px;
-        height: 300px;
-        text-align: center;
-    }
-
-    
-
-}
-
-
-
-
-footer{
-    margin-top: 50px;
-    background: $black;
+main,
+.afro-container {
+  margin: 20px auto auto auto;
+  width: 80%;
+
+  .subMain-container {
+    margin-bottom: 50px;
     text-align: center;
-    padding: 30px 0px;
-    nav {
-        
-        align-items: center;
-        margin-top: 10px;
-        
-        padding: 0px 20px;
-        
-        position: relative;
-        z-index: 900 !important;
-        @include flex(column,space-between, center,100%);
-        
 
-        .logo{
-            color: $white;
-            font-size: 25px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-        ul {
+    .explore-container {
+      color: $black;
+      .explore {
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
 
-          @include flex(column,space-between, unset,50%);
-          li{
-            list-style: none;
-            margin-top: 10px;
-            font-weight: 500;
-            text-transform: uppercase;
-            cursor: pointer;
+      .explore-subtext {
+        margin-bottom: 10px;
+        font-size: 12px;
+        color: $gray;
+      }
+    }
 
-            .myLink{
-                text-decoration: none;
-                color: $white;
-                
-            }
-        }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 30px;
+    }
+
+    .site-container {
+      .site-image {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 8px;
+        img {
+          width: 100%;
+          height: 100%;
         }
       }
-    
-    .footerSecondDiv {
-        margin-top: 20px;
+      .site-country {
+        margin-bottom: 8px;
+        color: $gray;
+        font-weight: 600;
+        font-size: 12px;
+      }
 
-        .footerSecondText {
-            width: 90%;
-            margin: auto;
-            color: $white;
-            font-size: 14px;
+      .site-name {
+        margin-bottom: 8px;
+        color: $black;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .bucketlist,
+      .visited,
+      .read-more {
+        border: 2px solid $gray;
+        margin-bottom: 10px;
+        margin: auto auto 10px auto;
+        transition: 500ms ease-in;
+
+        @include siteButtons(70%, 10px, 10px 8px, $gray, 700);
+
+        &:hover {
+          background-color: $red;
+          color: $white;
+          border: none;
         }
 
+        i {
+          margin-left: 10px;
+          font-size: 14px;
+        }
+      }
+
+      .myLinks {
+        text-decoration: none;
+        color: $gray;
+
+        &:hover {
+          background-color: $red;
+          color: $white;
+          border: none;
+        }
+      }
     }
 
-    .copyIcon {
-    margin-top: 20px;
-    color: white;
-    @include flex(column,center, unset,100%);
+    .seeMoreLink {
+      text-decoration: none;
+      cursor: pointer;
     }
-    
-    .icons {
-    
-    margin:30px auto auto auto;
-    cursor: pointer;
-    @include flex(unset,space-between, center,80%);
+
+    .seeMore {
+      border-radius: 5px;
+
+      text-decoration: none;
+
+      background-color: $red;
+      margin-top: 20px;
+
+      @include siteButtons(100%, 13px, 10px, $white, 500);
+
+      i {
+        display: none;
+      }
     }
-    
+  }
 }
 
+.afro-container {
+  width: 100%;
+  margin-top: 0;
+  position: relative;
+  min-height: 100vh;
 
+  .subMain-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  nav {
+    position: relative;
+    z-index: 1050;
+    background-color: $black;
+  }
+  .navcontainer {
+    margin: auto;
+
+    height: 3rem;
+    margin: auto;
+    @include flex(unset, space-between, center, 80%);
+
+    .logo {
+      color: $white;
+      font-size: 25px;
+      font-weight: 700;
+      cursor: pointer;
+
+      .logoLink {
+        color: white;
+        text-decoration: none;
+
+        span {
+          color: $red;
+        }
+      }
+    }
+
+    ul {
+      background-color: $white;
+      position: absolute;
+      top: 2.6rem;
+
+      height: 300px;
+      padding: 20px 20px;
+
+      margin-top: 6px;
+      background-color: $white;
+      border-radius: 0px 0px 0px 10px;
+      @include flex(column, space-between, unset, 100%);
+      li {
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+
+        .myLink {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    }
+    .hamIcons {
+      @include flex(unset, center, center, unset);
+
+      img {
+        filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg)
+          brightness(108%) contrast(100%);
+        cursor: pointer;
+      }
+
+      .hamClose {
+        display: none;
+      }
+    }
+  }
+
+  //SITES
+
+  .siteDetailsContainer {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+
+    .site-country-region {
+      font-size: 14px;
+    }
+
+    .siteCountry {
+      margin: 10px 0px 5px 0px;
+    }
+    .site-image {
+      margin: 20px 0px;
+    }
+
+    .site-description {
+      margin: 10px 0px;
+      h5 {
+        margin: 5px 0px;
+        color: $red;
+      }
+      .site-description-text {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+
+    .second-details-div {
+      @include flex(column, center, center, 100%);
+
+      .subCategory {
+        margin-top: 20px;
+        @include flex(column, center, center, 100%);
+
+        .sub-sub-category {
+          display: flex;
+          margin-bottom: 10px;
+
+          i {
+            font-size: 10px;
+            color: $gray;
+          }
+          p {
+            margin-left: 10px;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: $gray;
+          }
+        }
+
+        .details-text {
+          font-weight: 700;
+          color: $black;
+          text-align: center;
+          text-transform: capitalize;
+        }
+      }
+
+      .Save-container {
+        margin: 20px 0px;
+
+        .bucketlist,
+        .visited,
+        .read-more {
+          background-color: $red;
+          margin-bottom: 15px;
+          @include siteButtons(100%, 10px, 10px, $white, 700);
+        }
+      }
+    }
+
+    .mapContainerDiv {
+      width: 100%;
+      height: 400px;
+    }
+  }
+  .subMain-container {
+    margin-top: 50px;
+  }
+
+  .bucketempty {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+  }
+}
+
+footer {
+  margin-top: 50px;
+  background: $black;
+  text-align: center;
+  padding: 30px 0px;
+  nav {
+    align-items: center;
+    margin-top: 10px;
+
+    padding: 0px 20px;
+
+    position: relative;
+    z-index: 900 !important;
+    @include flex(column, space-between, center, 100%);
+
+    .logo {
+      color: $white;
+      font-size: 25px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    ul {
+      @include flex(column, space-between, unset, 50%);
+      li {
+        list-style: none;
+        margin-top: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        .myLink {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .footerSecondDiv {
+    margin-top: 20px;
+
+    .footerSecondText {
+      width: 90%;
+      margin: auto;
+      color: $white;
+      font-size: 14px;
+    }
+  }
+
+  .copyIcon {
+    margin-top: 20px;
+    color: white;
+    @include flex(column, center, unset, 100%);
+  }
+
+  .icons {
+    margin: 30px auto auto auto;
+    cursor: pointer;
+    @include flex(unset, space-between, center, 80%);
+  }
+}
 
 //FORMS STYLING
 
-.form-container{
-
-    nav{
-        position: relative;
-        z-index: 1050;
-        background-color: $black;
-
-    }
-
-    .navcontainer{
-
-        margin: auto;
-        
-        height: 3rem;
-        margin: auto;
-        @include flex(unset,space-between, center,80%);
-        
-        
-       
-
-        
-
-        .logo{
-            color: $white;
-            font-size: 25px;
-            font-weight: 700;
-            cursor: pointer;
-
-            .logoLink{
-                color: $white;
-                text-decoration: none;
-
-                span{
-                    color: $red;
-                }
-            }
-            
-        }
-
-        ul{
-            background-color: $white;
-            position: absolute;
-            top: 2.6rem;
-
-            height: 300px;
-            padding: 20px 20px;
-            margin-top: 6px;
-            background-color: $white;
-            border-radius: 0px 0px 0px 10px;
-            @include flex(column,space-between, unset,100%);
-            li{
-                list-style: none;
-                text-transform: uppercase;
-                font-weight: 700;
-                cursor: pointer;
-
-                .myLink{
-                    text-decoration: none;
-                    color: $black;
-                    
-                }
-
-            }
-            
-
-        }
-        .hamIcons{
-            
-            @include flex(unset,center, center,unset);
-
-            img{
-                filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
-                cursor: pointer;
-            }
-
-            .hamClose{
-                display: none;
-            }
-        }
-    }
-
-    //FORMS
-
-    .formDesigns{
-
-        width: 80%;
-        margin: 50px auto auto auto;
-
-        i{
-            display: none;
-        }
-
-        .LoginHeader{
-            background-color: $red;
-            margin-bottom: 20px;
-            color: white;
-            padding: 20px;
-            border-radius: 5px;
-            background-image: url(../assets/home/desktop/hero-image.jpeg);
-            @include header(center, cover, no-repeat,relative, unset);
-            
-
-            &::after{
-            @include headerAfter;
-            border-radius: 5px;
-            }
-            h3{
-                margin-bottom: 10px;
-                position: relative;
-                z-index: 10;
-                
-
-            }
-            p{
-                position: relative;
-                z-index: 10;
-                
-
-            }
-        }
-        
-        .form-inputss{
-
-            .form-control{
-            
-                @include flex(column,unset, unset,unset);
-                label{
-                    margin-bottom: 10px;
-                    
-                }
-                input{
-                    padding: 10px;
-                    margin-bottom: 5px;
-                    outline: none;
-                    border: 1px solid rgb(207, 207, 207);
-                    border-radius: 3px;
-
-                    &:focus{
-                        border: 1px solid $black;
-
-                    }
-                }
-
-                .error{
-                    color: rgb(185, 51, 51);
-                    margin-bottom: 10px;
-                    font-size: 12px;
-                }
-
-                
-            }
-
-            button{
-                background-color:$red;
-                
-                outline: none;
-                border: none;
-                margin: 10px 0px;
-                @include siteButtons(100%, unset, 10px, $white, 500);
-
-            }
-            
-        }
-
-        .signinLink{
-            font-size: 14px;
-            color: $gray;
-
-            .link{
-                text-transform: uppercase;
-                color: $black;
-                text-decoration: none;
-                font-weight: 600;
-                
-            }
-        }
-    }
-
-}
-
-
-.layer {
-    position: absolute;
-    top: 0vh;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.76);
-   
+.form-container {
+  nav {
+    position: relative;
+    z-index: 1050;
+    background-color: $black;
   }
 
+  .navcontainer {
+    margin: auto;
 
+    height: 3rem;
+    margin: auto;
+    @include flex(unset, space-between, center, 80%);
 
-@import 'tabQuery';
-@import 'desktopQuery';
+    .logo {
+      color: $white;
+      font-size: 25px;
+      font-weight: 700;
+      cursor: pointer;
+
+      .logoLink {
+        color: $white;
+        text-decoration: none;
+
+        span {
+          color: $red;
+        }
+      }
+    }
+
+    ul {
+      background-color: $white;
+      position: absolute;
+      top: 2.6rem;
+
+      height: 300px;
+      padding: 20px 20px;
+      margin-top: 6px;
+      background-color: $white;
+      border-radius: 0px 0px 0px 10px;
+      @include flex(column, space-between, unset, 100%);
+      li {
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+
+        .myLink {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    }
+    .hamIcons {
+      @include flex(unset, center, center, unset);
+
+      img {
+        filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg)
+          brightness(108%) contrast(100%);
+        cursor: pointer;
+      }
+
+      .hamClose {
+        display: none;
+      }
+    }
+  }
+
+  //FORMS
+
+  .formDesigns {
+    width: 80%;
+    margin: 50px auto auto auto;
+
+    i {
+      display: none;
+    }
+
+    .LoginHeader {
+      background-color: $red;
+      margin-bottom: 20px;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
+      background-image: url(../assets/home/desktop/hero-image.jpeg);
+      @include header(center, cover, no-repeat, relative, unset);
+
+      &::after {
+        @include headerAfter;
+        border-radius: 5px;
+      }
+      h3 {
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 10;
+      }
+      p {
+        position: relative;
+        z-index: 10;
+      }
+    }
+
+    .form-inputss {
+      .form-control {
+        @include flex(column, unset, unset, unset);
+        label {
+          margin-bottom: 10px;
+        }
+        input {
+          padding: 10px;
+          margin-bottom: 5px;
+          outline: none;
+          border: 1px solid rgb(207, 207, 207);
+          border-radius: 3px;
+
+          &:focus {
+            border: 1px solid $black;
+          }
+        }
+
+        .error {
+          color: rgb(185, 51, 51);
+          margin-bottom: 10px;
+          font-size: 12px;
+        }
+      }
+
+      button {
+        background-color: $red;
+
+        outline: none;
+        border: none;
+        margin: 10px 0px;
+        @include siteButtons(100%, unset, 10px, $white, 500);
+      }
+    }
+
+    .signinLink {
+      font-size: 14px;
+      color: $gray;
+
+      .link {
+        text-transform: uppercase;
+        color: $black;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.layer {
+  position: absolute;
+  top: 0vh;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+@import "tabQuery";
+@import "desktopQuery";

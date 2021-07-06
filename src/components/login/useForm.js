@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
-import {useHistory} from 'react-router';
-
+import { useHistory } from "react-router";
 
 const useForm = (callback, Validate) => {
-
   const history = useHistory();
-  
 
   //GENERAL
 
   const [error, setError] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   //SIGN IN
   const [signValues, setSignValues] = useState({
@@ -19,9 +15,7 @@ const useForm = (callback, Validate) => {
     mainpassword: "",
   });
 
-  console.log(signValues)
-
-
+  console.log(signValues);
 
   const handleChangeSign = (e) => {
     const { name, value } = e.target;
@@ -33,37 +27,28 @@ const useForm = (callback, Validate) => {
 
   //SET TO LOCAL STORAGE
 
-
-
-
   const onSubmitSignin = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     localStorage.setItem("SignIn", JSON.stringify(signValues));
-    setError(Validate(signValues))
-    setIsSubmitting(true)
-    
-    
+    setError(Validate(signValues));
+    setIsSubmitting(true);
   };
 
-  
   useEffect(() => {
-    if(Object.keys(error).length === 0 && isSubmitting){
+    if (Object.keys(error).length === 0 && isSubmitting) {
       callback();
-        history.push({
-      pathname:  "/"
-   });
+      history.push({
+        pathname: "/",
+      });
     }
     // eslint-disable-next-line
-  },[error])
-
-
+  }, [error]);
 
   return {
-
     signValues,
     onSubmitSignin,
     handleChangeSign,
-    error
+    error,
   };
 };
 

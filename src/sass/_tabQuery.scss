@@ -1,333 +1,283 @@
-@media (min-width:760px) {
+@media (min-width: 760px) {
+  .actives {
+    position: relative !important;
+    color: $red !important;
+    &::after {
+      position: absolute;
+      width: 70%;
+      height: 2px;
+      color: $white;
+      bottom: -10px;
+      content: "";
+      left: 13px;
+      margin: 10px auto auto auto;
+    }
+  }
+  header {
+    background: url(../assets/home/tablet/hero-image.jpeg);
 
-    .actives {
-        position: relative !important;
-        color: $red !important;
-        &::after {
-          position: absolute ;
-          width: 70% ;
-          height: 2px;
-          color: $white ;
-          bottom: -10px ;
-          content: "" ;
-          left: 13px ;
-          margin: 10px auto auto auto ;
+    @include header(center, cover, no-repeat, relative, 50vh);
+
+    &::after {
+      background-color: rgba(0, 0, 0, 0.562);
+    }
+
+    .navcontainer {
+      width: 80%;
+
+      ul {
+        position: unset;
+        top: unset;
+
+        height: unset;
+        padding: unset;
+        margin-top: unset;
+        @include flex(row, space-between, unset, 60%);
+        display: flex !important;
+
+        background-color: unset;
+        li {
+          list-style: none;
+          text-transform: capitalize;
+
+          font-weight: 600;
+          cursor: pointer;
+
+          .myLink {
+            color: $white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 500ms ease-in-out;
+
+            &:hover {
+              color: $red;
+            }
+          }
+
+          .usernameLi {
+            color: $white !important;
+          }
         }
       }
-    header{
-        background:url(../assets/home/tablet/hero-image.jpeg);
-    
-        @include header(center, cover, no-repeat,relative, 50vh);
-
-        &::after{
-
-            background-color: rgba(0, 0, 0, 0.562);
-
-        }
-
-        .navcontainer{
-
-            width: 80%;
-        
-    
-            ul{
-                position: unset;
-                top: unset;
-                
-                height: unset;
-                padding: unset;
-                margin-top: unset;
-                @include flex(row,space-between, unset,60%);
-                display: flex !important;
-                
-                background-color: unset;
-                li{
-                    list-style: none;
-                    text-transform:capitalize;
-                    
-                    font-weight: 600;
-                    cursor: pointer;
-
-                    .myLink{
-                        color: $white;
-                        text-decoration: none;
-                        font-size: 14px;
-                        transition: 500ms ease-in-out;
-
-                        &:hover{
-                            color: $red;
-                        }
-                    }
-
-                    .usernameLi{
-                        color: $white !important;
-                    }
-                    
-                }
-    
-            }
-            .hamIcons{
-                display: none;
-    
-            }
-        }
-
-        //HEROTEXT
-
-        .hero-container{
-            .hero-text{
-                h1{
-                    font-size: 5rem;
-                    
-                }
-
-                .Hero-subheading{
-                    color: white;
-
-                }
-            }
-
-        }
-
-        .formDiv{
-            form{
-                
-                @include flex(row,space-between, center,100%);
-                .mainSelect{
-                    width: 37%;
-                    margin-bottom: unset;
-                    
-                }
-        
-                .subSelect{
-                    width: 37%;
-                    margin-bottom: unset;
-                }
-    
-        
-                button{
-                    width: 20%;
-                    margin: unset;
-                }
-            }
-        }
-
-        
-    
-    }    
-    
-    //BODY
-
-    main,.afro-container{
-
-        .subMain-container{
-            text-align: left;
-
-            .grid-container{
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                grid-gap: 20px;
-                text-align: center;
-            }
-
-            .bucketlist,.visited,.read-more{
-                
-                width: 60% !important;
-
-                
-                
-            }
-
-            .site-name{
-                min-height: 70px;
-                font-size: 15px !important;
-                
-                @include flex(row,center,center,unset);
-            }
-
-            .site-container{
-                .read-more{
-                    margin-top: 13px;
-                   
-
-                
-                }
-
-            }
-            .site-image{
-                width: 100%;
-                height:400px !important;
-                transition: 300ms ease-in;
-                cursor: pointer;
-
-                &:hover{
-                    transform: scale(.95);
-                }
-            }
-
-            .seeMore{
-
-                border-radius: 5px;
-                padding: 10px;
-                width: 100%;
-                text-transform: capitalize !important;
-                font-size: 20px !important;
-                text-transform: uppercase;
-                font-weight: 700;
-                color: $red;
-                text-decoration: none;
-                text-align: left;
-                background-color: unset ;
-                margin-top: 20px;
-            
-
-
-                i{
-                    display: block;
-                    display: inline;
-                    margin-left: 10px;
-                    text-align: center;
-                    
-                }
-
-                &:hover{
-                    background-color: $red;
-                    color: white;
-
-    
-                }
-
-                
-            }
-
-        
-            
-        }
-
-    }
-
-    .afro-container{
-        .navcontainer{
-
-            width: 80%;
-        
-    
-            ul{
-                position: unset;
-                top: unset;
-                
-                height: unset;
-                padding: unset;
-                
-                margin-top: unset;
-                @include flex(row,space-between, center,60%);
-                display: flex !important;
-                
-                background-color: unset;
-                li{
-                    list-style: none;
-                    text-transform:capitalize;
-                    
-                    font-weight: 600;
-                    cursor: pointer;
-
-                    .myLink{
-                        color: $white;
-                        text-decoration: none;
-                        font-size: 14px;
-
-                        &:hover{
-                            color: $red;
-                        }
-                    }
-                    
-                    .usernameLi{
-                        color: $white;
-                    }
-                }
-    
-            }
-            .hamIcons{
-                display: none;
-    
-            }
-            
-        }
-
-        .mapContainerDiv{
-            width: 100%;
-            height: 500px !important;
-            
-        }
-        
-    }
-
-    //FORM CONTAINER
-
-    .form-container{
-        .navcontainer{
-
-            width: 80%;
-        
-    
-            ul{
-                position: unset;
-                top: unset;
-                height: unset;
-                padding: unset;
-                
-                margin-top: unset;
-                
-                background-color: unset;
-
-                @include flex(row,space-between, center,60%);
-                display: flex !important;
-                li{
-                    list-style: none;
-                    text-transform:capitalize;
-                    
-                    font-weight: 600;
-                    cursor: pointer;
-
-                    .myLink{
-                        color: $white;
-                        text-decoration: none;
-                        font-size: 14px;
-                        transition: 1s ease-in-out;
-
-                        &:hover{
-                            color: $red;
-                        }
-                    }
-                    
-                }
-    
-            }
-            .hamIcons{
-                display: none;
-    
-            }
-        }
-
-
-        .formDesigns{
-            .LoginHeader{
-                background-image: url(../assets/home/mobile/hero-image.jpeg);
-                @include header(center, cover, no-repeat,relative, unset);
-                padding: 50px 20px;
-            }
-        }
-
-    }
-
-
-    //LAYER
-
-    .layer{
+      .hamIcons {
         display: none;
+      }
     }
+
+    //HEROTEXT
+
+    .hero-container {
+      .hero-text {
+        h1 {
+          font-size: 5rem;
+        }
+
+        .Hero-subheading {
+          color: white;
+        }
+      }
+    }
+
+    .formDiv {
+      form {
+        @include flex(row, space-between, center, 100%);
+        .mainSelect {
+          width: 37%;
+          margin-bottom: unset;
+        }
+
+        .subSelect {
+          width: 37%;
+          margin-bottom: unset;
+        }
+
+        button {
+          width: 20%;
+          margin: unset;
+        }
+      }
+    }
+  }
+
+  //BODY
+
+  main,
+  .afro-container {
+    .subMain-container {
+      text-align: left;
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        text-align: center;
+      }
+
+      .bucketlist,
+      .visited,
+      .read-more {
+        width: 60% !important;
+      }
+
+      .site-name {
+        min-height: 70px;
+        font-size: 15px !important;
+
+        @include flex(row, center, center, unset);
+      }
+
+      .site-container {
+        .read-more {
+          margin-top: 13px;
+        }
+      }
+      .site-image {
+        width: 100%;
+        height: 400px !important;
+        transition: 300ms ease-in;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(0.95);
+        }
+      }
+
+      .seeMore {
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        text-transform: capitalize !important;
+        font-size: 20px !important;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $red;
+        text-decoration: none;
+        text-align: left;
+        background-color: unset;
+        margin-top: 20px;
+
+        i {
+          display: block;
+          display: inline;
+          margin-left: 10px;
+          text-align: center;
+        }
+
+        &:hover {
+          background-color: $red;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .afro-container {
+    .navcontainer {
+      width: 80%;
+
+      ul {
+        position: unset;
+        top: unset;
+
+        height: unset;
+        padding: unset;
+
+        margin-top: unset;
+        @include flex(row, space-between, center, 60%);
+        display: flex !important;
+
+        background-color: unset;
+        li {
+          list-style: none;
+          text-transform: capitalize;
+
+          font-weight: 600;
+          cursor: pointer;
+
+          .myLink {
+            color: $white;
+            text-decoration: none;
+            font-size: 14px;
+
+            &:hover {
+              color: $red;
+            }
+          }
+
+          .usernameLi {
+            color: $white;
+          }
+        }
+      }
+      .hamIcons {
+        display: none;
+      }
+    }
+
+    .mapContainerDiv {
+      width: 100%;
+      height: 500px !important;
+    }
+  }
+
+  //FORM CONTAINER
+
+  .form-container {
+    .navcontainer {
+      width: 80%;
+
+      ul {
+        position: unset;
+        top: unset;
+        height: unset;
+        padding: unset;
+
+        margin-top: unset;
+
+        background-color: unset;
+
+        @include flex(row, space-between, center, 60%);
+        display: flex !important;
+        li {
+          list-style: none;
+          text-transform: capitalize;
+
+          font-weight: 600;
+          cursor: pointer;
+
+          .myLink {
+            color: $white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 1s ease-in-out;
+
+            &:hover {
+              color: $red;
+            }
+          }
+        }
+      }
+      .hamIcons {
+        display: none;
+      }
+    }
+
+    .formDesigns {
+      .LoginHeader {
+        background-image: url(../assets/home/mobile/hero-image.jpeg);
+        @include header(center, cover, no-repeat, relative, unset);
+        padding: 50px 20px;
+      }
+    }
+  }
+
+  //LAYER
+
+  .layer {
+    display: none;
+  }
 }
 
-.usernameLi{
-    color: $white !important;
+.usernameLi {
+  color: $white !important;
 }
