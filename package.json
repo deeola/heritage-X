@@ -11,11 +11,13 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-google-maps": "^9.4.5",
+    "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-select": "^4.3.1",
     "react-select-country-list": "^2.2.3",
     "react-uuid": "^1.0.2",
+    "redux": "^4.1.1",
     "sass": "^1.35.1",
     "web-vitals": "^1.1.2"
   },
