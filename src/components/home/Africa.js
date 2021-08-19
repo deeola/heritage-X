@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 import loadingimage from "../../assets/icons/loadingtwo.gif";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useSelector, useDispatch } from "react-redux";
+import { Continent } from "../../actions";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Africa() {
+  const dispatch = useDispatch();
   const HeritageContext = useContext(heritageContext);
   const {
     Africa,
@@ -26,6 +29,7 @@ function Africa() {
   revealRefs.current = [];
 
   useEffect(() => {
+    dispatch(Continent("Africa"));
     getAfrica();
     // ANIMATION
 

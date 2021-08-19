@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import allReducers from "./reducers";
 import { Provider } from "react-redux";
-import Countries from "./reducers/CountriesReducers";
+import { myCountries, Continent } from "./actions";
 
 let store = createStore(
   allReducers,
@@ -14,13 +14,8 @@ let store = createStore(
 );
 store.subscribe(() => console.log(store.getState()));
 
-const myCountries = () => {
-  return {
-    type: "COUNTRIES",
-  };
-};
+store.dispatch(Continent("Africa"));
 
-store.dispatch(myCountries());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
