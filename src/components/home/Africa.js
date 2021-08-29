@@ -6,7 +6,6 @@ import loadingimage from "../../assets/icons/loadingtwo.gif";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSelector, useDispatch } from "react-redux";
-import { Continent } from "../../actions";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +28,6 @@ function Africa() {
   revealRefs.current = [];
 
   useEffect(() => {
-    dispatch(Continent("Africa"));
     getAfrica();
     // ANIMATION
 
