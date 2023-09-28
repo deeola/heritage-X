@@ -24,8 +24,8 @@ const Card = ({
         <div className="card-text">
           <Text className="text" text={stateName} />
           <Text className="site-text" text={countryName} />
-          <div>
-            <Link onClick={getAll} to={`${countryId}`}>
+          <div >
+            <Link className="linktext" onClick={getAll} to={`${countryId}`}>
               Details
             </Link>
           </div>

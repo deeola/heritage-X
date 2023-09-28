@@ -135,7 +135,7 @@ function Africa() {
         })}
       </div>
 
-      <Link className="seeMoreLink" to="/Afro">
+      <Link className="seeMoreLink" to="/Africa">
         <p className="seeMore">
           See More From Africa <i className="fas fa-chevron-right"></i>
         </p>{" "}

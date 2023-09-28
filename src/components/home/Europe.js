@@ -103,7 +103,7 @@ function Europe() {
         })}
       </div>
 
-      <Link className="seeMoreLink" to="/Euro">
+      <Link className="seeMoreLink" to="/Europe and North America">
         <p className="seeMore">
           See More From Europe and North America{" "}
           <i className="fas fa-chevron-right"></i>

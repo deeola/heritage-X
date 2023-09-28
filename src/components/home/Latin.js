@@ -105,7 +105,7 @@ function Latin() {
         })}
       </div>
 
-      <Link className="seeMoreLink" to="/Latino">
+      <Link className="seeMoreLink" to="/Latin America and the Caribbean">
         <p className="seeMore">
           See More From Latin America and Caribbean{" "}
           <i className="fas fa-chevron-right"></i>

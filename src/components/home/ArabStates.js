@@ -110,7 +110,7 @@ function ArabStates() {
             );
           })}
         </div>
-        <Link className="seeMoreLink" to="/Arabo">
+        <Link className="seeMoreLink" to="/Arab States">
           <p className="seeMore">
             See More From Arab States <i className="fas fa-chevron-right"></i>
           </p>

@@ -103,7 +103,7 @@ function Asia() {
           );
         })}
       </div>
-      <Link className="seeMoreLink" to="/Asias">
+      <Link className="seeMoreLink" to="/Asia and the Pacific">
         <p className="seeMore">
           See More From Asia and the Pacific{" "}
           <i className="fas fa-chevron-right"></i>
