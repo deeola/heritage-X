@@ -1,6 +1,6 @@
 
 
-# HERITAGE
+# HERITAGE-X
 
 ## Table of contents
 
