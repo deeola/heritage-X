@@ -1,4 +1,5 @@
 import React from "react";
+import i18next from 'i18next';
 import Africa from "./Africa";
 import Europe from "./Europe";
 import Asia from "./Asia";

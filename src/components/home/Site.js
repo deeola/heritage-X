@@ -37,7 +37,7 @@ function Site({ match }) {
   //MAPS
 
   return (
-    <div className="afro-container">
+    <div className=".afro-container ">
       <Navbar />
       {Alldata.length !== 0 &&
         Alldata.map((item) => {

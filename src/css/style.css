@@ -208,63 +208,63 @@ header .formDiv form button:hover {
   transform: scale(0.97);
 }
 
-main, .afro-container {
+main, .afro-container  {
   margin: 20px auto auto auto;
   width: 80%;
 }
 
-main .subMain-container, .afro-container .subMain-container {
+main .subMain-container, .afro-container  .subMain-container {
   margin-bottom: 50px;
   text-align: center;
 }
 
-main .subMain-container .explore-container, .afro-container .subMain-container .explore-container {
+main .subMain-container .explore-container, .afro-container  .subMain-container .explore-container {
   color: #201f1f;
 }
 
-main .subMain-container .explore-container .explore, .afro-container .subMain-container .explore-container .explore {
+main .subMain-container .explore-container .explore, .afro-container  .subMain-container .explore-container .explore {
   font-weight: 700;
   margin-bottom: 5px;
 }
 
-main .subMain-container .explore-container .explore-subtext, .afro-container .subMain-container .explore-container .explore-subtext {
+main .subMain-container .explore-container .explore-subtext, .afro-container  .subMain-container .explore-container .explore-subtext {
   margin-bottom: 10px;
   font-size: 12px;
   color: #727171;
 }
 
-main .subMain-container .grid-container, .afro-container .subMain-container .grid-container {
+main .subMain-container .grid-container, .afro-container  .subMain-container .grid-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 30px;
 }
 
-main .subMain-container .site-container .site-image, .afro-container .subMain-container .site-container .site-image {
+main .subMain-container .site-container .site-image, .afro-container  .subMain-container .site-container .site-image {
   width: 100%;
   height: 300px;
   margin-bottom: 8px;
 }
 
-main .subMain-container .site-container .site-image img, .afro-container .subMain-container .site-container .site-image img {
+main .subMain-container .site-container .site-image img, .afro-container  .subMain-container .site-container .site-image img {
   width: 100%;
   height: 100%;
 }
 
-main .subMain-container .site-container .site-country, .afro-container .subMain-container .site-container .site-country {
+main .subMain-container .site-container .site-country, .afro-container  .subMain-container .site-container .site-country {
   margin-bottom: 8px;
   color: #727171;
   font-weight: 600;
   font-size: 12px;
 }
 
-main .subMain-container .site-container .site-name, .afro-container .subMain-container .site-container .site-name {
+main .subMain-container .site-container .site-name, .afro-container  .subMain-container .site-container .site-name {
   margin-bottom: 8px;
   color: #201f1f;
   font-weight: 600;
   font-size: 18px;
 }
 
-main .subMain-container .site-container .bucketlist, main .subMain-container .site-container .visited, main .subMain-container .site-container .read-more, .afro-container .subMain-container .site-container .bucketlist, .afro-container .subMain-container .site-container .visited, .afro-container .subMain-container .site-container .read-more {
+main .subMain-container .site-container .bucketlist, main .subMain-container .site-container .visited, main .subMain-container .site-container .read-more, .afro-container  .subMain-container .site-container .bucketlist, .afro-container  .subMain-container .site-container .visited, .afro-container  .subMain-container .site-container .read-more {
   border: 2px solid #727171;
   margin-bottom: 10px;
   margin: auto auto 10px auto;
@@ -280,34 +280,34 @@ main .subMain-container .site-container .bucketlist, main .subMain-container .si
   cursor: pointer;
 }
 
-main .subMain-container .site-container .bucketlist:hover, main .subMain-container .site-container .visited:hover, main .subMain-container .site-container .read-more:hover, .afro-container .subMain-container .site-container .bucketlist:hover, .afro-container .subMain-container .site-container .visited:hover, .afro-container .subMain-container .site-container .read-more:hover {
+main .subMain-container .site-container .bucketlist:hover, main .subMain-container .site-container .visited:hover, main .subMain-container .site-container .read-more:hover, .afro-container  .subMain-container .site-container .bucketlist:hover, .afro-container  .subMain-container .site-container .visited:hover, .afro-container  .subMain-container .site-container .read-more:hover {
   background-color: #f76d6d;
   color: #FFFFFF;
   border: none;
 }
 
-main .subMain-container .site-container .bucketlist i, main .subMain-container .site-container .visited i, main .subMain-container .site-container .read-more i, .afro-container .subMain-container .site-container .bucketlist i, .afro-container .subMain-container .site-container .visited i, .afro-container .subMain-container .site-container .read-more i {
+main .subMain-container .site-container .bucketlist i, main .subMain-container .site-container .visited i, main .subMain-container .site-container .read-more i, .afro-container  .subMain-container .site-container .bucketlist i, .afro-container  .subMain-container .site-container .visited i, .afro-container  .subMain-container .site-container .read-more i {
   margin-left: 10px;
   font-size: 14px;
 }
 
-main .subMain-container .site-container .myLinks, .afro-container .subMain-container .site-container .myLinks {
+main .subMain-container .site-container .myLinks, .afro-container  .subMain-container .site-container .myLinks {
   text-decoration: none;
   color: #727171;
 }
 
-main .subMain-container .site-container .myLinks:hover, .afro-container .subMain-container .site-container .myLinks:hover {
+main .subMain-container .site-container .myLinks:hover, .afro-container  .subMain-container .site-container .myLinks:hover {
   background-color: #f76d6d;
   color: #FFFFFF;
   border: none;
 }
 
-main .subMain-container .seeMoreLink, .afro-container .subMain-container .seeMoreLink {
+main .subMain-container .seeMoreLink, .afro-container  .subMain-container .seeMoreLink {
   text-decoration: none;
   cursor: pointer;
 }
 
-main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
+main .subMain-container .seeMore, .afro-container  .subMain-container .seeMore {
   border-radius: 5px;
   text-decoration: none;
   background-color: #f76d6d;
@@ -323,29 +323,29 @@ main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
   cursor: pointer;
 }
 
-main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore i {
+main .subMain-container .seeMore i, .afro-container  .subMain-container .seeMore i {
   display: none;
 }
 
-.afro-container {
+.afro-container  {
   width: 100%;
   margin-top: 0;
   position: relative;
   min-height: 100vh;
 }
 
-.afro-container .subMain-container {
+.afro-container  .subMain-container {
   width: 80%;
   margin: auto;
 }
 
-.afro-container nav {
+.afro-container  nav {
   position: relative;
   z-index: 1050;
   background-color: #201f1f;
 }
 
-.afro-container .navcontainer {
+.afro-container  .navcontainer {
   margin: auto;
   height: 3rem;
   margin: auto;
@@ -356,23 +356,23 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   width: 80%;
 }
 
-.afro-container .navcontainer .logo {
+.afro-container  .navcontainer .logo {
   color: #FFFFFF;
   font-size: 25px;
   font-weight: 700;
   cursor: pointer;
 }
 
-.afro-container .navcontainer .logo .logoLink {
+.afro-container  .navcontainer .logo .logoLink {
   color: white;
   text-decoration: none;
 }
 
-.afro-container .navcontainer .logo .logoLink span {
+.afro-container  .navcontainer .logo .logoLink span {
   color: #f76d6d;
 }
 
-.afro-container .navcontainer ul {
+.afro-container  .navcontainer ul {
   background-color: #FFFFFF;
   position: absolute;
   top: 2.6rem;
@@ -388,19 +388,19 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   width: 100%;
 }
 
-.afro-container .navcontainer ul li {
+.afro-container  .navcontainer ul li {
   list-style: none;
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
 }
 
-.afro-container .navcontainer ul li .myLink {
+.afro-container  .navcontainer ul li .myLink {
   text-decoration: none;
   color: #201f1f;
 }
 
-.afro-container .navcontainer .hamIcons {
+.afro-container  .navcontainer .hamIcons {
   display: flex;
   flex-direction: unset;
   justify-content: center;
@@ -408,48 +408,48 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   width: unset;
 }
 
-.afro-container .navcontainer .hamIcons img {
+.afro-container  .navcontainer .hamIcons img {
   filter: invert(84%) sepia(99%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(100%);
   cursor: pointer;
 }
 
-.afro-container .navcontainer .hamIcons .hamClose {
+.afro-container  .navcontainer .hamIcons .hamClose {
   display: none;
 }
 
-.afro-container .siteDetailsContainer {
+.afro-container  .siteDetailsContainer {
   width: 80%;
   margin: auto;
   margin-top: 30px;
 }
 
-.afro-container .siteDetailsContainer .site-country-region {
+.afro-container  .siteDetailsContainer .site-country-region {
   font-size: 14px;
 }
 
-.afro-container .siteDetailsContainer .siteCountry {
+.afro-container  .siteDetailsContainer .siteCountry {
   margin: 10px 0px 5px 0px;
 }
 
-.afro-container .siteDetailsContainer .site-image {
+.afro-container  .siteDetailsContainer .site-image {
   margin: 20px 0px;
 }
 
-.afro-container .siteDetailsContainer .site-description {
+.afro-container  .siteDetailsContainer .site-description {
   margin: 10px 0px;
 }
 
-.afro-container .siteDetailsContainer .site-description h5 {
+.afro-container  .siteDetailsContainer .site-description h5 {
   margin: 5px 0px;
   color: #f76d6d;
 }
 
-.afro-container .siteDetailsContainer .site-description .site-description-text {
+.afro-container  .siteDetailsContainer .site-description .site-description-text {
   font-size: 14px;
   line-height: 1.7;
 }
 
-.afro-container .siteDetailsContainer .second-details-div {
+.afro-container  .siteDetailsContainer .second-details-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -457,7 +457,7 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   width: 100%;
 }
 
-.afro-container .siteDetailsContainer .second-details-div .subCategory {
+.afro-container  .siteDetailsContainer .second-details-div .subCategory {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -466,35 +466,35 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   width: 100%;
 }
 
-.afro-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category {
+.afro-container  .siteDetailsContainer .second-details-div .subCategory .sub-sub-category {
   display: flex;
   margin-bottom: 10px;
 }
 
-.afro-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category i {
+.afro-container  .siteDetailsContainer .second-details-div .subCategory .sub-sub-category i {
   font-size: 10px;
   color: #727171;
 }
 
-.afro-container .siteDetailsContainer .second-details-div .subCategory .sub-sub-category p {
+.afro-container  .siteDetailsContainer .second-details-div .subCategory .sub-sub-category p {
   margin-left: 10px;
   font-size: 10px;
   text-transform: uppercase;
   color: #727171;
 }
 
-.afro-container .siteDetailsContainer .second-details-div .subCategory .details-text {
+.afro-container  .siteDetailsContainer .second-details-div .subCategory .details-text {
   font-weight: 700;
   color: #201f1f;
   text-align: center;
   text-transform: capitalize;
 }
 
-.afro-container .siteDetailsContainer .second-details-div .Save-container {
+.afro-container  .siteDetailsContainer .second-details-div .Save-container {
   margin: 20px 0px;
 }
 
-.afro-container .siteDetailsContainer .second-details-div .Save-container .bucketlist, .afro-container .siteDetailsContainer .second-details-div .Save-container .visited, .afro-container .siteDetailsContainer .second-details-div .Save-container .read-more {
+.afro-container  .siteDetailsContainer .second-details-div .Save-container .bucketlist, .afro-container  .siteDetailsContainer .second-details-div .Save-container .visited, .afro-container  .siteDetailsContainer .second-details-div .Save-container .read-more {
   background-color: #f76d6d;
   margin-bottom: 15px;
   width: 100%;
@@ -508,16 +508,16 @@ main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore 
   cursor: pointer;
 }
 
-.afro-container .siteDetailsContainer .mapContainerDiv {
+.afro-container  .siteDetailsContainer .mapContainerDiv {
   width: 100%;
   height: 400px;
 }
 
-.afro-container .subMain-container {
+.afro-container  .subMain-container {
   margin-top: 50px;
 }
 
-.afro-container .bucketempty {
+.afro-container  .bucketempty {
   width: 300px;
   height: 300px;
   text-align: center;
@@ -883,19 +883,19 @@ footer .icons {
     width: 20%;
     margin: unset;
   }
-  main .subMain-container, .afro-container .subMain-container {
+  main .subMain-container, .afro-container  .subMain-container {
     text-align: left;
   }
-  main .subMain-container .grid-container, .afro-container .subMain-container .grid-container {
+  main .subMain-container .grid-container, .afro-container  .subMain-container .grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     text-align: center;
   }
-  main .subMain-container .bucketlist, main .subMain-container .visited, main .subMain-container .read-more, .afro-container .subMain-container .bucketlist, .afro-container .subMain-container .visited, .afro-container .subMain-container .read-more {
+  main .subMain-container .bucketlist, main .subMain-container .visited, main .subMain-container .read-more, .afro-container  .subMain-container .bucketlist, .afro-container  .subMain-container .visited, .afro-container  .subMain-container .read-more {
     width: 60% !important;
   }
-  main .subMain-container .site-name, .afro-container .subMain-container .site-name {
+  main .subMain-container .site-name, .afro-container  .subMain-container .site-name {
     min-height: 70px;
     font-size: 15px !important;
     display: flex;
@@ -904,19 +904,19 @@ footer .icons {
     align-items: center;
     width: unset;
   }
-  main .subMain-container .site-container .read-more, .afro-container .subMain-container .site-container .read-more {
+  main .subMain-container .site-container .read-more, .afro-container  .subMain-container .site-container .read-more {
     margin-top: 13px;
   }
-  main .subMain-container .site-image, .afro-container .subMain-container .site-image {
+  main .subMain-container .site-image, .afro-container  .subMain-container .site-image {
     width: 100%;
     height: 400px !important;
     transition: 300ms ease-in;
     cursor: pointer;
   }
-  main .subMain-container .site-image:hover, .afro-container .subMain-container .site-image:hover {
+  main .subMain-container .site-image:hover, .afro-container  .subMain-container .site-image:hover {
     transform: scale(0.95);
   }
-  main .subMain-container .seeMore, .afro-container .subMain-container .seeMore {
+  main .subMain-container .seeMore, .afro-container  .subMain-container .seeMore {
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -930,20 +930,20 @@ footer .icons {
     background-color: unset;
     margin-top: 20px;
   }
-  main .subMain-container .seeMore i, .afro-container .subMain-container .seeMore i {
+  main .subMain-container .seeMore i, .afro-container  .subMain-container .seeMore i {
     display: block;
     display: inline;
     margin-left: 10px;
     text-align: center;
   }
-  main .subMain-container .seeMore:hover, .afro-container .subMain-container .seeMore:hover {
+  main .subMain-container .seeMore:hover, .afro-container  .subMain-container .seeMore:hover {
     background-color: #f76d6d;
     color: white;
   }
-  .afro-container .navcontainer {
+  .afro-container  .navcontainer {
     width: 80%;
   }
-  .afro-container .navcontainer ul {
+  .afro-container  .navcontainer ul {
     position: unset;
     top: unset;
     height: unset;
@@ -957,27 +957,27 @@ footer .icons {
     display: flex !important;
     background-color: unset;
   }
-  .afro-container .navcontainer ul li {
+  .afro-container  .navcontainer ul li {
     list-style: none;
     text-transform: capitalize;
     font-weight: 600;
     cursor: pointer;
   }
-  .afro-container .navcontainer ul li .myLink {
+  .afro-container  .navcontainer ul li .myLink {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 14px;
   }
-  .afro-container .navcontainer ul li .myLink:hover {
+  .afro-container  .navcontainer ul li .myLink:hover {
     color: #f76d6d;
   }
-  .afro-container .navcontainer ul li .usernameLi {
+  .afro-container  .navcontainer ul li .usernameLi {
     color: #FFFFFF;
   }
-  .afro-container .navcontainer .hamIcons {
+  .afro-container  .navcontainer .hamIcons {
     display: none;
   }
-  .afro-container .mapContainerDiv {
+  .afro-container  .mapContainerDiv {
     width: 100%;
     height: 500px !important;
   }
@@ -1059,45 +1059,45 @@ footer .icons {
     font-size: 19px;
     color: #f76d6d;
   }
-  main .subMain-container, .afro-container .subMain-container {
+  main .subMain-container, .afro-container  .subMain-container {
     text-align: left;
   }
-  main .subMain-container .explore-container .explore, .afro-container .subMain-container .explore-container .explore {
+  main .subMain-container .explore-container .explore, .afro-container  .subMain-container .explore-container .explore {
     margin-bottom: 10px;
     font-size: 26px;
   }
-  main .subMain-container .explore-container .explore-subtext, .afro-container .subMain-container .explore-container .explore-subtext {
+  main .subMain-container .explore-container .explore-subtext, .afro-container  .subMain-container .explore-container .explore-subtext {
     margin-bottom: 30px;
     font-size: 16px;
   }
-  main .subMain-container .grid-container, .afro-container .subMain-container .grid-container {
+  main .subMain-container .grid-container, .afro-container  .subMain-container .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     text-align: center;
   }
-  main .subMain-container .bucketlist, main .subMain-container .visited, main .subMain-container .read-more, .afro-container .subMain-container .bucketlist, .afro-container .subMain-container .visited, .afro-container .subMain-container .read-more {
+  main .subMain-container .bucketlist, main .subMain-container .visited, main .subMain-container .read-more, .afro-container  .subMain-container .bucketlist, .afro-container  .subMain-container .visited, .afro-container  .subMain-container .read-more {
     width: 60% !important;
     border: 1px solid #727171 !important;
   }
-  main .subMain-container .bucketlist:hover, main .subMain-container .visited:hover, main .subMain-container .read-more:hover, .afro-container .subMain-container .bucketlist:hover, .afro-container .subMain-container .visited:hover, .afro-container .subMain-container .read-more:hover {
+  main .subMain-container .bucketlist:hover, main .subMain-container .visited:hover, main .subMain-container .read-more:hover, .afro-container  .subMain-container .bucketlist:hover, .afro-container  .subMain-container .visited:hover, .afro-container  .subMain-container .read-more:hover {
     border: none !important;
   }
-  main .subMain-container .site-name, .afro-container .subMain-container .site-name {
+  main .subMain-container .site-name, .afro-container  .subMain-container .site-name {
     min-height: 70px;
     font-size: 15px !important;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  main .subMain-container .site-container .read-more, .afro-container .subMain-container .site-container .read-more {
+  main .subMain-container .site-container .read-more, .afro-container  .subMain-container .site-container .read-more {
     margin-top: 13px;
   }
-  main .subMain-container .site-image, .afro-container .subMain-container .site-image {
+  main .subMain-container .site-image, .afro-container  .subMain-container .site-image {
     width: 100%;
     height: 300px !important;
   }
-  .afro-container .mapContainerDiv {
+  .afro-container  .mapContainerDiv {
     width: 100%;
     height: 450px !important;
   }

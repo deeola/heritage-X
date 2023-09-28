@@ -1,0 +1,30 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.card-image{
+height: 80%;
+}
+
+.img{
+    height: 100%;
+}
+
+
+.card-text{
+
+}
+
+.text{
+    font-size: 14px;
+    margin: 5px 0px;
+}
+
+.site-text{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px 0px;
+}

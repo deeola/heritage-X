@@ -14,7 +14,7 @@ function Country() {
   } = HeritageContext;
 
   return (
-    <div className="afro-container">
+    <div className=".afro-container ">
       <Navbar />
       <section className="subMain-container">
         <div className="grid-container">
