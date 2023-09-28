@@ -1,14 +1,11 @@
-import React, { useState, useContext, useEffect } from "react";
-import heritageContext from "../context/Heritage/heritageContext";
-import uuid from "react-uuid";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+
 import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
+import { Continents } from "./Continents.jsx/Continents";
 
 function Arabo() {
-  const HeritageContext = useContext(heritageContext);
-  const { getAll, storeTaskInLocalStoragesVisited, storeTaskInLocalStorages } =
-    HeritageContext;
+
 
   const [Alldata, setAlldata] = useState([]);
 
@@ -28,48 +25,14 @@ function Arabo() {
   return (
     <div className=".afro-container ">
       <Navbar />
-      <section className="subMain-container">
-        <div className="grid-container">
-          {Alldata.map((item) => {
-            return (
-              <div className="site-container" key={uuid()}>
-                <div className="site-image">
-                  <Link className="myLinks" to={`${item.id}`}>
-                    <img alt={item.name} src={item.image_url}></img>
-                  </Link>
-                </div>
-
-                <p className="site-country">{item.states[0].name}</p>
-                <p className="site-name">{item.name}</p>
-                <div className="read-more" onClick={getAll}>
-                  <Link className="myLinks" to={`${item.id}`}>
-                    Read more...
-                  </Link>
-                </div>
-                <div
-                  className="bucketlist"
-                  onClick={() => {
-                    storeTaskInLocalStorages(item);
-                  }}
-                >
-                  Save to Bucketlist
-                </div>
-                <div
-                  className="visited"
-                  onClick={() => {
-                    storeTaskInLocalStoragesVisited(item);
-                  }}
-                >
-                  Save to Visited
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <Continents
+        countries={Alldata}
+        getAll={getArabo}
+      />
       <Footer />
     </div>
   );
 }
 
 export default Arabo;
+
